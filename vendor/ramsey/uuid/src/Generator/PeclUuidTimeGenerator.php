@@ -14,9 +14,12 @@ declare(strict_types=1);
 
 namespace Ramsey\Uuid\Generator;
 
+<<<<<<< HEAD
 use function uuid_create;
 use function uuid_parse;
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use const UUID_TYPE_TIME;
 
 /**

@@ -71,9 +71,15 @@ abstract class Driver
      * @throws NoCodeCoverageDriverAvailableException
      * @throws PcovNotAvailableException
      * @throws PhpdbgNotAvailableException
+<<<<<<< HEAD
      * @throws Xdebug2NotEnabledException
      * @throws Xdebug3NotEnabledException
      * @throws XdebugNotAvailableException
+=======
+     * @throws XdebugNotAvailableException
+     * @throws Xdebug2NotEnabledException
+     * @throws Xdebug3NotEnabledException
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      *
      * @deprecated Use DriverSelector::forLineCoverage() instead
      */
@@ -84,9 +90,15 @@ abstract class Driver
 
     /**
      * @throws NoCodeCoverageDriverWithPathCoverageSupportAvailableException
+<<<<<<< HEAD
      * @throws Xdebug2NotEnabledException
      * @throws Xdebug3NotEnabledException
      * @throws XdebugNotAvailableException
+=======
+     * @throws XdebugNotAvailableException
+     * @throws Xdebug2NotEnabledException
+     * @throws Xdebug3NotEnabledException
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      *
      * @deprecated Use DriverSelector::forLineAndPathCoverage() instead
      */

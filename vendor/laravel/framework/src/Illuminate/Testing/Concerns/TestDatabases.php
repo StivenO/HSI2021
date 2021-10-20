@@ -69,6 +69,10 @@ trait TestDatabases
      * Ensure a test database exists and returns its name.
      *
      * @param  string  $database
+<<<<<<< HEAD
+=======
+     *
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return array
      */
     protected function ensureTestDatabaseExists($database)

@@ -15,7 +15,11 @@
 		}
 	],
 	"require": {
+<<<<<<< HEAD
 		"php": ">=7.2 <8.2"
+=======
+		"php": ">=7.2 <8.1"
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	},
 	"require-dev": {
 		"nette/tester": "~2.0",

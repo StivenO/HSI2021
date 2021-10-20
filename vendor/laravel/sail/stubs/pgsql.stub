@@ -12,6 +12,12 @@
         networks:
             - sail
         healthcheck:
+<<<<<<< HEAD
             test: ["CMD", "pg_isready", "-q", "-d", "${DB_DATABASE}", "-U", "${DB_USERNAME}"]
             retries: 3
             timeout: 5s
+=======
+          test: ["CMD", "pg_isready", "-q", "-d", "${DB_DATABASE}", "-U", "${DB_USERNAME}"]
+          retries: 3
+          timeout: 5s
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418

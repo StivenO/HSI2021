@@ -2,7 +2,10 @@
 
 namespace PhpParser\Node;
 
+<<<<<<< HEAD
 use PhpParser\Node\VariadicPlaceholder;
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use PhpParser\NodeAbstract;
 
 class Arg extends NodeAbstract

@@ -253,15 +253,21 @@ class Str
     {
         $patterns = Arr::wrap($pattern);
 
+<<<<<<< HEAD
         $value = (string) $value;
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         if (empty($patterns)) {
             return false;
         }
 
         foreach ($patterns as $pattern) {
+<<<<<<< HEAD
             $pattern = (string) $pattern;
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
             // If the given value is an exact match we can of course return true right
             // from the beginning. Otherwise, we will translate asterisks and do an
             // actual pattern match against the two strings to see if they match.

@@ -34,8 +34,11 @@ class JsonResponse extends BaseJsonResponse
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      *
      * @return static
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public static function fromJsonString(?string $data = null, int $status = 200, array $headers = [])
     {
@@ -67,8 +70,11 @@ class JsonResponse extends BaseJsonResponse
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      *
      * @return static
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public function setData($data = [])
     {
@@ -113,8 +119,11 @@ class JsonResponse extends BaseJsonResponse
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      *
      * @return static
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public function setEncodingOptions($options)
     {

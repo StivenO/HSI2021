@@ -13,6 +13,12 @@
         networks:
             - sail
         healthcheck:
+<<<<<<< HEAD
             test: ["CMD", "mysqladmin", "ping", "-p${DB_PASSWORD}"]
             retries: 3
             timeout: 5s
+=======
+          test: ["CMD", "mysqladmin", "ping", "-p${DB_PASSWORD}"]
+          retries: 3
+          timeout: 5s
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418

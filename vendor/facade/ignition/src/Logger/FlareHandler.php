@@ -5,7 +5,10 @@ namespace Facade\Ignition\Logger;
 use Facade\FlareClient\Flare;
 use Facade\FlareClient\Report;
 use Facade\Ignition\Ignition;
+<<<<<<< HEAD
 use Facade\Ignition\Support\SentReports;
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use Facade\Ignition\Tabs\Tab;
 use Monolog\Handler\AbstractProcessingHandler;
 use Monolog\Logger;
@@ -16,6 +19,7 @@ class FlareHandler extends AbstractProcessingHandler
     /** @var \Facade\FlareClient\Flare */
     protected $flare;
 
+<<<<<<< HEAD
     /** @var \Facade\Ignition\Support\SentReports */
     protected $sentReports;
 
@@ -27,6 +31,14 @@ class FlareHandler extends AbstractProcessingHandler
 
         $this->sentReports = $sentReports;
 
+=======
+    protected $minimumReportLogLevel = Logger::ERROR;
+
+    public function __construct(Flare $flare, $level = Logger::DEBUG, $bubble = true)
+    {
+        $this->flare = $flare;
+
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         parent::__construct($level, $bubble);
     }
 
@@ -54,11 +66,15 @@ class FlareHandler extends AbstractProcessingHandler
                     $tab->beforeRenderingErrorPage($this->flare, $throwable);
                 });
 
+<<<<<<< HEAD
             $report = $this->flare->report($record['context']['exception']);
 
             if ($report) {
                 $this->sentReports->add($report);
             }
+=======
+            $this->flare->report($record['context']['exception']);
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 
             return;
         }

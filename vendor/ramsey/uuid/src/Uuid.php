@@ -23,12 +23,18 @@ use Ramsey\Uuid\Lazy\LazyUuidFromString;
 use Ramsey\Uuid\Rfc4122\FieldsInterface as Rfc4122FieldsInterface;
 use Ramsey\Uuid\Type\Hexadecimal;
 use Ramsey\Uuid\Type\Integer as IntegerObject;
+<<<<<<< HEAD
 use ValueError;
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 
 use function assert;
 use function bin2hex;
 use function preg_match;
+<<<<<<< HEAD
 use function sprintf;
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use function str_replace;
 use function strcmp;
 use function strlen;
@@ -292,6 +298,7 @@ class Uuid implements UuidInterface
     }
 
     /**
+<<<<<<< HEAD
      * @return array{bytes: string}
      */
     public function __serialize(): array
@@ -300,6 +307,8 @@ class Uuid implements UuidInterface
     }
 
     /**
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * Re-constructs the object from its serialized form
      *
      * @param string $serialized The serialized PHP string to unserialize into
@@ -323,6 +332,7 @@ class Uuid implements UuidInterface
         $this->timeConverter = $uuid->timeConverter;
     }
 
+<<<<<<< HEAD
     /**
      * @param array{bytes: string} $data
      */
@@ -337,6 +347,8 @@ class Uuid implements UuidInterface
         $this->unserialize($data['bytes']);
     }
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function compareTo(UuidInterface $other): int
     {
         $compare = strcmp($this->toString(), $other->toString());

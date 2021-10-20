@@ -33,7 +33,11 @@ class Application extends Container implements ApplicationContract, CachesConfig
      *
      * @var string
      */
+<<<<<<< HEAD
     const VERSION = '8.63.0';
+=======
+    const VERSION = '8.59.0';
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 
     /**
      * The base path for the Laravel installation.
@@ -351,7 +355,11 @@ class Application extends Container implements ApplicationContract, CachesConfig
     /**
      * Get the base path of the Laravel installation.
      *
+<<<<<<< HEAD
      * @param  string  $path
+=======
+     * @param  string  $path Optionally, a path to append to the base path
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return string
      */
     public function basePath($path = '')
@@ -362,7 +370,11 @@ class Application extends Container implements ApplicationContract, CachesConfig
     /**
      * Get the path to the bootstrap directory.
      *
+<<<<<<< HEAD
      * @param  string  $path
+=======
+     * @param  string  $path Optionally, a path to append to the bootstrap path
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return string
      */
     public function bootstrapPath($path = '')
@@ -373,7 +385,11 @@ class Application extends Container implements ApplicationContract, CachesConfig
     /**
      * Get the path to the application configuration files.
      *
+<<<<<<< HEAD
      * @param  string  $path
+=======
+     * @param  string  $path Optionally, a path to append to the config path
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return string
      */
     public function configPath($path = '')
@@ -384,7 +400,11 @@ class Application extends Container implements ApplicationContract, CachesConfig
     /**
      * Get the path to the database directory.
      *
+<<<<<<< HEAD
      * @param  string  $path
+=======
+     * @param  string  $path Optionally, a path to append to the database path
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return string
      */
     public function databasePath($path = '')
@@ -958,8 +978,11 @@ class Application extends Container implements ApplicationContract, CachesConfig
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      *
      * @return \Symfony\Component\HttpFoundation\Response
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public function handle(SymfonyRequest $request, int $type = self::MASTER_REQUEST, bool $catch = true)
     {

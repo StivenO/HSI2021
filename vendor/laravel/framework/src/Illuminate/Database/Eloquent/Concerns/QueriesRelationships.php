@@ -2,11 +2,16 @@
 
 namespace Illuminate\Database\Eloquent\Concerns;
 
+<<<<<<< HEAD
 use BadMethodCallException;
 use Closure;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\RelationNotFoundException;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+=======
+use Closure;
+use Illuminate\Database\Eloquent\Builder;
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Database\Query\Builder as QueryBuilder;
@@ -387,7 +392,11 @@ trait QueriesRelationships
      * Add a polymorphic relationship condition to the query with a where clause.
      *
      * @param  \Illuminate\Database\Eloquent\Relations\MorphTo|string  $relation
+<<<<<<< HEAD
      * @param  string|array  $types
+=======
+     * @param  string|array $types
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @param  \Closure|string|array|\Illuminate\Database\Query\Expression  $column
      * @param  mixed  $operator
      * @param  mixed  $value
@@ -404,7 +413,11 @@ trait QueriesRelationships
      * Add a polymorphic relationship condition to the query with an "or where" clause.
      *
      * @param  \Illuminate\Database\Eloquent\Relations\MorphTo|string  $relation
+<<<<<<< HEAD
      * @param  string|array  $types
+=======
+     * @param  string|array $types
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @param  \Closure|string|array|\Illuminate\Database\Query\Expression  $column
      * @param  mixed  $operator
      * @param  mixed  $value
@@ -459,6 +472,7 @@ trait QueriesRelationships
     }
 
     /**
+<<<<<<< HEAD
      * Add a "belongs to" relationship where clause to the query.
      *
      * @param  \Illuminate\Database\Eloquent\Model  $related
@@ -509,6 +523,8 @@ trait QueriesRelationships
     }
 
     /**
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * Add subselect queries to include an aggregate value for a relationship.
      *
      * @param  mixed  $relations

@@ -15,10 +15,15 @@ declare(strict_types=1);
 namespace Ramsey\Uuid\Type;
 
 use Ramsey\Uuid\Exception\InvalidArgumentException;
+<<<<<<< HEAD
 use ValueError;
 
 use function ctype_xdigit;
 use function sprintf;
+=======
+
+use function ctype_xdigit;
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use function strpos;
 use function strtolower;
 use function substr;
@@ -80,6 +85,7 @@ final class Hexadecimal implements TypeInterface
     }
 
     /**
+<<<<<<< HEAD
      * @return array{string: string}
      */
     public function __serialize(): array
@@ -88,6 +94,8 @@ final class Hexadecimal implements TypeInterface
     }
 
     /**
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * Constructs the object from a serialized string representation
      *
      * @param string $serialized The serialized string representation of the object
@@ -99,6 +107,7 @@ final class Hexadecimal implements TypeInterface
     {
         $this->__construct($serialized);
     }
+<<<<<<< HEAD
 
     /**
      * @param array{string: string} $data
@@ -113,4 +122,6 @@ final class Hexadecimal implements TypeInterface
 
         $this->unserialize($data['string']);
     }
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 }

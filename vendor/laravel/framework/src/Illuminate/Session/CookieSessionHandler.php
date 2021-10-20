@@ -47,10 +47,14 @@ class CookieSessionHandler implements SessionHandlerInterface
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      *
      * @return bool
      */
     #[\ReturnTypeWillChange]
+=======
+     */
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function open($savePath, $sessionName)
     {
         return true;
@@ -58,10 +62,14 @@ class CookieSessionHandler implements SessionHandlerInterface
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      *
      * @return bool
      */
     #[\ReturnTypeWillChange]
+=======
+     */
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function close()
     {
         return true;
@@ -69,10 +77,14 @@ class CookieSessionHandler implements SessionHandlerInterface
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      *
      * @return string|false
      */
     #[\ReturnTypeWillChange]
+=======
+     */
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function read($sessionId)
     {
         $value = $this->request->cookies->get($sessionId) ?: '';
@@ -88,10 +100,14 @@ class CookieSessionHandler implements SessionHandlerInterface
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      *
      * @return bool
      */
     #[\ReturnTypeWillChange]
+=======
+     */
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function write($sessionId, $data)
     {
         $this->cookie->queue($sessionId, json_encode([
@@ -104,10 +120,14 @@ class CookieSessionHandler implements SessionHandlerInterface
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      *
      * @return bool
      */
     #[\ReturnTypeWillChange]
+=======
+     */
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function destroy($sessionId)
     {
         $this->cookie->queue($this->cookie->forget($sessionId));
@@ -117,10 +137,14 @@ class CookieSessionHandler implements SessionHandlerInterface
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      *
      * @return int|false
      */
     #[\ReturnTypeWillChange]
+=======
+     */
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function gc($lifetime)
     {
         return true;

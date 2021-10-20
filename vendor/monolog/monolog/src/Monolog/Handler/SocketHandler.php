@@ -36,7 +36,11 @@ class SocketHandler extends AbstractProcessingHandler
     private $writingTimeout = 10.0;
     /** @var ?int */
     private $lastSentBytes = null;
+<<<<<<< HEAD
     /** @var ?int */
+=======
+    /** @var int */
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     private $chunkSize = null;
     /** @var bool */
     private $persistent = false;
@@ -197,7 +201,11 @@ class SocketHandler extends AbstractProcessingHandler
     /**
      * Get current chunk size
      */
+<<<<<<< HEAD
     public function getChunkSize(): ?int
+=======
+    public function getChunkSize(): int
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         return $this->chunkSize;
     }
@@ -265,10 +273,13 @@ class SocketHandler extends AbstractProcessingHandler
             throw new \LogicException('streamSetChunkSize called but $this->resource is not a resource');
         }
 
+<<<<<<< HEAD
         if (null === $this->chunkSize) {
             throw new \LogicException('streamSetChunkSize called but $this->chunkSize is not set');
         }
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         return stream_set_chunk_size($this->resource, $this->chunkSize);
     }
 

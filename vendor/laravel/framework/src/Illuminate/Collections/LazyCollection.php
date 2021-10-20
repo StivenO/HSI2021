@@ -1353,6 +1353,7 @@ class LazyCollection implements Enumerable
     }
 
     /**
+<<<<<<< HEAD
      * Return only unique items from the collection array.
      *
      * @param  string|callable|null  $key
@@ -1377,6 +1378,8 @@ class LazyCollection implements Enumerable
     }
 
     /**
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * Reset the keys on the underlying array.
      *
      * @return static

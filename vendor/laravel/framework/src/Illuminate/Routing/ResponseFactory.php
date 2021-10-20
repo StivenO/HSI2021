@@ -45,7 +45,11 @@ class ResponseFactory implements FactoryContract
     /**
      * Create a new response instance.
      *
+<<<<<<< HEAD
      * @param  mixed  $content
+=======
+     * @param  string  $content
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @param  int  $status
      * @param  array  $headers
      * @return \Illuminate\Http\Response

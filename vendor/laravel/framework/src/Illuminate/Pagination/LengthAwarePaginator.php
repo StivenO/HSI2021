@@ -34,7 +34,11 @@ class LengthAwarePaginator extends AbstractPaginator implements Arrayable, Array
      * @param  int  $total
      * @param  int  $perPage
      * @param  int|null  $currentPage
+<<<<<<< HEAD
      * @param  array  $options  (path, query, fragment, pageName)
+=======
+     * @param  array  $options (path, query, fragment, pageName)
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return void
      */
     public function __construct($items, $total, $perPage, $currentPage = null, array $options = [])

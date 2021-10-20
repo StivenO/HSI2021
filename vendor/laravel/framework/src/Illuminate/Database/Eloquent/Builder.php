@@ -571,6 +571,7 @@ class Builder
     }
 
     /**
+<<<<<<< HEAD
      * Get a single column's value from the first result of the query or throw an exception.
      *
      * @param  string|\Illuminate\Database\Query\Expression  $column
@@ -584,6 +585,8 @@ class Builder
     }
 
     /**
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * Execute the query as a "select" statement.
      *
      * @param  array|string  $columns

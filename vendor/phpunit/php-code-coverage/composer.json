@@ -32,7 +32,11 @@
         "ext-dom": "*",
         "ext-libxml": "*",
         "ext-xmlwriter": "*",
+<<<<<<< HEAD
         "nikic/php-parser": "^4.12.0",
+=======
+        "nikic/php-parser": "^4.10.2",
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         "phpunit/php-file-iterator": "^3.0.3",
         "phpunit/php-text-template": "^2.0.2",
         "sebastian/code-unit-reverse-lookup": "^2.0.2",

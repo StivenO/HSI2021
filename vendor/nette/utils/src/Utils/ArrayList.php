@@ -14,7 +14,10 @@ use Nette;
 
 /**
  * Provides the base class for a generic list (items can be accessed by index).
+<<<<<<< HEAD
  * @template T
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
  */
 class ArrayList implements \ArrayAccess, \Countable, \IteratorAggregate
 {
@@ -25,6 +28,7 @@ class ArrayList implements \ArrayAccess, \Countable, \IteratorAggregate
 
 
 	/**
+<<<<<<< HEAD
 	 * Transforms array to ArrayList.
 	 * @param  array<T>  $array
 	 * @return static
@@ -43,6 +47,9 @@ class ArrayList implements \ArrayAccess, \Countable, \IteratorAggregate
 	/**
 	 * Returns an iterator over all items.
 	 * @return \ArrayIterator<int, T>
+=======
+	 * Returns an iterator over all items.
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 */
 	public function getIterator(): \ArrayIterator
 	{
@@ -62,7 +69,11 @@ class ArrayList implements \ArrayAccess, \Countable, \IteratorAggregate
 	/**
 	 * Replaces or appends a item.
 	 * @param  int|null  $index
+<<<<<<< HEAD
 	 * @param  T  $value
+=======
+	 * @param  mixed  $value
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 * @throws Nette\OutOfRangeException
 	 */
 	public function offsetSet($index, $value): void
@@ -82,10 +93,16 @@ class ArrayList implements \ArrayAccess, \Countable, \IteratorAggregate
 	/**
 	 * Returns a item.
 	 * @param  int  $index
+<<<<<<< HEAD
 	 * @return T
 	 * @throws Nette\OutOfRangeException
 	 */
 	#[\ReturnTypeWillChange]
+=======
+	 * @return mixed
+	 * @throws Nette\OutOfRangeException
+	 */
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	public function offsetGet($index)
 	{
 		if (!is_int($index) || $index < 0 || $index >= count($this->list)) {
@@ -121,7 +138,11 @@ class ArrayList implements \ArrayAccess, \Countable, \IteratorAggregate
 
 	/**
 	 * Prepends a item.
+<<<<<<< HEAD
 	 * @param  T  $value
+=======
+	 * @param  mixed  $value
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 */
 	public function prepend($value): void
 	{

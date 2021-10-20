@@ -285,11 +285,14 @@ class ServerRequest extends Request implements ServerRequestInterface
         return $new;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      *
      * @return array|object|null
      */
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function getParsedBody()
     {
         return $this->parsedBody;
@@ -308,11 +311,14 @@ class ServerRequest extends Request implements ServerRequestInterface
         return $this->attributes;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      *
      * @return mixed
      */
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function getAttribute($attribute, $default = null)
     {
         if (false === array_key_exists($attribute, $this->attributes)) {

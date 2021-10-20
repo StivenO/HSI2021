@@ -12,12 +12,15 @@ class RejectedPromise implements PromiseInterface
 {
     private $reason;
 
+<<<<<<< HEAD
     /** @var Promise|null */
     private $promise;
 
     /** @var callable|null */
     private $onRejected;
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function __construct($reason)
     {
         if (is_object($reason) && method_exists($reason, 'then')) {
@@ -38,6 +41,7 @@ class RejectedPromise implements PromiseInterface
             return $this;
         }
 
+<<<<<<< HEAD
         $this->onRejected = $onRejected;
 
         $queue = Utils::queue();
@@ -46,6 +50,23 @@ class RejectedPromise implements PromiseInterface
         $queue->add(static function () use ($p, $reason, $onRejected) {
             if (Is::pending($p)) {
                 self::callHandler($p, $reason, $onRejected);
+=======
+        $queue = Utils::queue();
+        $reason = $this->reason;
+        $p = new Promise([$queue, 'run']);
+        $queue->add(static function () use ($p, $reason, $onRejected) {
+            if (Is::pending($p)) {
+                try {
+                    // Return a resolved promise if onRejected does not throw.
+                    $p->resolve($onRejected($reason));
+                } catch (\Throwable $e) {
+                    // onRejected threw, so return a rejected promise.
+                    $p->reject($e);
+                } catch (\Exception $e) {
+                    // onRejected threw, so return a rejected promise.
+                    $p->reject($e);
+                }
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
             }
         });
 
@@ -63,11 +84,14 @@ class RejectedPromise implements PromiseInterface
             throw Create::exceptionFor($this->reason);
         }
 
+<<<<<<< HEAD
         // Don't run the queue to avoid deadlocks, instead directly reject the promise.
         if ($this->promise && Is::pending($this->promise)) {
             self::callHandler($this->promise, $this->reason, $this->onRejected);
         }
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         return null;
     }
 
@@ -92,6 +116,7 @@ class RejectedPromise implements PromiseInterface
     {
         // pass
     }
+<<<<<<< HEAD
 
     private static function callHandler(Promise $promise, $reason, callable $handler)
     {
@@ -103,4 +128,6 @@ class RejectedPromise implements PromiseInterface
             $promise->reject($e);
         }
     }
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 }

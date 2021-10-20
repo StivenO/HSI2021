@@ -189,7 +189,11 @@ class NameResolver extends NodeVisitorAbstract
             $node->type = $this->resolveType($node->type);
             return $node;
         }
+<<<<<<< HEAD
         if ($node instanceof Node\UnionType || $node instanceof Node\IntersectionType) {
+=======
+        if ($node instanceof Node\UnionType) {
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
             foreach ($node->types as &$type) {
                 $type = $this->resolveType($type);
             }

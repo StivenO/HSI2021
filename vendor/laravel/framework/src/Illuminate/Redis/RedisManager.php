@@ -7,7 +7,10 @@ use Illuminate\Contracts\Redis\Factory;
 use Illuminate\Redis\Connections\Connection;
 use Illuminate\Redis\Connectors\PhpRedisConnector;
 use Illuminate\Redis\Connectors\PredisConnector;
+<<<<<<< HEAD
 use Illuminate\Support\Arr;
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use Illuminate\Support\ConfigurationUrlParser;
 use InvalidArgumentException;
 
@@ -109,7 +112,11 @@ class RedisManager implements Factory
         if (isset($this->config[$name])) {
             return $this->connector()->connect(
                 $this->parseConnectionConfiguration($this->config[$name]),
+<<<<<<< HEAD
                 array_merge(Arr::except($options, 'parameters'), ['parameters' => Arr::get($options, 'parameters.'.$name, Arr::get($options, 'parameters', []))])
+=======
+                $options
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
             );
         }
 

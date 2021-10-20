@@ -226,6 +226,7 @@ final class Utils
             );
         }
     }
+<<<<<<< HEAD
 
     /**
      * Converts a string with a valid 'memory_limit' format, to bytes.
@@ -260,4 +261,6 @@ final class Utils
 
         return $val;
     }
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 }

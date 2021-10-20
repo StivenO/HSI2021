@@ -827,7 +827,11 @@ class Collection implements ArrayAccess, Enumerable
     /**
      * Push one or more items onto the end of the collection.
      *
+<<<<<<< HEAD
      * @param  mixed  $values
+=======
+     * @param  mixed  $values [optional]
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return $this
      */
     public function push(...$values)
@@ -1412,6 +1416,7 @@ class Collection implements ArrayAccess, Enumerable
     }
 
     /**
+<<<<<<< HEAD
      * Return only unique items from the collection array.
      *
      * @param  string|callable|null  $key
@@ -1434,6 +1439,8 @@ class Collection implements ArrayAccess, Enumerable
     }
 
     /**
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * Reset the keys on the underlying array.
      *
      * @return static

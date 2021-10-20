@@ -7,6 +7,12 @@
         networks:
             - sail
         healthcheck:
+<<<<<<< HEAD
             test: ["CMD", "wget", "--no-verbose", "--spider",  "http://localhost:7700/health"]
             retries: 3
             timeout: 5s
+=======
+          test: ["CMD", "wget", "--no-verbose", "--spider",  "http://localhost:7700/health"]
+          retries: 3
+          timeout: 5s
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418

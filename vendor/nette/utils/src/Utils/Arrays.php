@@ -22,11 +22,17 @@ class Arrays
 
 	/**
 	 * Returns item from array. If it does not exist, it throws an exception, unless a default value is set.
+<<<<<<< HEAD
 	 * @template T
 	 * @param  array<T>  $array
 	 * @param  array-key|array-key[]  $key
 	 * @param  ?T  $default
 	 * @return ?T
+=======
+	 * @param  string|int|array  $key one or more keys
+	 * @param  mixed  $default
+	 * @return mixed
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 * @throws Nette\InvalidArgumentException if item does not exist and default value is not provided
 	 */
 	public static function get(array $array, $key, $default = null)
@@ -47,10 +53,15 @@ class Arrays
 
 	/**
 	 * Returns reference to array item. If the index does not exist, new one is created with value null.
+<<<<<<< HEAD
 	 * @template T
 	 * @param  array<T>  $array
 	 * @param  array-key|array-key[]  $key
 	 * @return ?T
+=======
+	 * @param  string|int|array  $key one or more keys
+	 * @return mixed
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 * @throws Nette\InvalidArgumentException if traversed item is not an array
 	 */
 	public static function &getRef(array &$array, $key)
@@ -70,11 +81,14 @@ class Arrays
 	 * Recursively merges two fields. It is useful, for example, for merging tree structures. It behaves as
 	 * the + operator for array, ie. it adds a key/value pair from the second array to the first one and retains
 	 * the value from the first array in the case of a key collision.
+<<<<<<< HEAD
 	 * @template T1
 	 * @template T2
 	 * @param  array<T1>  $array1
 	 * @param  array<T2>  $array2
 	 * @return array<T1|T2>
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 */
 	public static function mergeTree(array $array1, array $array2): array
 	{
@@ -90,7 +104,11 @@ class Arrays
 
 	/**
 	 * Returns zero-indexed position of given array key. Returns null if key is not found.
+<<<<<<< HEAD
 	 * @param  array-key  $key
+=======
+	 * @param  string|int  $key
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 * @return int|null offset if it is found, null otherwise
 	 */
 	public static function getKeyOffset(array $array, $key): ?int
@@ -120,9 +138,13 @@ class Arrays
 
 	/**
 	 * Returns the first item from the array or null if array is empty.
+<<<<<<< HEAD
 	 * @template T
 	 * @param  array<T>  $array
 	 * @return ?T
+=======
+	 * @return mixed
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 */
 	public static function first(array $array)
 	{
@@ -132,9 +154,13 @@ class Arrays
 
 	/**
 	 * Returns the last item from the array or null if array is empty.
+<<<<<<< HEAD
 	 * @template T
 	 * @param  array<T>  $array
 	 * @return ?T
+=======
+	 * @return mixed
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 */
 	public static function last(array $array)
 	{
@@ -145,7 +171,11 @@ class Arrays
 	/**
 	 * Inserts the contents of the $inserted array into the $array immediately after the $key.
 	 * If $key is null (or does not exist), it is inserted at the beginning.
+<<<<<<< HEAD
 	 * @param  array-key|null  $key
+=======
+	 * @param  string|int|null  $key
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 */
 	public static function insertBefore(array &$array, $key, array $inserted): void
 	{
@@ -159,7 +189,11 @@ class Arrays
 	/**
 	 * Inserts the contents of the $inserted array into the $array before the $key.
 	 * If $key is null (or does not exist), it is inserted at the end.
+<<<<<<< HEAD
 	 * @param  array-key|null  $key
+=======
+	 * @param  string|int|null  $key
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 */
 	public static function insertAfter(array &$array, $key, array $inserted): void
 	{
@@ -174,8 +208,13 @@ class Arrays
 
 	/**
 	 * Renames key in array.
+<<<<<<< HEAD
 	 * @param  array-key  $oldKey
 	 * @param  array-key  $newKey
+=======
+	 * @param  string|int  $oldKey
+	 * @param  string|int  $newKey
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 */
 	public static function renameKey(array &$array, $oldKey, $newKey): bool
 	{
@@ -194,8 +233,12 @@ class Arrays
 
 	/**
 	 * Returns only those array items, which matches a regular expression $pattern.
+<<<<<<< HEAD
 	 * @param  string[]  $array
 	 * @return string[]
+=======
+	 * @throws Nette\RegexpException  on compilation or runtime error
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 */
 	public static function grep(array $array, string $pattern, int $flags = 0): array
 	{
@@ -300,11 +343,17 @@ class Arrays
 	/**
 	 * Returns and removes the value of an item from an array. If it does not exist, it throws an exception,
 	 * or returns $default, if provided.
+<<<<<<< HEAD
 	 * @template T
 	 * @param  array<T>  $array
 	 * @param  array-key  $key
 	 * @param  ?T  $default
 	 * @return ?T
+=======
+	 * @param  string|int  $key
+	 * @param  mixed  $default
+	 * @return mixed
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 * @throws Nette\InvalidArgumentException if item does not exist and default value is not provided
 	 */
 	public static function pick(array &$array, $key, $default = null)
@@ -397,9 +446,14 @@ class Arrays
 
 	/**
 	 * Copies the elements of the $array array to the $object object and then returns it.
+<<<<<<< HEAD
 	 * @template T of object
 	 * @param  T  $object
 	 * @return T
+=======
+	 * @param  object  $object
+	 * @return object
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 */
 	public static function toObject(iterable $array, $object)
 	{
@@ -413,7 +467,11 @@ class Arrays
 	/**
 	 * Converts value to array key.
 	 * @param  mixed  $value
+<<<<<<< HEAD
 	 * @return array-key
+=======
+	 * @return int|string
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 */
 	public static function toKey($value)
 	{
@@ -424,7 +482,10 @@ class Arrays
 	/**
 	 * Returns copy of the $array where every item is converted to string
 	 * and prefixed by $prefix and suffixed by $suffix.
+<<<<<<< HEAD
 	 * @param  string[]  $array
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 * @return string[]
 	 */
 	public static function wrap(array $array, string $prefix = '', string $suffix = ''): array

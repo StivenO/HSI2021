@@ -419,7 +419,11 @@ class MailFake implements Factory, Mailer, MailQueue
      * Infer mailable class using reflection if a typehinted closure is passed to assertion.
      *
      * @param  string|\Closure  $mailable
+<<<<<<< HEAD
      * @param  callable|null  $callback
+=======
+     * @param  callable|null $callback
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return array
      */
     protected function prepareMailableAndCallback($mailable, $callback)

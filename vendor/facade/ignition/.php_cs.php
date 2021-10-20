@@ -12,7 +12,11 @@ $finder = Symfony\Component\Finder\Finder::create()
 
 return (new PhpCsFixer\Config())
     ->setRules([
+<<<<<<< HEAD
         '@PSR12' => true,
+=======
+        '@PSR2' => true,
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         'array_syntax' => ['syntax' => 'short'],
         'ordered_imports' => ['sort_algorithm' => 'alpha'],
         'no_unused_imports' => true,
@@ -26,11 +30,14 @@ return (new PhpCsFixer\Config())
         ],
         'phpdoc_single_line_var_spacing' => true,
         'phpdoc_var_without_name' => true,
+<<<<<<< HEAD
         'class_attributes_separation' => [
             'elements' => [
                 'method' => 'one',
             ],
         ],
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         'method_argument_space' => [
             'on_multiline' => 'ensure_fully_multiline',
             'keep_multiple_spaces_after_comma' => true,

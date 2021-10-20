@@ -248,8 +248,13 @@ final class TestRunner extends BaseTestRunner
 
         unset($listener, $listenerNeeded);
 
+<<<<<<< HEAD
         if ($arguments['convertDeprecationsToExceptions']) {
             $result->convertDeprecationsToExceptions(true);
+=======
+        if (!$arguments['convertDeprecationsToExceptions']) {
+            $result->convertDeprecationsToExceptions(false);
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         }
 
         if (!$arguments['convertErrorsToExceptions']) {
@@ -1101,7 +1106,11 @@ final class TestRunner extends BaseTestRunner
         $arguments['cacheResult']                                     = $arguments['cacheResult'] ?? true;
         $arguments['colors']                                          = $arguments['colors'] ?? DefaultResultPrinter::COLOR_DEFAULT;
         $arguments['columns']                                         = $arguments['columns'] ?? 80;
+<<<<<<< HEAD
         $arguments['convertDeprecationsToExceptions']                 = $arguments['convertDeprecationsToExceptions'] ?? false;
+=======
+        $arguments['convertDeprecationsToExceptions']                 = $arguments['convertDeprecationsToExceptions'] ?? true;
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         $arguments['convertErrorsToExceptions']                       = $arguments['convertErrorsToExceptions'] ?? true;
         $arguments['convertNoticesToExceptions']                      = $arguments['convertNoticesToExceptions'] ?? true;
         $arguments['convertWarningsToExceptions']                     = $arguments['convertWarningsToExceptions'] ?? true;

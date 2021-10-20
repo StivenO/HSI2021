@@ -14,10 +14,14 @@ declare(strict_types=1);
 
 namespace Ramsey\Uuid\Fields;
 
+<<<<<<< HEAD
 use ValueError;
 
 use function base64_decode;
 use function sprintf;
+=======
+use function base64_decode;
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use function strlen;
 
 /**
@@ -46,6 +50,7 @@ trait SerializableFieldsTrait
     }
 
     /**
+<<<<<<< HEAD
      * @return array{bytes: string}
      */
     public function __serialize(): array
@@ -54,6 +59,8 @@ trait SerializableFieldsTrait
     }
 
     /**
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * Constructs the object from a serialized string representation
      *
      * @param string $serialized The serialized string representation of the object
@@ -69,6 +76,7 @@ trait SerializableFieldsTrait
             $this->__construct(base64_decode($serialized));
         }
     }
+<<<<<<< HEAD
 
     /**
      * @param array{bytes: string} $data
@@ -83,4 +91,6 @@ trait SerializableFieldsTrait
 
         $this->unserialize($data['bytes']);
     }
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 }

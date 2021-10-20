@@ -73,6 +73,7 @@ class MethodProphecy
             $this->withArguments($arguments);
         }
 
+<<<<<<< HEAD
         $hasTentativeReturnType = method_exists($reflectedMethod, 'hasTentativeReturnType')
             && $reflectedMethod->hasTentativeReturnType();
 
@@ -83,6 +84,11 @@ class MethodProphecy
             else {
                 $reflectionType = $reflectedMethod->getReturnType();
             }
+=======
+        if (true === $reflectedMethod->hasReturnType()) {
+
+            $reflectionType = $reflectedMethod->getReturnType();
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 
             if ($reflectionType instanceof ReflectionNamedType) {
                 $types = [$reflectionType];

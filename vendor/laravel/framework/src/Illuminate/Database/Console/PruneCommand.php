@@ -19,8 +19,12 @@ class PruneCommand extends Command
      */
     protected $signature = 'model:prune
                                 {--model=* : Class names of the models to be pruned}
+<<<<<<< HEAD
                                 {--chunk=1000 : The number of models to retrieve per chunk of models to be deleted}
                                 {--pretend : Display the number of prunable records found instead of deleting them}';
+=======
+                                {--chunk=1000 : The number of models to retrieve per chunk of models to be deleted}';
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 
     /**
      * The console command description.
@@ -45,6 +49,7 @@ class PruneCommand extends Command
             return;
         }
 
+<<<<<<< HEAD
         if ($this->option('pretend')) {
             $models->each(function ($model) {
                 $this->pretendToPrune($model);
@@ -53,6 +58,8 @@ class PruneCommand extends Command
             return;
         }
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         $events->listen(ModelsPruned::class, function ($event) {
             $this->info("{$event->count} [{$event->model}] records have been pruned.");
         });
@@ -87,7 +94,11 @@ class PruneCommand extends Command
             return collect($models);
         }
 
+<<<<<<< HEAD
         return collect((new Finder)->in(app_path('Models'))->files()->name('*.php'))
+=======
+        return collect((new Finder)->in(app_path('Models'))->files())
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
             ->map(function ($model) {
                 $namespace = $this->laravel->getNamespace();
 
@@ -113,6 +124,7 @@ class PruneCommand extends Command
 
         return in_array(Prunable::class, $uses) || in_array(MassPrunable::class, $uses);
     }
+<<<<<<< HEAD
 
     /**
      * Display how many models will be pruned.
@@ -135,4 +147,6 @@ class PruneCommand extends Command
             $this->info("{$count} [{$model}] records will be pruned.");
         }
     }
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 }

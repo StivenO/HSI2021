@@ -824,11 +824,15 @@ abstract class PrettyPrinterAbstract
                     return null;
                 }
 
+<<<<<<< HEAD
                 // We go multiline if the original code was multiline,
                 // or if it's an array item with a comment above it.
                 if ($insertStr === ', ' &&
                     ($this->isMultiline($origNodes) || $arrItem->getComments())
                 ) {
+=======
+                if ($insertStr === ', ' && $this->isMultiline($origNodes)) {
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
                     $insertStr = ',';
                     $insertNewline = true;
                 }
@@ -846,11 +850,19 @@ abstract class PrettyPrinterAbstract
                 $this->setIndentLevel($lastElemIndentLevel);
 
                 if ($insertNewline) {
+<<<<<<< HEAD
                     $result .= $insertStr . $this->nl;
                     $comments = $arrItem->getComments();
                     if ($comments) {
                         $result .= $this->pComments($comments) . $this->nl;
                     }
+=======
+                    $comments = $arrItem->getComments();
+                    if ($comments) {
+                        $result .= $this->nl . $this->pComments($comments);
+                    }
+                    $result .= $insertStr . $this->nl;
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
                 } else {
                     $result .= $insertStr;
                 }
@@ -1347,7 +1359,10 @@ abstract class PrettyPrinterAbstract
             //'Scalar_Encapsed->parts' => '',
             'Stmt_Catch->types' => '|',
             'UnionType->types' => '|',
+<<<<<<< HEAD
             'IntersectionType->types' => '&',
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
             'Stmt_If->elseifs' => ' ',
             'Stmt_TryCatch->catches' => ' ',
 

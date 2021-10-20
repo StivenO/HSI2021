@@ -530,6 +530,7 @@ non_empty_parameter_list:
     | non_empty_parameter_list ',' parameter                { push($1, $3); }
 ;
 
+<<<<<<< HEAD
 optional_property_modifiers:
       /* empty */               { $$ = 0; }
     | optional_property_modifiers property_modifier
@@ -538,12 +539,18 @@ optional_property_modifiers:
 
 property_modifier:
       T_PUBLIC                  { $$ = Stmt\Class_::MODIFIER_PUBLIC; }
+=======
+optional_visibility_modifier:
+      /* empty */               { $$ = 0; }
+    | T_PUBLIC                  { $$ = Stmt\Class_::MODIFIER_PUBLIC; }
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     | T_PROTECTED               { $$ = Stmt\Class_::MODIFIER_PROTECTED; }
     | T_PRIVATE                 { $$ = Stmt\Class_::MODIFIER_PRIVATE; }
     | T_READONLY                { $$ = Stmt\Class_::MODIFIER_READONLY; }
 ;
 
 parameter:
+<<<<<<< HEAD
       optional_attributes optional_property_modifiers optional_type_without_static
       optional_arg_ref optional_ellipsis plain_variable
           { $$ = new Node\Param($6, null, $3, $4, $5, attributes(), $2, $1);
@@ -553,6 +560,17 @@ parameter:
           { $$ = new Node\Param($6, $8, $3, $4, $5, attributes(), $2, $1);
             $this->checkParam($$); }
     | optional_attributes optional_property_modifiers optional_type_without_static
+=======
+      optional_attributes optional_visibility_modifier optional_type_without_static
+      optional_arg_ref optional_ellipsis plain_variable
+          { $$ = new Node\Param($6, null, $3, $4, $5, attributes(), $2, $1);
+            $this->checkParam($$); }
+    | optional_attributes optional_visibility_modifier optional_type_without_static
+      optional_arg_ref optional_ellipsis plain_variable '=' expr
+          { $$ = new Node\Param($6, $8, $3, $4, $5, attributes(), $2, $1);
+            $this->checkParam($$); }
+    | optional_attributes optional_visibility_modifier optional_type_without_static
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
       optional_arg_ref optional_ellipsis error
           { $$ = new Node\Param(Expr\Error[], null, $3, $4, $5, attributes(), $2, $1); }
 ;
@@ -561,7 +579,10 @@ type_expr:
       type                                                  { $$ = $1; }
     | '?' type                                              { $$ = Node\NullableType[$2]; }
     | union_type                                            { $$ = Node\UnionType[$1]; }
+<<<<<<< HEAD
     | intersection_type                                     { $$ = Node\IntersectionType[$1]; }
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 ;
 
 type:
@@ -585,6 +606,7 @@ union_type_without_static:
     | union_type_without_static '|' type_without_static     { push($1, $3); }
 ;
 
+<<<<<<< HEAD
 intersection_type:
       type T_AMPERSAND_NOT_FOLLOWED_BY_VAR_OR_VARARG type   { init($1, $3); }
     | intersection_type T_AMPERSAND_NOT_FOLLOWED_BY_VAR_OR_VARARG type
@@ -598,11 +620,16 @@ intersection_type_without_static:
           { push($1, $3); }
 ;
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 type_expr_without_static:
       type_without_static                                   { $$ = $1; }
     | '?' type_without_static                               { $$ = Node\NullableType[$2]; }
     | union_type_without_static                             { $$ = Node\UnionType[$1]; }
+<<<<<<< HEAD
     | intersection_type_without_static                      { $$ = Node\IntersectionType[$1]; }
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 ;
 
 optional_type_without_static:
@@ -619,11 +646,14 @@ optional_return_type:
 argument_list:
       '(' ')'                                               { $$ = array(); }
     | '(' non_empty_argument_list optional_comma ')'        { $$ = $2; }
+<<<<<<< HEAD
     | '(' variadic_placeholder ')'                          { init($2); }
 ;
 
 variadic_placeholder:
       T_ELLIPSIS                                            { $$ = Node\VariadicPlaceholder[]; }
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 ;
 
 non_empty_argument_list:

@@ -25,12 +25,17 @@ use Monolog\Utils;
  */
 class StreamHandler extends AbstractProcessingHandler
 {
+<<<<<<< HEAD
     /** @const int */
     protected const MAX_CHUNK_SIZE = 2147483647;
     /** @const int 10MB */
     protected const DEFAULT_CHUNK_SIZE = 10 * 1024 * 1024;
     /** @var int */
     protected $streamChunkSize;
+=======
+    protected const MAX_CHUNK_SIZE = 2147483647;
+
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     /** @var resource|null */
     protected $stream;
     /** @var ?string */
@@ -54,6 +59,7 @@ class StreamHandler extends AbstractProcessingHandler
     public function __construct($stream, $level = Logger::DEBUG, bool $bubble = true, ?int $filePermission = null, bool $useLocking = false)
     {
         parent::__construct($level, $bubble);
+<<<<<<< HEAD
 
         if (($phpMemoryLimit = Utils::expandIniShorthandBytes(ini_get('memory_limit'))) !== false) {
             if ($phpMemoryLimit > 0) {
@@ -72,6 +78,11 @@ class StreamHandler extends AbstractProcessingHandler
             $this->stream = $stream;
 
             stream_set_chunk_size($this->stream, $this->streamChunkSize);
+=======
+        if (is_resource($stream)) {
+            $this->stream = $stream;
+            stream_set_chunk_size($this->stream, self::MAX_CHUNK_SIZE);
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         } elseif (is_string($stream)) {
             $this->url = Utils::canonicalizePath($stream);
         } else {
@@ -115,6 +126,7 @@ class StreamHandler extends AbstractProcessingHandler
     }
 
     /**
+<<<<<<< HEAD
      * @return int
      */
     public function getStreamChunkSize(): int
@@ -123,6 +135,8 @@ class StreamHandler extends AbstractProcessingHandler
     }
 
     /**
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * {@inheritDoc}
      */
     protected function write(array $record): void
@@ -145,7 +159,11 @@ class StreamHandler extends AbstractProcessingHandler
 
                 throw new \UnexpectedValueException(sprintf('The stream or file "%s" could not be opened in append mode: '.$this->errorMessage, $url));
             }
+<<<<<<< HEAD
             stream_set_chunk_size($stream, $this->streamChunkSize);
+=======
+            stream_set_chunk_size($stream, self::MAX_CHUNK_SIZE);
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
             $this->stream = $stream;
         }
 

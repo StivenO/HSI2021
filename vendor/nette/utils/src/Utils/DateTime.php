@@ -97,7 +97,10 @@ class DateTime extends \DateTime implements \JsonSerializable
 	 * @param  string|\DateTimeZone  $timezone (default timezone is used if null is passed)
 	 * @return static|false
 	 */
+<<<<<<< HEAD
 	#[\ReturnTypeWillChange]
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	public static function createFromFormat($format, $time, $timezone = null)
 	{
 		if ($timezone === null) {

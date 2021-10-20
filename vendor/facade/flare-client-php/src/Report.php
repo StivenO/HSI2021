@@ -15,8 +15,12 @@ use Throwable;
 
 class Report
 {
+<<<<<<< HEAD
     use UsesTime;
     use HasContext;
+=======
+    use UsesTime, HasContext;
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 
     /** @var \Facade\FlareClient\Stacktrace\Stacktrace */
     private $stacktrace;
@@ -66,12 +70,15 @@ class Report
     /** @var string */
     private $groupBy ;
 
+<<<<<<< HEAD
     /** @var string */
     private $trackingUuid;
 
     /** @var null string|null */
     public static $fakeTrackingUuid = null;
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public static function createForThrowable(
         Throwable $throwable,
         ContextInterface $context,
@@ -113,6 +120,7 @@ class Report
             ->openFrameIndex($stacktrace->firstApplicationFrameIndex());
     }
 
+<<<<<<< HEAD
     public function __construct()
     {
         $this->trackingUuid = self::$fakeTrackingUuid ?? $this->generateUuid();
@@ -123,6 +131,8 @@ class Report
         return $this->trackingUuid;
     }
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function exceptionClass(string $exceptionClass)
     {
         $this->exceptionClass = $exceptionClass;
@@ -311,6 +321,7 @@ class Report
             'open_frame_index' => $this->openFrameIndex,
             'application_path' => $this->applicationPath,
             'application_version' => $this->applicationVersion,
+<<<<<<< HEAD
             'tracking_uuid' => $this->trackingUuid,
         ];
     }
@@ -332,4 +343,8 @@ class Report
         // Output the 36 character UUID.
         return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
     }
+=======
+        ];
+    }
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 }

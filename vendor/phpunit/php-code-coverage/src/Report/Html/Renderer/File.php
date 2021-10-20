@@ -1136,6 +1136,7 @@ final class File extends Renderer
             self::$keywordTokens[constant('T_MATCH')] = true;
         }
 
+<<<<<<< HEAD
         if (defined('T_ENUM')) {
             self::$keywordTokens[constant('T_ENUM')] = true;
         }
@@ -1144,6 +1145,8 @@ final class File extends Renderer
             self::$keywordTokens[constant('T_READONLY')] = true;
         }
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         return self::$keywordTokens;
     }
 }

@@ -17,7 +17,11 @@ class CallQueuedClosure implements ShouldQueue
     /**
      * The serializable Closure instance.
      *
+<<<<<<< HEAD
      * @var \Laravel\SerializableClosure\SerializableClosure
+=======
+     * @var \Illuminate\Queue\SerializableClosure
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public $closure;
 
@@ -38,10 +42,17 @@ class CallQueuedClosure implements ShouldQueue
     /**
      * Create a new job instance.
      *
+<<<<<<< HEAD
      * @param  \Laravel\SerializableClosure\SerializableClosure  $closure
      * @return void
      */
     public function __construct($closure)
+=======
+     * @param  \Illuminate\Queue\SerializableClosure  $closure
+     * @return void
+     */
+    public function __construct(SerializableClosure $closure)
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         $this->closure = $closure;
     }
@@ -54,7 +65,11 @@ class CallQueuedClosure implements ShouldQueue
      */
     public static function create(Closure $job)
     {
+<<<<<<< HEAD
         return new self(SerializableClosureFactory::make($job));
+=======
+        return new self(new SerializableClosure($job));
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     }
 
     /**
@@ -77,7 +92,11 @@ class CallQueuedClosure implements ShouldQueue
     public function onFailure($callback)
     {
         $this->failureCallbacks[] = $callback instanceof Closure
+<<<<<<< HEAD
                         ? SerializableClosureFactory::make($callback)
+=======
+                        ? new SerializableClosure($callback)
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
                         : $callback;
 
         return $this;
@@ -92,7 +111,11 @@ class CallQueuedClosure implements ShouldQueue
     public function failed($e)
     {
         foreach ($this->failureCallbacks as $callback) {
+<<<<<<< HEAD
             $callback($e);
+=======
+            call_user_func($callback instanceof SerializableClosure ? $callback->getClosure() : $callback, $e);
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         }
     }
 

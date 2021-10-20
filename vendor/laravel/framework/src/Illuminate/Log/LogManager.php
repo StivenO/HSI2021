@@ -95,7 +95,11 @@ class LogManager implements LoggerInterface
      */
     public function driver($driver = null)
     {
+<<<<<<< HEAD
         return $this->get($this->parseDriver($driver));
+=======
+        return $this->get($driver ?? $this->getDefaultDriver());
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     }
 
     /**
@@ -450,7 +454,11 @@ class LogManager implements LoggerInterface
     /**
      * Get the default log driver name.
      *
+<<<<<<< HEAD
      * @return string|null
+=======
+     * @return string
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public function getDefaultDriver()
     {
@@ -490,7 +498,11 @@ class LogManager implements LoggerInterface
      */
     public function forgetChannel($driver = null)
     {
+<<<<<<< HEAD
         $driver = $this->parseDriver($driver);
+=======
+        $driver = $driver ?? $this->getDefaultDriver();
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 
         if (isset($this->channels[$driver])) {
             unset($this->channels[$driver]);
@@ -498,6 +510,7 @@ class LogManager implements LoggerInterface
     }
 
     /**
+<<<<<<< HEAD
      * Parse the driver name.
      *
      * @param  string|null  $driver
@@ -515,10 +528,16 @@ class LogManager implements LoggerInterface
     }
 
     /**
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * System is unusable.
      *
      * @param  string  $message
      * @param  array  $context
+<<<<<<< HEAD
+=======
+     *
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return void
      */
     public function emergency($message, array $context = [])
@@ -534,6 +553,10 @@ class LogManager implements LoggerInterface
      *
      * @param  string  $message
      * @param  array  $context
+<<<<<<< HEAD
+=======
+     *
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return void
      */
     public function alert($message, array $context = [])
@@ -548,6 +571,10 @@ class LogManager implements LoggerInterface
      *
      * @param  string  $message
      * @param  array  $context
+<<<<<<< HEAD
+=======
+     *
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return void
      */
     public function critical($message, array $context = [])
@@ -561,6 +588,10 @@ class LogManager implements LoggerInterface
      *
      * @param  string  $message
      * @param  array  $context
+<<<<<<< HEAD
+=======
+     *
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return void
      */
     public function error($message, array $context = [])
@@ -576,6 +607,10 @@ class LogManager implements LoggerInterface
      *
      * @param  string  $message
      * @param  array  $context
+<<<<<<< HEAD
+=======
+     *
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return void
      */
     public function warning($message, array $context = [])
@@ -588,6 +623,10 @@ class LogManager implements LoggerInterface
      *
      * @param  string  $message
      * @param  array  $context
+<<<<<<< HEAD
+=======
+     *
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return void
      */
     public function notice($message, array $context = [])
@@ -602,6 +641,10 @@ class LogManager implements LoggerInterface
      *
      * @param  string  $message
      * @param  array  $context
+<<<<<<< HEAD
+=======
+     *
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return void
      */
     public function info($message, array $context = [])
@@ -614,6 +657,10 @@ class LogManager implements LoggerInterface
      *
      * @param  string  $message
      * @param  array  $context
+<<<<<<< HEAD
+=======
+     *
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return void
      */
     public function debug($message, array $context = [])
@@ -627,6 +674,10 @@ class LogManager implements LoggerInterface
      * @param  mixed  $level
      * @param  string  $message
      * @param  array  $context
+<<<<<<< HEAD
+=======
+     *
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return void
      */
     public function log($level, $message, array $context = [])

@@ -10,8 +10,11 @@ class TimestampType extends Type
 {
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public function getSQLDeclaration(array $fieldDeclaration, AbstractPlatform $platform)
     {
@@ -99,8 +102,11 @@ class TimestampType extends Type
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      *
      * @return string
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public function getName()
     {

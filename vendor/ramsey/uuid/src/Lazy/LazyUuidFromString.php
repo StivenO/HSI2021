@@ -24,12 +24,18 @@ use Ramsey\Uuid\Type\Hexadecimal;
 use Ramsey\Uuid\Type\Integer as IntegerObject;
 use Ramsey\Uuid\UuidFactory;
 use Ramsey\Uuid\UuidInterface;
+<<<<<<< HEAD
 use ValueError;
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 
 use function assert;
 use function bin2hex;
 use function hex2bin;
+<<<<<<< HEAD
 use function sprintf;
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use function str_replace;
 use function substr;
 
@@ -93,6 +99,7 @@ final class LazyUuidFromString implements UuidInterface
     }
 
     /**
+<<<<<<< HEAD
      * @return array{string: string}
      *
      * @psalm-return array{string: non-empty-string}
@@ -103,6 +110,8 @@ final class LazyUuidFromString implements UuidInterface
     }
 
     /**
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * {@inheritDoc}
      *
      * @param string $serialized
@@ -114,6 +123,7 @@ final class LazyUuidFromString implements UuidInterface
         $this->uuid = $serialized;
     }
 
+<<<<<<< HEAD
     /**
      * @param array{string: string} $data
      *
@@ -130,6 +140,8 @@ final class LazyUuidFromString implements UuidInterface
         $this->unserialize($data['string']);
     }
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     /** @psalm-suppress DeprecatedMethod */
     public function getNumberConverter(): NumberConverterInterface
     {

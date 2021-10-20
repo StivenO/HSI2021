@@ -43,7 +43,11 @@ class RouteAction
             $action['uses'] = static::findCallable($action);
         }
 
+<<<<<<< HEAD
         if (! static::containsSerializedClosure($action) && is_string($action['uses']) && ! Str::contains($action['uses'], '@')) {
+=======
+        if (is_string($action['uses']) && ! Str::contains($action['uses'], '@')) {
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
             $action['uses'] = static::makeInvokable($action['uses']);
         }
 
@@ -103,9 +107,14 @@ class RouteAction
      */
     public static function containsSerializedClosure(array $action)
     {
+<<<<<<< HEAD
         return is_string($action['uses']) && Str::startsWith($action['uses'], [
             'C:32:"Opis\\Closure\\SerializableClosure',
             'O:47:"Laravel\\SerializableClosure\\SerializableClosure',
         ]) !== false;
+=======
+        return is_string($action['uses']) &&
+               Str::startsWith($action['uses'], 'C:32:"Opis\\Closure\\SerializableClosure') !== false;
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     }
 }

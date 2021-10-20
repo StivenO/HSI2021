@@ -30,6 +30,7 @@ class Wormhole
      * @param  callable|null  $callback
      * @return mixed
      */
+<<<<<<< HEAD
     public function millisecond($callback = null)
     {
         return $this->milliseconds($callback);
@@ -41,6 +42,8 @@ class Wormhole
      * @param  callable|null  $callback
      * @return mixed
      */
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function milliseconds($callback = null)
     {
         Carbon::setTestNow(Carbon::now()->addMilliseconds($this->value));
@@ -54,6 +57,7 @@ class Wormhole
      * @param  callable|null  $callback
      * @return mixed
      */
+<<<<<<< HEAD
     public function second($callback = null)
     {
         return $this->seconds($callback);
@@ -65,6 +69,8 @@ class Wormhole
      * @param  callable|null  $callback
      * @return mixed
      */
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function seconds($callback = null)
     {
         Carbon::setTestNow(Carbon::now()->addSeconds($this->value));
@@ -78,6 +84,7 @@ class Wormhole
      * @param  callable|null  $callback
      * @return mixed
      */
+<<<<<<< HEAD
     public function minute($callback = null)
     {
         return $this->minutes($callback);
@@ -89,6 +96,8 @@ class Wormhole
      * @param  callable|null  $callback
      * @return mixed
      */
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function minutes($callback = null)
     {
         Carbon::setTestNow(Carbon::now()->addMinutes($this->value));
@@ -102,6 +111,7 @@ class Wormhole
      * @param  callable|null  $callback
      * @return mixed
      */
+<<<<<<< HEAD
     public function hour($callback = null)
     {
         return $this->hours($callback);
@@ -113,6 +123,8 @@ class Wormhole
      * @param  callable|null  $callback
      * @return mixed
      */
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function hours($callback = null)
     {
         Carbon::setTestNow(Carbon::now()->addHours($this->value));
@@ -126,6 +138,7 @@ class Wormhole
      * @param  callable|null  $callback
      * @return mixed
      */
+<<<<<<< HEAD
     public function day($callback = null)
     {
         return $this->days($callback);
@@ -137,6 +150,8 @@ class Wormhole
      * @param  callable|null  $callback
      * @return mixed
      */
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function days($callback = null)
     {
         Carbon::setTestNow(Carbon::now()->addDays($this->value));
@@ -150,6 +165,7 @@ class Wormhole
      * @param  callable|null  $callback
      * @return mixed
      */
+<<<<<<< HEAD
     public function week($callback = null)
     {
         return $this->weeks($callback);
@@ -161,6 +177,8 @@ class Wormhole
      * @param  callable|null  $callback
      * @return mixed
      */
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function weeks($callback = null)
     {
         Carbon::setTestNow(Carbon::now()->addWeeks($this->value));
@@ -174,6 +192,7 @@ class Wormhole
      * @param  callable|null  $callback
      * @return mixed
      */
+<<<<<<< HEAD
     public function month($callback = null)
     {
         return $this->months($callback);
@@ -185,6 +204,8 @@ class Wormhole
      * @param  callable|null  $callback
      * @return mixed
      */
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function months($callback = null)
     {
         Carbon::setTestNow(Carbon::now()->addMonths($this->value));
@@ -198,6 +219,7 @@ class Wormhole
      * @param  callable|null  $callback
      * @return mixed
      */
+<<<<<<< HEAD
     public function year($callback = null)
     {
         return $this->years($callback);
@@ -209,6 +231,8 @@ class Wormhole
      * @param  callable|null  $callback
      * @return mixed
      */
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function years($callback = null)
     {
         Carbon::setTestNow(Carbon::now()->addYears($this->value));

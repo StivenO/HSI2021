@@ -36,11 +36,17 @@ class TestMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
+<<<<<<< HEAD
         $suffix = $this->option('unit') ? '.unit.stub' : '.stub';
 
         return $this->option('pest')
             ? $this->resolveStubPath('/stubs/pest'.$suffix)
             : $this->resolveStubPath('/stubs/test'.$suffix);
+=======
+        return $this->option('unit')
+                    ? $this->resolveStubPath('/stubs/test.unit.stub')
+                    : $this->resolveStubPath('/stubs/test.stub');
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     }
 
     /**
@@ -103,7 +109,10 @@ class TestMakeCommand extends GeneratorCommand
     {
         return [
             ['unit', 'u', InputOption::VALUE_NONE, 'Create a unit test.'],
+<<<<<<< HEAD
             ['pest', 'p', InputOption::VALUE_NONE, 'Create a Pest test.'],
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         ];
     }
 }

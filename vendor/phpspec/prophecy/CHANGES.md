@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1.14.0 / 2021/09/16
 ===================
 
@@ -6,6 +7,8 @@
 * [added] Support for the 'never' return type [@ciaranmcnulty]
 * [fixed] Better error message when doubling intersection return types [@ciaranmcnulty]
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 1.13.0 / 2021/03/17
 ===================
 

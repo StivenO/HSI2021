@@ -407,7 +407,11 @@ abstract class Relation
     /**
      * Define the morph map for polymorphic relations and require all morphed models to be explicitly mapped.
      *
+<<<<<<< HEAD
      * @param  array  $map
+=======
+     * @param  array|null  $map
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @param  bool  $merge
      * @return array
      */
@@ -478,7 +482,17 @@ abstract class Relation
             return $this->macroCall($method, $parameters);
         }
 
+<<<<<<< HEAD
         return $this->forwardDecoratedCallTo($this->query, $method, $parameters);
+=======
+        $result = $this->forwardCallTo($this->query, $method, $parameters);
+
+        if ($result === $this->query) {
+            return $this;
+        }
+
+        return $result;
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     }
 
     /**

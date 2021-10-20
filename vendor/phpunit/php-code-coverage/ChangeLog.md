@@ -2,12 +2,15 @@
 
 All notable changes are documented in this file using the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+<<<<<<< HEAD
 ## [9.2.7] - 2021-09-17
 
 ### Fixed
 
 * [#860](https://github.com/sebastianbergmann/php-code-coverage/pull/860): Empty value for `XDEBUG_MODE` environment variable is not handled correctly
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 ## [9.2.6] - 2021-03-28
 
 ### Fixed
@@ -220,6 +223,7 @@ All notable changes are documented in this file using the [Keep a CHANGELOG](htt
 
 * This component is no longer supported on PHP 7.2
 
+<<<<<<< HEAD
 ## [7.0.15] - 2021-07-26
 
 ### Changed
@@ -250,6 +254,8 @@ All notable changes are documented in this file using the [Keep a CHANGELOG](htt
 
 * Support for Xdebug 3
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 ## [7.0.10] - 2019-11-20
 
 ### Fixed
@@ -329,7 +335,41 @@ All notable changes are documented in this file using the [Keep a CHANGELOG](htt
 
 * This component is no longer supported on PHP 7.1
 
+<<<<<<< HEAD
 [9.2.7]: https://github.com/sebastianbergmann/php-code-coverage/compare/9.2.6...9.2.7
+=======
+## [6.1.4] - 2018-10-31
+
+### Fixed
+
+* [#650](https://github.com/sebastianbergmann/php-code-coverage/issues/650): Wasted screen space in HTML code coverage report
+
+## [6.1.3] - 2018-10-23
+
+### Changed
+
+* Use `^3.1` of `sebastian/environment` again due to [regression](https://github.com/sebastianbergmann/environment/issues/31)
+
+## [6.1.2] - 2018-10-23
+
+### Fixed
+
+* [#645](https://github.com/sebastianbergmann/php-code-coverage/pull/645): Crash that can occur when php-token-stream parses invalid files
+
+## [6.1.1] - 2018-10-18
+
+### Changed
+
+* This component now allows `^4` of `sebastian/environment`
+
+## [6.1.0] - 2018-10-16
+
+### Changed
+
+* Class names are now abbreviated (unqualified name shown, fully qualified name shown on hover) in the file view of the HTML report
+* Update HTML report to Bootstrap 4
+
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 [9.2.6]: https://github.com/sebastianbergmann/php-code-coverage/compare/9.2.5...9.2.6
 [9.2.5]: https://github.com/sebastianbergmann/php-code-coverage/compare/9.2.4...9.2.5
 [9.2.4]: https://github.com/sebastianbergmann/php-code-coverage/compare/9.2.3...9.2.4
@@ -353,11 +393,14 @@ All notable changes are documented in this file using the [Keep a CHANGELOG](htt
 [8.0.2]: https://github.com/sebastianbergmann/php-code-coverage/compare/8.0.1...8.0.2
 [8.0.1]: https://github.com/sebastianbergmann/php-code-coverage/compare/8.0.0...8.0.1
 [8.0.0]: https://github.com/sebastianbergmann/php-code-coverage/compare/7.0.10...8.0.0
+<<<<<<< HEAD
 [7.0.15]: https://github.com/sebastianbergmann/php-code-coverage/compare/7.0.14...7.0.15
 [7.0.14]: https://github.com/sebastianbergmann/php-code-coverage/compare/7.0.13...7.0.14
 [7.0.13]: https://github.com/sebastianbergmann/php-code-coverage/compare/7.0.12...7.0.13
 [7.0.12]: https://github.com/sebastianbergmann/php-code-coverage/compare/7.0.11...7.0.12
 [7.0.11]: https://github.com/sebastianbergmann/php-code-coverage/compare/7.0.10...7.0.11
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 [7.0.10]: https://github.com/sebastianbergmann/php-code-coverage/compare/7.0.9...7.0.10
 [7.0.9]: https://github.com/sebastianbergmann/php-code-coverage/compare/7.0.8...7.0.9
 [7.0.8]: https://github.com/sebastianbergmann/php-code-coverage/compare/7.0.7...7.0.8
@@ -369,3 +412,12 @@ All notable changes are documented in this file using the [Keep a CHANGELOG](htt
 [7.0.2]: https://github.com/sebastianbergmann/php-code-coverage/compare/7.0.1...7.0.2
 [7.0.1]: https://github.com/sebastianbergmann/php-code-coverage/compare/7.0.0...7.0.1
 [7.0.0]: https://github.com/sebastianbergmann/php-code-coverage/compare/6.1.4...7.0.0
+<<<<<<< HEAD
+=======
+[6.1.4]: https://github.com/sebastianbergmann/php-code-coverage/compare/6.1.3...6.1.4
+[6.1.3]: https://github.com/sebastianbergmann/php-code-coverage/compare/6.1.2...6.1.3
+[6.1.2]: https://github.com/sebastianbergmann/php-code-coverage/compare/6.1.1...6.1.2
+[6.1.1]: https://github.com/sebastianbergmann/php-code-coverage/compare/6.1.0...6.1.1
+[6.1.0]: https://github.com/sebastianbergmann/php-code-coverage/compare/6.0...6.1.0
+
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418

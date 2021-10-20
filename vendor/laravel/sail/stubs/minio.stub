@@ -12,6 +12,12 @@
             - sail
         command: minio server /data/minio --console-address ":8900"
         healthcheck:
+<<<<<<< HEAD
             test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
             retries: 3
             timeout: 5s
+=======
+          test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+          retries: 3
+          timeout: 5s
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418

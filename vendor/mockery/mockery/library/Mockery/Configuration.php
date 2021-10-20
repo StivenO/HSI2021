@@ -75,6 +75,7 @@ class Configuration
     protected $_objectFormatters = array();
 
     /**
+<<<<<<< HEAD
      * Default argument matchers
      *
      * @var array
@@ -82,6 +83,8 @@ class Configuration
     protected $_defaultMatchers = array();
 
     /**
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * Set boolean to allow/prevent mocking of non-existent methods
      *
      * @param bool $flag
@@ -246,6 +249,7 @@ class Configuration
         }
         return $defaultFormatter;
     }
+<<<<<<< HEAD
 
     /**
      * @param string $class
@@ -280,4 +284,6 @@ class Configuration
         }
         return null;
     }
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 }

@@ -6,7 +6,11 @@ use PhpParser\NodeAbstract;
 
 class Param extends NodeAbstract
 {
+<<<<<<< HEAD
     /** @var null|Identifier|Name|ComplexType Type declaration */
+=======
+    /** @var null|Identifier|Name|NullableType|UnionType Type declaration */
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public $type;
     /** @var bool Whether parameter is passed by reference */
     public $byRef;
@@ -24,6 +28,7 @@ class Param extends NodeAbstract
     /**
      * Constructs a parameter node.
      *
+<<<<<<< HEAD
      * @param Expr\Variable|Expr\Error                $var        Parameter variable
      * @param null|Expr                               $default    Default value
      * @param null|string|Identifier|Name|ComplexType $type       Type declaration
@@ -32,6 +37,16 @@ class Param extends NodeAbstract
      * @param array                                   $attributes Additional attributes
      * @param int                                     $flags      Optional visibility flags
      * @param AttributeGroup[]                        $attrGroups PHP attribute groups
+=======
+     * @param Expr\Variable|Expr\Error                           $var        Parameter variable
+     * @param null|Expr                                          $default    Default value
+     * @param null|string|Identifier|Name|NullableType|UnionType $type       Type declaration
+     * @param bool                                               $byRef      Whether is passed by reference
+     * @param bool                                               $variadic   Whether this is a variadic argument
+     * @param array                                              $attributes Additional attributes
+     * @param int                                                $flags      Optional visibility flags
+     * @param AttributeGroup[]                                   $attrGroups PHP attribute groups
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public function __construct(
         $var, Expr $default = null, $type = null,

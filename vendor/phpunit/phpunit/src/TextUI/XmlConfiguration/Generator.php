@@ -30,7 +30,10 @@ final class Generator
          beStrictAboutCoversAnnotation="true"
          beStrictAboutOutputDuringTests="true"
          beStrictAboutTodoAnnotatedTests="true"
+<<<<<<< HEAD
          convertDeprecationsToExceptions="true"
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
          failOnRisky="true"
          failOnWarning="true"
          verbose="true">

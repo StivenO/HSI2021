@@ -23,7 +23,11 @@ final class Iterable_ extends AbstractList
     /**
      * Returns a rendered output of the Type as it would be used in a DocBlock.
      */
+<<<<<<< HEAD
     public function __toString(): string
+=======
+    public function __toString() : string
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         if ($this->keyType) {
             return 'iterable<' . $this->keyType . ',' . $this->valueType . '>';

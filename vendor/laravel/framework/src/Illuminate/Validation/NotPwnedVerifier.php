@@ -32,7 +32,11 @@ class NotPwnedVerifier implements UncompromisedVerifier
     public function __construct($factory, $timeout = null)
     {
         $this->factory = $factory;
+<<<<<<< HEAD
         $this->timeout = $timeout ?? 30;
+=======
+        $this->timeout = $timeout ?? 10;
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     }
 
     /**

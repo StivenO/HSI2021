@@ -28,7 +28,10 @@ namespace Illuminate\Support\Facades;
  * @method static void enableQueryLog()
  * @method static void disableQueryLog()
  * @method static void flushQueryLog()
+<<<<<<< HEAD
  * @method static \Illuminate\Database\Connection beforeExecuting(\Closure $callback)
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
  * @method static void listen(\Closure $callback)
  * @method static void rollBack(int $toLevel = null)
  * @method static void setDefaultConnection(string $name)

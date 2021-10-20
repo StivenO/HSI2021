@@ -36,8 +36,11 @@ class SesTransport extends Transport
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      *
      * @return int
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public function send(Swift_Mime_SimpleMessage $message, &$failedRecipients = null)
     {

@@ -5,7 +5,11 @@ namespace Illuminate\Foundation\Bus;
 use Closure;
 use Illuminate\Contracts\Bus\Dispatcher;
 use Illuminate\Queue\CallQueuedClosure;
+<<<<<<< HEAD
 use Illuminate\Queue\SerializableClosureFactory;
+=======
+use Illuminate\Queue\SerializableClosure;
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 
 class PendingChain
 {
@@ -112,7 +116,11 @@ class PendingChain
     public function catch($callback)
     {
         $this->catchCallbacks[] = $callback instanceof Closure
+<<<<<<< HEAD
                         ? SerializableClosureFactory::make($callback)
+=======
+                        ? new SerializableClosure($callback)
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
                         : $callback;
 
         return $this;

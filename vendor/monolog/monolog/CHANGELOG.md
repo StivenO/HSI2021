@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### 2.3.5 (2021-10-01)
 
   * Fixed regression in StreamHandler since 2.3.3 on systems with the memory_limit set to >=20GB (#1592)
@@ -12,6 +13,8 @@
   * Fixed support for psr/log 2.x (#1587)
   * Fixed some type annotations
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 ### 2.3.2 (2021-07-23)
 
   * Fixed compatibility with PHP 7.2 - 7.4 when experiencing PCRE errors (#1568)

@@ -26,7 +26,11 @@ class Paginator extends AbstractPaginator implements Arrayable, ArrayAccess, Cou
      * @param  mixed  $items
      * @param  int  $perPage
      * @param  int|null  $currentPage
+<<<<<<< HEAD
      * @param  array  $options  (path, query, fragment, pageName)
+=======
+     * @param  array  $options (path, query, fragment, pageName)
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return void
      */
     public function __construct($items, $perPage, $currentPage = null, array $options = [])

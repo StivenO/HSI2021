@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+<<<<<<< HEAD
 ## 2.1.0 - 2021-10-06
 
 ### Changed
@@ -20,6 +21,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Return `null` in caching stream size if remote size is `null`
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 ## 2.0.0 - 2021-06-30
 
 Identical to the RC release.

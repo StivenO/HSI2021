@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace GuzzleHttp\Psr7;
 
+<<<<<<< HEAD
 use GuzzleHttp\Psr7\Exception\MalformedUriException;
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use Psr\Http\Message\UriInterface;
 
 /**
@@ -82,7 +85,11 @@ class Uri implements UriInterface
         if ($uri !== '') {
             $parts = self::parse($uri);
             if ($parts === false) {
+<<<<<<< HEAD
                 throw new MalformedUriException("Unable to parse URI: $uri");
+=======
+                throw new \InvalidArgumentException("Unable to parse URI: $uri");
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
             }
             $this->applyParts($parts);
         }
@@ -350,7 +357,11 @@ class Uri implements UriInterface
      *
      * @link http://php.net/manual/en/function.parse-url.php
      *
+<<<<<<< HEAD
      * @throws MalformedUriException If the components do not form a valid URI.
+=======
+     * @throws \InvalidArgumentException If the components do not form a valid URI.
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public static function fromParts(array $parts): UriInterface
     {
@@ -721,6 +732,7 @@ class Uri implements UriInterface
 
         if ($this->getAuthority() === '') {
             if (0 === strpos($this->path, '//')) {
+<<<<<<< HEAD
                 throw new MalformedUriException('The path of a URI without an authority must not start with two slashes "//"');
             }
             if ($this->scheme === '' && false !== strpos(explode('/', $this->path, 2)[0], ':')) {
@@ -728,6 +740,15 @@ class Uri implements UriInterface
             }
         } elseif (isset($this->path[0]) && $this->path[0] !== '/') {
             throw new MalformedUriException('The path of a URI with an authority must start with a slash "/" or be empty');
+=======
+                throw new \InvalidArgumentException('The path of a URI without an authority must not start with two slashes "//"');
+            }
+            if ($this->scheme === '' && false !== strpos(explode('/', $this->path, 2)[0], ':')) {
+                throw new \InvalidArgumentException('A relative URI must not have a path beginning with a segment containing a colon');
+            }
+        } elseif (isset($this->path[0]) && $this->path[0] !== '/') {
+            throw new \InvalidArgumentException('The path of a URI with an authority must start with a slash "/" or be empty');
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         }
     }
 }

@@ -10,7 +10,10 @@ use ArrayAccess;
 use ArrayIterator;
 use Countable;
 use IteratorAggregate;
+<<<<<<< HEAD
 use ReturnTypeWillChange;
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use Serializable;
 use UnexpectedValueException;
 
@@ -90,7 +93,10 @@ class FrameCollection implements ArrayAccess, IteratorAggregate, Serializable, C
      * @see IteratorAggregate::getIterator
      * @return ArrayIterator
      */
+<<<<<<< HEAD
     #[ReturnTypeWillChange]
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function getIterator()
     {
         return new ArrayIterator($this->frames);
@@ -100,7 +106,10 @@ class FrameCollection implements ArrayAccess, IteratorAggregate, Serializable, C
      * @see ArrayAccess::offsetExists
      * @param int $offset
      */
+<<<<<<< HEAD
     #[ReturnTypeWillChange]
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function offsetExists($offset)
     {
         return isset($this->frames[$offset]);
@@ -110,7 +119,10 @@ class FrameCollection implements ArrayAccess, IteratorAggregate, Serializable, C
      * @see ArrayAccess::offsetGet
      * @param int $offset
      */
+<<<<<<< HEAD
     #[ReturnTypeWillChange]
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function offsetGet($offset)
     {
         return $this->frames[$offset];
@@ -120,7 +132,10 @@ class FrameCollection implements ArrayAccess, IteratorAggregate, Serializable, C
      * @see ArrayAccess::offsetSet
      * @param int $offset
      */
+<<<<<<< HEAD
     #[ReturnTypeWillChange]
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function offsetSet($offset, $value)
     {
         throw new \Exception(__CLASS__ . ' is read only');
@@ -130,7 +145,10 @@ class FrameCollection implements ArrayAccess, IteratorAggregate, Serializable, C
      * @see ArrayAccess::offsetUnset
      * @param int $offset
      */
+<<<<<<< HEAD
     #[ReturnTypeWillChange]
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function offsetUnset($offset)
     {
         throw new \Exception(__CLASS__ . ' is read only');
@@ -140,7 +158,10 @@ class FrameCollection implements ArrayAccess, IteratorAggregate, Serializable, C
      * @see Countable::count
      * @return int
      */
+<<<<<<< HEAD
     #[ReturnTypeWillChange]
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function count()
     {
         return count($this->frames);
@@ -162,7 +183,10 @@ class FrameCollection implements ArrayAccess, IteratorAggregate, Serializable, C
      * @see Serializable::serialize
      * @return string
      */
+<<<<<<< HEAD
     #[ReturnTypeWillChange]
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function serialize()
     {
         return serialize($this->frames);
@@ -172,12 +196,16 @@ class FrameCollection implements ArrayAccess, IteratorAggregate, Serializable, C
      * @see Serializable::unserialize
      * @param string $serializedFrames
      */
+<<<<<<< HEAD
     #[ReturnTypeWillChange]
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function unserialize($serializedFrames)
     {
         $this->frames = unserialize($serializedFrames);
     }
 
+<<<<<<< HEAD
     public function __serialize()
     {
         return $this->frames;
@@ -188,6 +216,8 @@ class FrameCollection implements ArrayAccess, IteratorAggregate, Serializable, C
         $this->frames = $serializedFrames;
     }
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     /**
      * @param Frame[] $frames Array of Frame instances, usually from $e->getPrevious()
      */

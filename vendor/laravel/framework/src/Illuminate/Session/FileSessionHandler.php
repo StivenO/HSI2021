@@ -47,10 +47,14 @@ class FileSessionHandler implements SessionHandlerInterface
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      *
      * @return bool
      */
     #[\ReturnTypeWillChange]
+=======
+     */
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function open($savePath, $sessionName)
     {
         return true;
@@ -58,10 +62,14 @@ class FileSessionHandler implements SessionHandlerInterface
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      *
      * @return bool
      */
     #[\ReturnTypeWillChange]
+=======
+     */
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function close()
     {
         return true;
@@ -69,10 +77,14 @@ class FileSessionHandler implements SessionHandlerInterface
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      *
      * @return string|false
      */
     #[\ReturnTypeWillChange]
+=======
+     */
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function read($sessionId)
     {
         if ($this->files->isFile($path = $this->path.'/'.$sessionId)) {
@@ -86,10 +98,14 @@ class FileSessionHandler implements SessionHandlerInterface
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      *
      * @return bool
      */
     #[\ReturnTypeWillChange]
+=======
+     */
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function write($sessionId, $data)
     {
         $this->files->put($this->path.'/'.$sessionId, $data, true);
@@ -99,10 +115,14 @@ class FileSessionHandler implements SessionHandlerInterface
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      *
      * @return bool
      */
     #[\ReturnTypeWillChange]
+=======
+     */
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function destroy($sessionId)
     {
         $this->files->delete($this->path.'/'.$sessionId);
@@ -112,10 +132,14 @@ class FileSessionHandler implements SessionHandlerInterface
 
     /**
      * {@inheritdoc}
+<<<<<<< HEAD
      *
      * @return int|false
      */
     #[\ReturnTypeWillChange]
+=======
+     */
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function gc($lifetime)
     {
         $files = Finder::create()

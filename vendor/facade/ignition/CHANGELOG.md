@@ -2,6 +2,7 @@
 
 All notable changes to `ignition` will be documented in this fil
 
+<<<<<<< HEAD
 ## 2.14.1 - 2021-10-08
 
 - update base URL for Flare
@@ -22,6 +23,8 @@ All notable changes to `ignition` will be documented in this fil
 
 - add support for VS Codium editor (#417)
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 ## 2.12.0 - 2021-08-24
 
 - add support for collecting information about jobs (#412)

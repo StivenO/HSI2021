@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 2.14.4
 
 * Fix PHP 5.5 support.
@@ -7,6 +8,8 @@
 
 * Support PHP 8.1
 
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 # 2.14.1
 
 * Fix syntax highlighting scrolling too far.

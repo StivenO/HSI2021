@@ -16,12 +16,18 @@ namespace Ramsey\Uuid\Type;
 
 use Ramsey\Uuid\Exception\UnsupportedOperationException;
 use Ramsey\Uuid\Type\Integer as IntegerObject;
+<<<<<<< HEAD
 use ValueError;
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use stdClass;
 
 use function json_decode;
 use function json_encode;
+<<<<<<< HEAD
 use function sprintf;
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 
 /**
  * A value object representing a timestamp
@@ -91,6 +97,7 @@ final class Time implements TypeInterface
     }
 
     /**
+<<<<<<< HEAD
      * @return array{seconds: string, microseconds: string}
      */
     public function __serialize(): array
@@ -102,6 +109,8 @@ final class Time implements TypeInterface
     }
 
     /**
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * Constructs the object from a serialized string representation
      *
      * @param string $serialized The serialized string representation of the object
@@ -122,6 +131,7 @@ final class Time implements TypeInterface
 
         $this->__construct($time->seconds, $time->microseconds);
     }
+<<<<<<< HEAD
 
     /**
      * @param array{seconds: string, microseconds: string} $data
@@ -136,4 +146,6 @@ final class Time implements TypeInterface
 
         $this->__construct($data['seconds'], $data['microseconds']);
     }
+=======
+>>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 }
