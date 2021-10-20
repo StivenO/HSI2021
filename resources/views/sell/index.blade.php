@@ -4,7 +4,6 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"></script>
 	<script src="https://kit.fontawesome.com/fc2b074465.js" crossorigin="anonymous"></script>
 </head>
