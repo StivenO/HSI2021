@@ -571,22 +571,6 @@ class Builder
     }
 
     /**
-<<<<<<< HEAD
-     * Get a single column's value from the first result of the query or throw an exception.
-     *
-     * @param  string|\Illuminate\Database\Query\Expression  $column
-     * @return mixed
-     *
-     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
-     */
-    public function valueOrFail($column)
-    {
-        return $this->firstOrFail([$column])->{Str::afterLast($column, '.')};
-    }
-
-    /**
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * Execute the query as a "select" statement.
      *
      * @param  array|string  $columns

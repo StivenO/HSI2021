@@ -13,11 +13,7 @@
         "php": "^7.2.5|^8.0",
         "ext-json": "*",
         "ext-mbstring": "*",
-<<<<<<< HEAD
-        "facade/flare-client-php": "^1.9.1",
-=======
         "facade/flare-client-php": "^1.6",
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         "facade/ignition-contracts": "^1.0.2",
         "illuminate/support": "^7.0|^8.0",
         "monolog/monolog": "^2.0",

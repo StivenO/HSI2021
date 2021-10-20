@@ -6,11 +6,7 @@ use Closure;
 use Illuminate\Bus\Events\BatchDispatched;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Events\Dispatcher as EventDispatcher;
-<<<<<<< HEAD
-use Illuminate\Queue\SerializableClosureFactory;
-=======
 use Illuminate\Queue\SerializableClosure;
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Throwable;
@@ -82,11 +78,7 @@ class PendingBatch
     public function then($callback)
     {
         $this->options['then'][] = $callback instanceof Closure
-<<<<<<< HEAD
-                        ? SerializableClosureFactory::make($callback)
-=======
                         ? new SerializableClosure($callback)
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
                         : $callback;
 
         return $this;
@@ -111,11 +103,7 @@ class PendingBatch
     public function catch($callback)
     {
         $this->options['catch'][] = $callback instanceof Closure
-<<<<<<< HEAD
-                    ? SerializableClosureFactory::make($callback)
-=======
                     ? new SerializableClosure($callback)
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
                     : $callback;
 
         return $this;
@@ -140,11 +128,7 @@ class PendingBatch
     public function finally($callback)
     {
         $this->options['finally'][] = $callback instanceof Closure
-<<<<<<< HEAD
-                    ? SerializableClosureFactory::make($callback)
-=======
                     ? new SerializableClosure($callback)
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
                     : $callback;
 
         return $this;

@@ -15,11 +15,7 @@ class ClassMethod extends Node\Stmt implements FunctionLike
     public $name;
     /** @var Node\Param[] Parameters */
     public $params;
-<<<<<<< HEAD
-    /** @var null|Node\Identifier|Node\Name|Node\ComplexType Return type */
-=======
     /** @var null|Node\Identifier|Node\Name|Node\NullableType|Node\UnionType Return type */
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public $returnType;
     /** @var Node\Stmt[]|null Statements */
     public $stmts;

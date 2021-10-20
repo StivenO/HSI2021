@@ -24,14 +24,8 @@
         "illuminate/filesystem": "^8.0",
         "illuminate/pipeline": "^8.0",
         "illuminate/support": "^8.0",
-<<<<<<< HEAD
-        "laravel/serializable-closure": "^1.0",
-        "opis/closure": "^3.6",
-        "ramsey/uuid": "^4.2.2",
-=======
         "opis/closure": "^3.6",
         "ramsey/uuid": "^4.0",
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         "symfony/process": "^5.1.4"
     },
     "autoload": {

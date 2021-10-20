@@ -193,11 +193,7 @@ class Response implements ArrayAccess
     /**
      * Execute the given callback if there was a server or client error.
      *
-<<<<<<< HEAD
-     * @param  callable  $callback
-=======
      * @param  \Closure|callable $callback
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return $this
      */
     public function onError(callable $callback)

@@ -268,11 +268,6 @@ class Password implements Rule, DataAwareRule, ValidatorAwareRule
      */
     public function passes($attribute, $value)
     {
-<<<<<<< HEAD
-        $this->messages = [];
-
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         $validator = Validator::make($this->data, [
             $attribute => 'string|min:'.$this->min,
         ], $this->validator->customMessages, $this->validator->customAttributes);

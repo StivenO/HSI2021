@@ -15,10 +15,6 @@ namespace phpDocumentor\Reflection\Types;
 use ArrayIterator;
 use IteratorAggregate;
 use phpDocumentor\Reflection\Type;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use function array_key_exists;
 use function implode;
 
@@ -57,11 +53,7 @@ abstract class AggregatedType implements Type, IteratorAggregate
     /**
      * Returns the type at the given index.
      */
-<<<<<<< HEAD
-    public function get(int $index): ?Type
-=======
     public function get(int $index) : ?Type
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         if (!$this->has($index)) {
             return null;
@@ -73,11 +65,7 @@ abstract class AggregatedType implements Type, IteratorAggregate
     /**
      * Tests if this compound type has a type with the given index.
      */
-<<<<<<< HEAD
-    public function has(int $index): bool
-=======
     public function has(int $index) : bool
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         return array_key_exists($index, $this->types);
     }
@@ -85,11 +73,7 @@ abstract class AggregatedType implements Type, IteratorAggregate
     /**
      * Tests if this compound type contains the given type.
      */
-<<<<<<< HEAD
-    public function contains(Type $type): bool
-=======
     public function contains(Type $type) : bool
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         foreach ($this->types as $typePart) {
             // if the type is duplicate; do not add it
@@ -104,11 +88,7 @@ abstract class AggregatedType implements Type, IteratorAggregate
     /**
      * Returns a rendered output of the Type as it would be used in a DocBlock.
      */
-<<<<<<< HEAD
-    public function __toString(): string
-=======
     public function __toString() : string
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         return implode($this->token, $this->types);
     }
@@ -116,11 +96,7 @@ abstract class AggregatedType implements Type, IteratorAggregate
     /**
      * @return ArrayIterator<int, Type>
      */
-<<<<<<< HEAD
-    public function getIterator(): ArrayIterator
-=======
     public function getIterator() : ArrayIterator
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         return new ArrayIterator($this->types);
     }
@@ -128,11 +104,7 @@ abstract class AggregatedType implements Type, IteratorAggregate
     /**
      * @psalm-suppress ImpureMethodCall
      */
-<<<<<<< HEAD
-    private function add(Type $type): void
-=======
     private function add(Type $type) : void
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         if ($type instanceof self) {
             foreach ($type->getIterator() as $subType) {

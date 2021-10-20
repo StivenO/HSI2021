@@ -108,10 +108,7 @@ trait Matching
      *
      * @param  string  $key
      * @param  array|string  $expected
-<<<<<<< HEAD
-=======
      *
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return $this
      */
     public function whereContains(string $key, $expected)

@@ -456,11 +456,6 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-     *
-     * @return static
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public function duplicate(array $query = null, array $request = null, array $attributes = null, array $cookies = null, array $files = null, array $server = null)
     {

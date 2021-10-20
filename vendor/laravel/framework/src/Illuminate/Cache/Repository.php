@@ -131,11 +131,6 @@ class Repository implements ArrayAccess, CacheContract
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-     *
-     * @return iterable
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public function getMultiple($keys, $default = null)
     {
@@ -224,11 +219,6 @@ class Repository implements ArrayAccess, CacheContract
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-     *
-     * @return bool
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public function set($key, $value, $ttl = null)
     {
@@ -286,11 +276,6 @@ class Repository implements ArrayAccess, CacheContract
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-     *
-     * @return bool
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public function setMultiple($values, $ttl = null)
     {
@@ -454,11 +439,6 @@ class Repository implements ArrayAccess, CacheContract
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-     *
-     * @return bool
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public function delete($key)
     {
@@ -467,11 +447,6 @@ class Repository implements ArrayAccess, CacheContract
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-     *
-     * @return bool
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public function deleteMultiple($keys)
     {
@@ -488,11 +463,6 @@ class Repository implements ArrayAccess, CacheContract
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-     *
-     * @return bool
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public function clear()
     {

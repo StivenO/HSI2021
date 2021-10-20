@@ -1262,27 +1262,6 @@ abstract class Model implements Arrayable, ArrayAccess, HasBroadcastChannel, Jso
     }
 
     /**
-<<<<<<< HEAD
-     * Delete the model from the database within a transaction.
-     *
-     * @return bool|null
-     *
-     * @throws \Throwable
-     */
-    public function deleteOrFail()
-    {
-        if (! $this->exists) {
-            return false;
-        }
-
-        return $this->getConnection()->transaction(function () {
-            return $this->delete();
-        });
-    }
-
-    /**
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * Force a hard delete on a soft deleted model.
      *
      * This method protects developers from running forceDelete when the trait is missing.

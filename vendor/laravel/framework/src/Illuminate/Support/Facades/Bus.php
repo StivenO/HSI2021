@@ -24,10 +24,6 @@ use Illuminate\Support\Testing\Fakes\BusFake;
  * @method static void assertDispatchedAfterResponseTimes(string $command, int $times = 1)
  * @method static void assertNotDispatchedAfterResponse(string|\Closure $command, callable $callback = null)
  * @method static void assertBatched(callable $callback)
-<<<<<<< HEAD
- * @method static void assertChained(array $expectedChain)
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
  *
  * @see \Illuminate\Contracts\Bus\Dispatcher
  */

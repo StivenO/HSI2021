@@ -38,30 +38,6 @@ trait ForwardsCalls
     }
 
     /**
-<<<<<<< HEAD
-     * Forward a method call to the given object, returning $this if the forwarded call returned itself.
-     *
-     * @param  mixed  $object
-     * @param  string  $method
-     * @param  array  $parameters
-     * @return mixed
-     *
-     * @throws \BadMethodCallException
-     */
-    protected function forwardDecoratedCallTo($object, $method, $parameters)
-    {
-        $result = $this->forwardCallTo($object, $method, $parameters);
-
-        if ($result === $object) {
-            return $this;
-        }
-
-        return $result;
-    }
-
-    /**
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * Throw a bad method call exception for the given method.
      *
      * @param  string  $method

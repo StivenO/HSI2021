@@ -1971,11 +1971,7 @@ trait ValidatesAttributes
             return $value->getSize() / 1024;
         }
 
-<<<<<<< HEAD
-        return mb_strlen($value ?? '');
-=======
         return mb_strlen($value);
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     }
 
     /**
@@ -2072,10 +2068,7 @@ trait ValidatesAttributes
      *
      * @param  string  $attribute
      * @param  string  $rule
-<<<<<<< HEAD
-=======
      *
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return void
      */
     protected function shouldBeNumeric($attribute, $rule)

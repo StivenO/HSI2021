@@ -189,15 +189,7 @@ abstract class Queue
             return;
         }
 
-<<<<<<< HEAD
-        if (is_null($backoff = $job->backoff ?? $job->backoff())) {
-            return;
-        }
-
-        return collect(Arr::wrap($backoff))
-=======
         return collect(Arr::wrap($job->backoff ?? $job->backoff()))
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
             ->map(function ($backoff) {
                 return $backoff instanceof DateTimeInterface
                                 ? $this->secondsUntil($backoff) : $backoff;

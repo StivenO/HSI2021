@@ -1035,11 +1035,7 @@ final class Loader
             $this->getBooleanAttribute($document->documentElement, 'noInteraction', false),
             $this->getBooleanAttribute($document->documentElement, 'verbose', false),
             $this->getBooleanAttribute($document->documentElement, 'reverseDefectList', false),
-<<<<<<< HEAD
-            $this->getBooleanAttribute($document->documentElement, 'convertDeprecationsToExceptions', false),
-=======
             $this->getBooleanAttribute($document->documentElement, 'convertDeprecationsToExceptions', true),
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
             $this->getBooleanAttribute($document->documentElement, 'convertErrorsToExceptions', true),
             $this->getBooleanAttribute($document->documentElement, 'convertNoticesToExceptions', true),
             $this->getBooleanAttribute($document->documentElement, 'convertWarningsToExceptions', true),

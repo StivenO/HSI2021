@@ -53,10 +53,6 @@ use Facade\Ignition\SolutionProviders\UndefinedPropertySolutionProvider;
 use Facade\Ignition\SolutionProviders\UndefinedVariableSolutionProvider;
 use Facade\Ignition\SolutionProviders\UnknownValidationSolutionProvider;
 use Facade\Ignition\SolutionProviders\ViewNotFoundSolutionProvider;
-<<<<<<< HEAD
-use Facade\Ignition\Support\SentReports;
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use Facade\Ignition\Views\Engines\CompilerEngine;
 use Facade\Ignition\Views\Engines\PhpEngine;
 use Facade\IgnitionContracts\SolutionProviderRepository as SolutionProviderRepositoryContract;
@@ -264,18 +260,6 @@ class IgnitionServiceProvider extends ServiceProvider
             return new Client(
                 config('flare.key'),
                 config('flare.secret'),
-<<<<<<< HEAD
-                config('flare.base_url', 'https://reporting.flareapp.io/api')
-            );
-        });
-
-        $this->app->singleton(SentReports::class);
-
-        $this->app->alias('flare.http', Client::class);
-
-        $this->app->singleton(Flare::class, function () {
-            $client = new Flare($this->app->get('flare.http'), new LaravelContextDetector(), $this->app);
-=======
                 config('flare.base_url', 'https://flareapp.io/api')
             );
         });
@@ -284,7 +268,6 @@ class IgnitionServiceProvider extends ServiceProvider
 
         $this->app->singleton(Flare::class, function () {
             $client = new Flare($this->app->get('flare.http'), new LaravelContextDetector, $this->app);
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
             $client->applicationPath(base_path());
             $client->stage(config('app.env'));
 
@@ -297,14 +280,7 @@ class IgnitionServiceProvider extends ServiceProvider
     protected function registerLogHandler()
     {
         $this->app->singleton('flare.logger', function ($app) {
-<<<<<<< HEAD
-            $handler = new FlareHandler(
-                $app->make(Flare::class),
-                $app->make(SentReports::class)
-            );
-=======
             $handler = new FlareHandler($app->make(Flare::class));
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 
             $logLevelString = config('logging.channels.flare.level', 'error');
 
@@ -519,10 +495,6 @@ class IgnitionServiceProvider extends ServiceProvider
 
     protected function resetFlare()
     {
-<<<<<<< HEAD
-        $this->app->get(SentReports::class)->clear();
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         $this->app->get(Flare::class)->reset();
 
         if (config('flare.reporting.report_logs')) {

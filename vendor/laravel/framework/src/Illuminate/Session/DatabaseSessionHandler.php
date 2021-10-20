@@ -69,14 +69,7 @@ class DatabaseSessionHandler implements ExistenceAwareInterface, SessionHandlerI
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-     *
-     * @return bool
      */
-    #[\ReturnTypeWillChange]
-=======
-     */
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function open($savePath, $sessionName)
     {
         return true;
@@ -84,14 +77,7 @@ class DatabaseSessionHandler implements ExistenceAwareInterface, SessionHandlerI
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-     *
-     * @return bool
      */
-    #[\ReturnTypeWillChange]
-=======
-     */
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function close()
     {
         return true;
@@ -99,14 +85,7 @@ class DatabaseSessionHandler implements ExistenceAwareInterface, SessionHandlerI
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-     *
-     * @return string|false
      */
-    #[\ReturnTypeWillChange]
-=======
-     */
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function read($sessionId)
     {
         $session = (object) $this->getQuery()->find($sessionId);
@@ -140,14 +119,7 @@ class DatabaseSessionHandler implements ExistenceAwareInterface, SessionHandlerI
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-     *
-     * @return bool
      */
-    #[\ReturnTypeWillChange]
-=======
-     */
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function write($sessionId, $data)
     {
         $payload = $this->getDefaultPayload($data);
@@ -281,14 +253,7 @@ class DatabaseSessionHandler implements ExistenceAwareInterface, SessionHandlerI
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-     *
-     * @return bool
      */
-    #[\ReturnTypeWillChange]
-=======
-     */
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function destroy($sessionId)
     {
         $this->getQuery()->where('id', $sessionId)->delete();
@@ -298,14 +263,7 @@ class DatabaseSessionHandler implements ExistenceAwareInterface, SessionHandlerI
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-     *
-     * @return int|false
      */
-    #[\ReturnTypeWillChange]
-=======
-     */
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function gc($lifetime)
     {
         $this->getQuery()->where('last_activity', '<=', $this->currentTime() - $lifetime)->delete();

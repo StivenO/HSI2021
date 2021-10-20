@@ -241,18 +241,6 @@ class Frame implements Serializable
         return serialize($frame);
     }
 
-<<<<<<< HEAD
-    public function __serialize()
-    {
-        $frame = $this->frame;
-        if (!empty($this->comments)) {
-            $frame['_comments'] = $this->comments;
-        }
-        return $frame;
-    }
-
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     /**
      * Unserializes the frame data, while also preserving
      * any existing comment data.
@@ -272,19 +260,6 @@ class Frame implements Serializable
         $this->frame = $frame;
     }
 
-<<<<<<< HEAD
-    public function __unserialize($frame)
-    {
-        if (!empty($frame['_comments'])) {
-            $this->comments = $frame['_comments'];
-            unset($frame['_comments']);
-        }
-
-        $this->frame = $frame;
-    }
-
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     /**
      * Compares Frame against one another
      * @param  Frame $frame

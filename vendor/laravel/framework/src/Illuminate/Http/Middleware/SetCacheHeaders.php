@@ -55,11 +55,7 @@ class SetCacheHeaders
      */
     protected function parseOptions($options)
     {
-<<<<<<< HEAD
-        return collect(explode(';', rtrim($options, ';')))->mapWithKeys(function ($option) {
-=======
         return collect(explode(';', $options))->mapWithKeys(function ($option) {
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
             $data = explode('=', $option, 2);
 
             return [$data[0] => $data[1] ?? true];

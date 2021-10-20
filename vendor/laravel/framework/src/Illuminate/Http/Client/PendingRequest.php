@@ -374,13 +374,7 @@ class PendingRequest
      */
     public function withUserAgent($userAgent)
     {
-<<<<<<< HEAD
-        return tap($this, function ($request) use ($userAgent) {
-            return $this->options['headers']['User-Agent'] = trim($userAgent);
-        });
-=======
         return $this->withHeaders(['User-Agent' => $userAgent]);
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     }
 
     /**

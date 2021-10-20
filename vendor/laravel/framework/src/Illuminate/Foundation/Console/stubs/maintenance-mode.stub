@@ -48,11 +48,7 @@ if (isset($_COOKIE['laravel_maintenance']) && isset($data['secret'])) {
     if (is_array($payload) &&
         is_numeric($payload['expires_at'] ?? null) &&
         isset($payload['mac']) &&
-<<<<<<< HEAD
-        hash_equals(hash_hmac('sha256', $payload['expires_at'], $data['secret']), $payload['mac']) &&
-=======
         hash_equals(hash_hmac('SHA256', $payload['expires_at'], $data['secret']), $payload['mac']) &&
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         (int) $payload['expires_at'] >= time()) {
         return;
     }

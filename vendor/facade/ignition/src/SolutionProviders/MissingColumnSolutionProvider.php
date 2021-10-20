@@ -12,11 +12,7 @@ class MissingColumnSolutionProvider implements HasSolutionsForThrowable
     /**
      * See https://dev.mysql.com/doc/refman/8.0/en/server-error-reference.html#error_er_bad_field_error.
      */
-<<<<<<< HEAD
-    public const MYSQL_BAD_FIELD_CODE = '42S22';
-=======
     const MYSQL_BAD_FIELD_CODE = '42S22';
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 
     public function canSolve(Throwable $throwable): bool
     {

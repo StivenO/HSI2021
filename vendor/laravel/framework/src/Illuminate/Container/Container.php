@@ -187,13 +187,7 @@ class Container implements ArrayAccess, ContainerContract
     }
 
     /**
-<<<<<<< HEAD
-     * {@inheritdoc}
-     *
-     * @return bool
-=======
      *  {@inheritdoc}
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public function has($id)
     {
@@ -699,13 +693,7 @@ class Container implements ArrayAccess, ContainerContract
     }
 
     /**
-<<<<<<< HEAD
-     * {@inheritdoc}
-     *
-     * @return mixed
-=======
      *  {@inheritdoc}
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public function get($id)
     {
@@ -1249,10 +1237,7 @@ class Container implements ArrayAccess, ContainerContract
      * @param  string  $abstract
      * @param  object  $object
      * @param  array  $callbacksPerType
-<<<<<<< HEAD
-=======
      *
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return array
      */
     protected function getCallbacksForType($abstract, $object, array $callbacksPerType)

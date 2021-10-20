@@ -25,11 +25,7 @@ final class Utils
         }
 
         foreach ($data as $k => $v) {
-<<<<<<< HEAD
-            if (!is_string($k) || !in_array(strtolower($k), $keys)) {
-=======
             if (!in_array(strtolower($k), $keys)) {
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
                 $result[$k] = $v;
             }
         }

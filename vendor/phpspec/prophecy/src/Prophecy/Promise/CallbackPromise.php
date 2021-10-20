@@ -15,10 +15,6 @@ use Prophecy\Prophecy\ObjectProphecy;
 use Prophecy\Prophecy\MethodProphecy;
 use Prophecy\Exception\InvalidArgumentException;
 use Closure;
-<<<<<<< HEAD
-use ReflectionFunction;
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 
 /**
  * Callback promise.
@@ -61,11 +57,7 @@ class CallbackPromise implements PromiseInterface
     {
         $callback = $this->callback;
 
-<<<<<<< HEAD
-        if ($callback instanceof Closure && method_exists('Closure', 'bind') && (new ReflectionFunction($callback))->getClosureThis() !== null) {
-=======
         if ($callback instanceof Closure && method_exists('Closure', 'bind')) {
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
             $callback = Closure::bind($callback, $object);
         }
 

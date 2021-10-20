@@ -169,11 +169,7 @@ class Encrypter implements EncrypterContract, StringEncrypter
         // we will then unserialize it and return it out to the caller. If we are
         // unable to decrypt this value we will throw out an exception message.
         $decrypted = \openssl_decrypt(
-<<<<<<< HEAD
-            $payload['value'], strtolower($this->cipher), $this->key, 0, $iv, $tag ?? ''
-=======
             $payload['value'], strtolower($this->cipher), $this->key, 0, $iv, $tag
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         );
 
         if ($decrypted === false) {

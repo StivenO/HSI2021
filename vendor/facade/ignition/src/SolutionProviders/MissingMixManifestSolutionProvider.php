@@ -1,9 +1,6 @@
 <?php
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 namespace Facade\Ignition\SolutionProviders;
 
 use Facade\IgnitionContracts\BaseSolution;

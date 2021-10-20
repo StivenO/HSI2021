@@ -2,10 +2,6 @@
 
 namespace Facade\Ignition\Facades;
 
-<<<<<<< HEAD
-use Facade\Ignition\Support\SentReports;
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use Illuminate\Support\Facades\Facade;
 
 /**
@@ -23,12 +19,4 @@ class Flare extends Facade
     {
         return \Facade\FlareClient\Flare::class;
     }
-<<<<<<< HEAD
-
-    public static function sentReports(): SentReports
-    {
-        return app(SentReports::class);
-    }
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 }

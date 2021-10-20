@@ -59,16 +59,6 @@ class ResetPassword extends Notification
      */
     public function toMail($notifiable)
     {
-<<<<<<< HEAD
-        if (static::$toMailCallback) {
-            return call_user_func(static::$toMailCallback, $notifiable, $this->token);
-        }
-
-        if (static::$createUrlCallback) {
-            $url = call_user_func(static::$createUrlCallback, $notifiable, $this->token);
-        } else {
-            $url = url(route('password.reset', [
-=======
         $url = $this->resetUrl($notifiable);
 
         if (static::$toMailCallback) {
@@ -90,16 +80,10 @@ class ResetPassword extends Notification
             return call_user_func(static::$createUrlCallback, $notifiable, $this->token);
         } else {
             return url(route('password.reset', [
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
                 'token' => $this->token,
                 'email' => $notifiable->getEmailForPasswordReset(),
             ], false));
         }
-<<<<<<< HEAD
-
-        return $this->buildMailMessage($url);
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     }
 
     /**

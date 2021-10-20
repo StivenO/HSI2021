@@ -52,11 +52,7 @@ class ComponentTagCompiler
      *
      * @param  array  $aliases
      * @param  array  $namespaces
-<<<<<<< HEAD
-     * @param  \Illuminate\View\Compilers\BladeCompiler|null  $blade
-=======
      * @param  \Illuminate\View\Compilers\BladeCompiler|null $blade
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return void
      */
     public function __construct(array $aliases = [], array $namespaces = [], ?BladeCompiler $blade = null)
@@ -276,13 +272,6 @@ class ComponentTagCompiler
             return $view;
         }
 
-<<<<<<< HEAD
-        if ($viewFactory->exists($view = $this->guessViewName($component).'.index')) {
-            return $view;
-        }
-
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         throw new InvalidArgumentException(
             "Unable to locate a class or view for component [{$component}]."
         );

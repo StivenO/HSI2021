@@ -1353,33 +1353,6 @@ class LazyCollection implements Enumerable
     }
 
     /**
-<<<<<<< HEAD
-     * Return only unique items from the collection array.
-     *
-     * @param  string|callable|null  $key
-     * @param  bool  $strict
-     * @return static
-     */
-    public function unique($key = null, $strict = false)
-    {
-        $callback = $this->valueRetriever($key);
-
-        return new static(function () use ($callback, $strict) {
-            $exists = [];
-
-            foreach ($this as $key => $item) {
-                if (! in_array($id = $callback($item, $key), $exists, $strict)) {
-                    yield $key => $item;
-
-                    $exists[] = $id;
-                }
-            }
-        });
-    }
-
-    /**
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * Reset the keys on the underlying array.
      *
      * @return static

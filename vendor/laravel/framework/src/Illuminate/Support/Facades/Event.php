@@ -17,11 +17,7 @@ use Illuminate\Support\Testing\Fakes\EventFake;
  * @method static void assertDispatchedTimes(string $event, int $times = 1)
  * @method static void assertNotDispatched(string|\Closure $event, callable|int $callback = null)
  * @method static void assertNothingDispatched()
-<<<<<<< HEAD
- * @method static void assertListening(string $expectedEvent, string $expectedListener)
-=======
  * @method static void assertListening(string $expectedEvent, string expectedListener)
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
  * @method static void flush(string $event)
  * @method static void forget(string $event)
  * @method static void forgetPushed()

@@ -16,10 +16,6 @@ namespace phpDocumentor\Reflection\Types;
 use InvalidArgumentException;
 use phpDocumentor\Reflection\Fqsen;
 use phpDocumentor\Reflection\Type;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use function strpos;
 
 /**
@@ -56,20 +52,12 @@ final class Object_ implements Type
     /**
      * Returns the FQSEN associated with this object.
      */
-<<<<<<< HEAD
-    public function getFqsen(): ?Fqsen
-=======
     public function getFqsen() : ?Fqsen
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         return $this->fqsen;
     }
 
-<<<<<<< HEAD
-    public function __toString(): string
-=======
     public function __toString() : string
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         if ($this->fqsen) {
             return (string) $this->fqsen;

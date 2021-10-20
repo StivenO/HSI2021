@@ -7,11 +7,7 @@ class InvokeQueuedClosure
     /**
      * Handle the event.
      *
-<<<<<<< HEAD
-     * @param  \Laravel\SerializableClosure\SerializableClosure  $closure
-=======
      * @param  \Illuminate\Queue\SerializableClosure  $closure
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @param  array  $arguments
      * @return void
      */
@@ -23,11 +19,7 @@ class InvokeQueuedClosure
     /**
      * Handle a job failure.
      *
-<<<<<<< HEAD
-     * @param  \Laravel\SerializableClosure\SerializableClosure  $closure
-=======
      * @param  \Illuminate\Queue\SerializableClosure  $closure
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @param  array  $arguments
      * @param  array  $catchCallbacks
      * @param  \Throwable  $exception

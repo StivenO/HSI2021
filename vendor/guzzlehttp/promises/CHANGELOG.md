@@ -1,24 +1,7 @@
 # CHANGELOG
 
-<<<<<<< HEAD
-## 1.5.0 - 2021-10-07
-
-### Changed
-
-- Call handler when waiting on fulfilled/rejected Promise
-
-### Fixed
-
-- Fix manually settle promises generated with Utils::task
-
 ## 1.4.1 - 2021-02-18
 
-### Fixed
-
-=======
-## 1.4.1 - 2021-02-18
-
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 - Fixed `each_limit` skipping promises and failing
 
 ## 1.4.0 - 2020-09-30

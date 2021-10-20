@@ -60,11 +60,7 @@ class ComposerClassMap
         foreach ($prefixes as $namespace => $directories) {
             foreach ($directories as $directory) {
                 if (file_exists($directory)) {
-<<<<<<< HEAD
-                    $files = (new Finder())
-=======
                     $files = (new Finder)
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
                         ->in($directory)
                         ->files()
                         ->name('*.php');
@@ -93,11 +89,7 @@ class ComposerClassMap
         foreach ($prefixes as $namespace => $directories) {
             foreach ($directories as $directory) {
                 if (file_exists($directory)) {
-<<<<<<< HEAD
-                    $files = (new Finder())
-=======
                     $files = (new Finder)
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
                         ->in($directory)
                         ->files()
                         ->name('*.php');

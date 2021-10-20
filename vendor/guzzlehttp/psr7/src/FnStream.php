@@ -167,14 +167,6 @@ final class FnStream implements StreamInterface
         return call_user_func($this->_fn_getContents);
     }
 
-<<<<<<< HEAD
-    /**
-     * {@inheritdoc}
-     *
-     * @return mixed
-     */
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     public function getMetadata($key = null)
     {
         return call_user_func($this->_fn_getMetadata, $key);

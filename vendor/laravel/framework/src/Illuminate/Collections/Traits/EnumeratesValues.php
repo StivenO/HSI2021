@@ -774,8 +774,6 @@ trait EnumeratesValues
     }
 
     /**
-<<<<<<< HEAD
-=======
      * Return only unique items from the collection array.
      *
      * @param  string|callable|null  $key
@@ -798,7 +796,6 @@ trait EnumeratesValues
     }
 
     /**
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * Return only unique items from the collection array using strict comparison.
      *
      * @param  string|callable|null  $key

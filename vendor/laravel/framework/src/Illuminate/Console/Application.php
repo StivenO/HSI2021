@@ -76,11 +76,6 @@ class Application extends SymfonyApplication implements ApplicationContract
 
     /**
      * {@inheritdoc}
-<<<<<<< HEAD
-     *
-     * @return int
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      */
     public function run(InputInterface $input = null, OutputInterface $output = null)
     {

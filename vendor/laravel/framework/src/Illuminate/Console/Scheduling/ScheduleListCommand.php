@@ -27,10 +27,6 @@ class ScheduleListCommand extends Command
      *
      * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
      * @return void
-<<<<<<< HEAD
-     *
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @throws \Exception
      */
     public function handle(Schedule $schedule)

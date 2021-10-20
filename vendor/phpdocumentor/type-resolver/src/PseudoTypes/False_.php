@@ -16,10 +16,6 @@ namespace phpDocumentor\Reflection\PseudoTypes;
 use phpDocumentor\Reflection\PseudoType;
 use phpDocumentor\Reflection\Type;
 use phpDocumentor\Reflection\Types\Boolean;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use function class_alias;
 
 /**
@@ -29,20 +25,12 @@ use function class_alias;
  */
 final class False_ extends Boolean implements PseudoType
 {
-<<<<<<< HEAD
-    public function underlyingType(): Type
-=======
     public function underlyingType() : Type
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         return new Boolean();
     }
 
-<<<<<<< HEAD
-    public function __toString(): string
-=======
     public function __toString() : string
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         return 'false';
     }

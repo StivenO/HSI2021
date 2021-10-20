@@ -15,10 +15,6 @@ namespace phpDocumentor\Reflection;
 
 use InvalidArgumentException;
 use phpDocumentor\Reflection\Types\Context;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use function explode;
 use function implode;
 use function strpos;
@@ -33,11 +29,7 @@ class FqsenResolver
     /** @var string Definition of the NAMESPACE operator in PHP */
     private const OPERATOR_NAMESPACE = '\\';
 
-<<<<<<< HEAD
-    public function resolve(string $fqsen, ?Context $context = null): Fqsen
-=======
     public function resolve(string $fqsen, ?Context $context = null) : Fqsen
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         if ($context === null) {
             $context = new Context('');
@@ -53,11 +45,7 @@ class FqsenResolver
     /**
      * Tests whether the given type is a Fully Qualified Structural Element Name.
      */
-<<<<<<< HEAD
-    private function isFqsen(string $type): bool
-=======
     private function isFqsen(string $type) : bool
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         return strpos($type, self::OPERATOR_NAMESPACE) === 0;
     }
@@ -68,11 +56,7 @@ class FqsenResolver
      *
      * @throws InvalidArgumentException When type is not a valid FQSEN.
      */
-<<<<<<< HEAD
-    private function resolvePartialStructuralElementName(string $type, Context $context): Fqsen
-=======
     private function resolvePartialStructuralElementName(string $type, Context $context) : Fqsen
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         $typeParts = explode(self::OPERATOR_NAMESPACE, $type, 2);
 

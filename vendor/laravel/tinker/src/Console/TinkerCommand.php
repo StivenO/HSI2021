@@ -129,13 +129,7 @@ class TinkerCommand extends Command
             $casters['Illuminate\Foundation\Application'] = 'Laravel\Tinker\TinkerCaster::castApplication';
         }
 
-<<<<<<< HEAD
-        $config = $this->getLaravel()->make('config');
-
-        return array_merge($casters, (array) $config->get('tinker.casters', []));
-=======
         return $casters;
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     }
 
     /**

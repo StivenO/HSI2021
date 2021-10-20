@@ -5,10 +5,6 @@ namespace Illuminate\Foundation\Console;
 use App\Http\Middleware\PreventRequestsDuringMaintenance;
 use Exception;
 use Illuminate\Console\Command;
-<<<<<<< HEAD
-use Illuminate\Foundation\Events\MaintenanceModeEnabled;
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use Illuminate\Foundation\Exceptions\RegisterErrorViewPaths;
 use Throwable;
 
@@ -57,11 +53,6 @@ class DownCommand extends Command
                 file_get_contents(__DIR__.'/stubs/maintenance-mode.stub')
             );
 
-<<<<<<< HEAD
-            $this->laravel->get('events')->dispatch(MaintenanceModeEnabled::class);
-
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
             $this->comment('Application is now in maintenance mode.');
         } catch (Exception $e) {
             $this->error('Failed to enter maintenance mode.');

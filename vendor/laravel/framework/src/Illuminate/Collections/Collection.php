@@ -827,11 +827,7 @@ class Collection implements ArrayAccess, Enumerable
     /**
      * Push one or more items onto the end of the collection.
      *
-<<<<<<< HEAD
-     * @param  mixed  $values
-=======
      * @param  mixed  $values [optional]
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return $this
      */
     public function push(...$values)
@@ -1416,31 +1412,6 @@ class Collection implements ArrayAccess, Enumerable
     }
 
     /**
-<<<<<<< HEAD
-     * Return only unique items from the collection array.
-     *
-     * @param  string|callable|null  $key
-     * @param  bool  $strict
-     * @return static
-     */
-    public function unique($key = null, $strict = false)
-    {
-        $callback = $this->valueRetriever($key);
-
-        $exists = [];
-
-        return $this->reject(function ($item, $key) use ($callback, $strict, &$exists) {
-            if (in_array($id = $callback($item, $key), $exists, $strict)) {
-                return true;
-            }
-
-            $exists[] = $id;
-        });
-    }
-
-    /**
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * Reset the keys on the underlying array.
      *
      * @return static

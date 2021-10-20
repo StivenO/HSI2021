@@ -7,10 +7,7 @@ use Closure;
 use Illuminate\Contracts\Queue\Factory as QueueFactory;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Queue\CallQueuedClosure;
-<<<<<<< HEAD
-=======
 use Illuminate\Queue\SerializableClosure;
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use JsonSerializable;
@@ -423,11 +420,7 @@ class Batch implements Arrayable, JsonSerializable
     /**
      * Invoke a batch callback handler.
      *
-<<<<<<< HEAD
-     * @param  callable  $handler
-=======
      * @param  \Illuminate\Queue\SerializableClosure|callable  $handler
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @param  \Illuminate\Bus\Batch  $batch
      * @param  \Throwable|null  $e
      * @return void
@@ -435,13 +428,9 @@ class Batch implements Arrayable, JsonSerializable
     protected function invokeHandlerCallback($handler, Batch $batch, Throwable $e = null)
     {
         try {
-<<<<<<< HEAD
-            return $handler($batch, $e);
-=======
             return $handler instanceof SerializableClosure
                 ? $handler->__invoke($batch, $e)
                 : call_user_func($handler, $batch, $e);
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         } catch (Throwable $e) {
             if (function_exists('report')) {
                 report($e);

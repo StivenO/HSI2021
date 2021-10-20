@@ -91,15 +91,9 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 9) {
         /**
          * Returns a string representation of the constraint.
          *
-<<<<<<< HEAD
-         * @return string
-         *
-         * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
-=======
          * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
          *
          * @return string
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
          */
         public function toString(): string
         {
@@ -230,15 +224,9 @@ if (class_exists(Version::class) && (int) Version::series()[0] >= 9) {
         /**
          * Returns a string representation of the constraint.
          *
-<<<<<<< HEAD
-         * @return string
-         *
-         * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
-=======
          * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
          *
          * @return string
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
          */
         public function toString(): string
         {

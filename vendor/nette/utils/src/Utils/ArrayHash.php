@@ -14,19 +14,11 @@ use Nette;
 
 /**
  * Provides objects to work as array.
-<<<<<<< HEAD
- * @template T
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
  */
 class ArrayHash extends \stdClass implements \ArrayAccess, \Countable, \IteratorAggregate
 {
 	/**
 	 * Transforms array to ArrayHash.
-<<<<<<< HEAD
-	 * @param  array<T>  $array
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 * @return static
 	 */
 	public static function from(array $array, bool $recursive = true)
@@ -43,10 +35,6 @@ class ArrayHash extends \stdClass implements \ArrayAccess, \Countable, \Iterator
 
 	/**
 	 * Returns an iterator over all items.
-<<<<<<< HEAD
-	 * @return \RecursiveArrayIterator<array-key, T>
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 */
 	public function getIterator(): \RecursiveArrayIterator
 	{
@@ -66,11 +54,7 @@ class ArrayHash extends \stdClass implements \ArrayAccess, \Countable, \Iterator
 	/**
 	 * Replaces or appends a item.
 	 * @param  string|int  $key
-<<<<<<< HEAD
-	 * @param  T  $value
-=======
 	 * @param  mixed  $value
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 */
 	public function offsetSet($key, $value): void
 	{
@@ -84,14 +68,8 @@ class ArrayHash extends \stdClass implements \ArrayAccess, \Countable, \Iterator
 	/**
 	 * Returns a item.
 	 * @param  string|int  $key
-<<<<<<< HEAD
-	 * @return T
-	 */
-	#[\ReturnTypeWillChange]
-=======
 	 * @return mixed
 	 */
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	public function offsetGet($key)
 	{
 		return $this->$key;

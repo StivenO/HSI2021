@@ -248,11 +248,7 @@ class Html implements \ArrayAccess, \Countable, \IteratorAggregate, HtmlStringab
 		'isindex' => 1, 'wbr' => 1, 'command' => 1, 'track' => 1,
 	];
 
-<<<<<<< HEAD
-	/** @var array<int, HtmlStringable|string> nodes */
-=======
 	/** @var array<int, Html|string> nodes */
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	protected $children = [];
 
 	/** @var string  element's name */
@@ -666,14 +662,8 @@ class Html implements \ArrayAccess, \Countable, \IteratorAggregate, HtmlStringab
 	/**
 	 * Returns child node (\ArrayAccess implementation).
 	 * @param  int  $index
-<<<<<<< HEAD
-	 * @return HtmlStringable|string
-	 */
-	#[\ReturnTypeWillChange]
-=======
 	 * @return static|string
 	 */
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	final public function offsetGet($index)
 	{
 		return $this->children[$index];
@@ -722,10 +712,6 @@ class Html implements \ArrayAccess, \Countable, \IteratorAggregate, HtmlStringab
 
 	/**
 	 * Iterates over elements.
-<<<<<<< HEAD
-	 * @return \ArrayIterator<int, HtmlStringable|string>
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 	 */
 	final public function getIterator(): \ArrayIterator
 	{

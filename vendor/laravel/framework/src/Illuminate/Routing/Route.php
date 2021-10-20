@@ -14,14 +14,8 @@ use Illuminate\Routing\Matching\UriValidator;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Illuminate\Support\Traits\Macroable;
-<<<<<<< HEAD
-use Laravel\SerializableClosure\SerializableClosure;
-use LogicException;
-use Opis\Closure\SerializableClosure as OpisSerializableClosure;
-=======
 use LogicException;
 use Opis\Closure\SerializableClosure;
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use ReflectionFunction;
 use Symfony\Component\Routing\Route as SymfonyRoute;
 
@@ -981,16 +975,9 @@ class Route
         $missing = $this->action['missing'] ?? null;
 
         return is_string($missing) &&
-<<<<<<< HEAD
-            Str::startsWith($missing, [
-                'C:32:"Opis\\Closure\\SerializableClosure',
-                'O:47:"Laravel\\SerializableClosure\\SerializableClosure',
-            ]) ? unserialize($missing) : $missing;
-=======
             Str::startsWith($missing, 'C:32:"Opis\\Closure\\SerializableClosure')
                 ? unserialize($missing)
                 : $missing;
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     }
 
     /**
@@ -1239,25 +1226,11 @@ class Route
     public function prepareForSerialization()
     {
         if ($this->action['uses'] instanceof Closure) {
-<<<<<<< HEAD
-            $this->action['uses'] = serialize(\PHP_VERSION_ID < 70400
-                ? new OpisSerializableClosure($this->action['uses'])
-                : new SerializableClosure($this->action['uses'])
-            );
-        }
-
-        if (isset($this->action['missing']) && $this->action['missing'] instanceof Closure) {
-            $this->action['missing'] = serialize(\PHP_VERSION_ID < 70400
-                ? new OpisSerializableClosure($this->action['missing'])
-                : new SerializableClosure($this->action['missing'])
-            );
-=======
             $this->action['uses'] = serialize(new SerializableClosure($this->action['uses']));
         }
 
         if (isset($this->action['missing']) && $this->action['missing'] instanceof Closure) {
             $this->action['missing'] = serialize(new SerializableClosure($this->action['missing']));
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         }
 
         $this->compileRoute();

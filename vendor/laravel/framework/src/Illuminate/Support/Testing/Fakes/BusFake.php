@@ -636,11 +636,7 @@ class BusFake implements QueueingDispatcher
     /**
      * Record the fake pending batch dispatch.
      *
-<<<<<<< HEAD
-     * @param  \Illuminate\Bus\PendingBatch  $pendingBatch
-=======
      * @param  \Illuminate\Bus\PendingBatch $pendingBatch
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * @return \Illuminate\Bus\Batch
      */
     public function recordPendingBatch(PendingBatch $pendingBatch)

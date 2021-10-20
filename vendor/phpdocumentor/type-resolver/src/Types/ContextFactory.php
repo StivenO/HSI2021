@@ -23,10 +23,6 @@ use ReflectionProperty;
 use Reflector;
 use RuntimeException;
 use UnexpectedValueException;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use function define;
 use function defined;
 use function file_exists;
@@ -38,19 +34,10 @@ use function strrpos;
 use function substr;
 use function token_get_all;
 use function trim;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use const T_AS;
 use const T_CLASS;
 use const T_CURLY_OPEN;
 use const T_DOLLAR_OPEN_CURLY_BRACES;
-<<<<<<< HEAD
-use const T_NAME_FULLY_QUALIFIED;
-use const T_NAME_QUALIFIED;
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use const T_NAMESPACE;
 use const T_NS_SEPARATOR;
 use const T_STRING;
@@ -86,11 +73,7 @@ final class ContextFactory
      *
      * @see Context for more information on Contexts.
      */
-<<<<<<< HEAD
-    public function createFromReflector(Reflector $reflector): Context
-=======
     public function createFromReflector(Reflector $reflector) : Context
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         if ($reflector instanceof ReflectionClass) {
             //phpcs:ignore SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration.MissingVariable
@@ -118,24 +101,13 @@ final class ContextFactory
         throw new UnexpectedValueException('Unhandled \Reflector instance given:  ' . get_class($reflector));
     }
 
-<<<<<<< HEAD
-    private function createFromReflectionParameter(ReflectionParameter $parameter): Context
-=======
     private function createFromReflectionParameter(ReflectionParameter $parameter) : Context
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         $class = $parameter->getDeclaringClass();
         if (!$class) {
             throw new InvalidArgumentException('Unable to get class of ' . $parameter->getName());
         }
 
-<<<<<<< HEAD
-        return $this->createFromReflectionClass($class);
-    }
-
-    private function createFromReflectionMethod(ReflectionMethod $method): Context
-    {
-=======
         //phpcs:ignore SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration.MissingVariable
         /** @var ReflectionClass<object> $class */
 
@@ -146,52 +118,33 @@ final class ContextFactory
     {
         //phpcs:ignore SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration.MissingVariable
         /** @var ReflectionClass<object> $class */
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         $class = $method->getDeclaringClass();
 
         return $this->createFromReflectionClass($class);
     }
 
-<<<<<<< HEAD
-    private function createFromReflectionProperty(ReflectionProperty $property): Context
-    {
-=======
     private function createFromReflectionProperty(ReflectionProperty $property) : Context
     {
         //phpcs:ignore SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration.MissingVariable
         /** @var ReflectionClass<object> $class */
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         $class = $property->getDeclaringClass();
 
         return $this->createFromReflectionClass($class);
     }
 
-<<<<<<< HEAD
-    private function createFromReflectionClassConstant(ReflectionClassConstant $constant): Context
-    {
-        //phpcs:ignore SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration.MissingVariable
-        /** @phpstan-var ReflectionClass<object> $class */
-=======
     private function createFromReflectionClassConstant(ReflectionClassConstant $constant) : Context
     {
         //phpcs:ignore SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration.MissingVariable
         /** @var ReflectionClass<object> $class */
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
         $class = $constant->getDeclaringClass();
 
         return $this->createFromReflectionClass($class);
     }
 
     /**
-<<<<<<< HEAD
-     * @phpstan-param ReflectionClass<object> $class
-     */
-    private function createFromReflectionClass(ReflectionClass $class): Context
-=======
      * @param ReflectionClass<object> $class
      */
     private function createFromReflectionClass(ReflectionClass $class) : Context
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         $fileName  = $class->getFileName();
         $namespace = $class->getNamespaceName();
@@ -217,11 +170,7 @@ final class ContextFactory
      * this method first normalizes.
      * @param string $fileContents The file's contents to retrieve the aliases from with the given namespace.
      */
-<<<<<<< HEAD
-    public function createForNamespace(string $namespace, string $fileContents): Context
-=======
     public function createForNamespace(string $namespace, string $fileContents) : Context
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         $namespace        = trim($namespace, '\\');
         $useStatements    = [];
@@ -242,15 +191,8 @@ final class ContextFactory
                     $firstBraceFound = false;
                     while ($tokens->valid() && ($braceLevel > 0 || !$firstBraceFound)) {
                         $currentToken = $tokens->current();
-<<<<<<< HEAD
-                        if (
-                            $currentToken === '{'
-                            || in_array($currentToken[0], [T_CURLY_OPEN, T_DOLLAR_OPEN_CURLY_BRACES], true)
-                        ) {
-=======
                         if ($currentToken === '{'
                             || in_array($currentToken[0], [T_CURLY_OPEN, T_DOLLAR_OPEN_CURLY_BRACES], true)) {
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
                             if (!$firstBraceFound) {
                                 $firstBraceFound = true;
                             }
@@ -285,11 +227,7 @@ final class ContextFactory
      *
      * @param ArrayIterator<int, string|array{0:int,1:string,2:int}> $tokens
      */
-<<<<<<< HEAD
-    private function parseNamespace(ArrayIterator $tokens): string
-=======
     private function parseNamespace(ArrayIterator $tokens) : string
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         // skip to the first string or namespace separator
         $this->skipToNextStringOrNamespaceSeparator($tokens);
@@ -310,16 +248,10 @@ final class ContextFactory
      * @param ArrayIterator<int, string|array{0:int,1:string,2:int}> $tokens
      *
      * @return string[]
-<<<<<<< HEAD
-     * @psalm-return array<string, string>
-     */
-    private function parseUseStatement(ArrayIterator $tokens): array
-=======
      *
      * @psalm-return array<string, string>
      */
     private function parseUseStatement(ArrayIterator $tokens) : array
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         $uses = [];
 
@@ -341,11 +273,7 @@ final class ContextFactory
      *
      * @param ArrayIterator<int, string|array{0:int,1:string,2:int}> $tokens
      */
-<<<<<<< HEAD
-    private function skipToNextStringOrNamespaceSeparator(ArrayIterator $tokens): void
-=======
     private function skipToNextStringOrNamespaceSeparator(ArrayIterator $tokens) : void
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         while ($tokens->valid()) {
             $currentToken = $tokens->current();
@@ -372,20 +300,12 @@ final class ContextFactory
      * @param ArrayIterator<int, string|array{0:int,1:string,2:int}> $tokens
      *
      * @return string[]
-<<<<<<< HEAD
-     * @psalm-return array<string, string>
-     *
-     * @psalm-suppress TypeDoesNotContainType
-     */
-    private function extractUseStatements(ArrayIterator $tokens): array
-=======
      *
      * @psalm-suppress TypeDoesNotContainType
      *
      * @psalm-return array<string, string>
      */
     private function extractUseStatements(ArrayIterator $tokens) : array
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     {
         $extractedUseStatements = [];
         $groupedNs              = '';

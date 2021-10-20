@@ -24,18 +24,10 @@ use Ramsey\Uuid\Type\Hexadecimal;
 use Ramsey\Uuid\Type\Integer as IntegerObject;
 use Ramsey\Uuid\UuidFactory;
 use Ramsey\Uuid\UuidInterface;
-<<<<<<< HEAD
-use ValueError;
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 
 use function assert;
 use function bin2hex;
 use function hex2bin;
-<<<<<<< HEAD
-use function sprintf;
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
 use function str_replace;
 use function substr;
 
@@ -99,19 +91,6 @@ final class LazyUuidFromString implements UuidInterface
     }
 
     /**
-<<<<<<< HEAD
-     * @return array{string: string}
-     *
-     * @psalm-return array{string: non-empty-string}
-     */
-    public function __serialize(): array
-    {
-        return ['string' => $this->uuid];
-    }
-
-    /**
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
      * {@inheritDoc}
      *
      * @param string $serialized
@@ -123,25 +102,6 @@ final class LazyUuidFromString implements UuidInterface
         $this->uuid = $serialized;
     }
 
-<<<<<<< HEAD
-    /**
-     * @param array{string: string} $data
-     *
-     * @psalm-param array{string: non-empty-string} $data
-     */
-    public function __unserialize(array $data): void
-    {
-        // @codeCoverageIgnoreStart
-        if (!isset($data['string'])) {
-            throw new ValueError(sprintf('%s(): Argument #1 ($data) is invalid', __METHOD__));
-        }
-        // @codeCoverageIgnoreEnd
-
-        $this->unserialize($data['string']);
-    }
-
-=======
->>>>>>> 4b7cf7360a7b81a06dad794700bbb884a8d64418
     /** @psalm-suppress DeprecatedMethod */
     public function getNumberConverter(): NumberConverterInterface
     {
