@@ -135,7 +135,7 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Detalle de tesorería:</h6>
-                        <a class="collapse-item" href="ventas.php">Historial de ventas</a>
+                        <a class="collapse-item" href="/h_ventas">Historial de ventas</a>
                         <a class="collapse-item" href="caja.php">Caja</a>
                     </div>
                 </div>
@@ -152,7 +152,7 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Detalle de productos:</h6>
-                        <a class="collapse-item" href="productos.php">Lista de productos</a>
+                        <a class="collapse-item" href="/product">Lista de productos</a>
                     </div>
                 </div>
             </li>
@@ -170,7 +170,7 @@
                         <h6 class="collapse-header">Sobre Inventario:</h6>
                         <a class="collapse-item" href="inventario.php">Inventario</a>
                         <a class="collapse-item" href="abastecer.php">Abastecer</a>
-                        <a class="collapse-item" href="h_abastecer.php">Historial abastecimiento</a>
+                        <a class="collapse-item" href="/h_abastecimiento">Historial abastecimiento</a>
                     </div>
                 </div>
             </li>
