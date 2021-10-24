@@ -116,16 +116,16 @@ Route::get('sell/delete/{idsell}', [SellController::class, 'delete']);
 
 Route::get('h_ventas', [H_ventasController::class, 'index']);
 
-Route::get('h_ventas/new', [SellController::class, 'create']);
-Route::post('h_ventas', [SellController::class, 'store']);
+Route::get('h_ventas/new', [H_ventasController::class, 'create']);
+Route::post('h_ventas', [H_ventasController::class, 'store']);
 
-Route::get('h_ventas/editar/{idsell}', [SellController::class, 'edit']);
-Route::post('h_ventas/editar/{idsell}', [SellController::class, 'update']);
+Route::get('h_ventas/editar/{idsell}', [H_ventasController::class, 'edit']);
+Route::post('h_ventas/editar/{idsell}', [H_ventasController::class, 'update']);
 
 
-Route::get('h_ventas/destroy/{idsell}', [SellController::class, 'destroy']);
-Route::get('h_ventas/recovery/{idsell}', [SellController::class, 'recovery']);
-Route::get('h_ventas/delete/{idsell}', [SellController::class, 'delete']);
+Route::get('h_ventas/destroy/{idsell}', [H_ventasController::class, 'destroy']);
+Route::get('h_ventas/recovery/{idsell}', [H_ventasController::class, 'recovery']);
+Route::get('h_ventas/delete/{idsell}', [H_ventasController::class, 'delete']);
 
 //  abastecimiento (sell) ----------------------------------------------------------------------
 

@@ -20,15 +20,15 @@ class H_ventasController extends Controller
         //$data = Tipo::all(); Trae todos.
         //$data = Sell::where('state', 1)->get();
         $data2 = Sell::where($consulta2)->get();
-        return view('H_ventas.index', compact('data', 'data2') );
+        return view('h_ventas.index', compact('data', 'data2') );
     }
 
 
     public function create()
     {
-        $operaciones = Operationtype::where('state', 1)->get();
-        $productos = Product::where('state', 1)->get();
-        return view('sell.new', compact('operaciones', 'productos'));
+        //$operaciones = Operationtype::where('state', 1)->get();
+        //$productos = Product::where('state', 1)->get();
+        //return view('h_ventas.new', compact('operaciones', 'productos'));
     }
 
 
@@ -36,7 +36,7 @@ class H_ventasController extends Controller
     {
         $data['person_id'] = $request->get('person_id');
         $data['user_id'] = $request->get('user_id');
-        $data['opetype_id'] = $request->get('opetype_id');
+        // $data['opetype_id'] = 1;
         $data['product_id'] = $request->get('product_id');
         $data['cantproduct'] = $request->get('cantproduct');
         $data['cash'] = $request->get('cash');
@@ -45,9 +45,9 @@ class H_ventasController extends Controller
         $data['total'] = $request->get('total');
      
 
-        Sell::create($data);
+        //Sell::create($data);
         
-        return redirect('sell');
+        return redirect('h_ventas');
     }
 
     public function show($id)
@@ -61,7 +61,7 @@ class H_ventasController extends Controller
         $operaciones = Operationtype::where('state', 1)->get();
         $productos = Product::where('state', 1)->get();
         $data = Sell::find($id);
-        return view('sell.edit', compact('data', 'operaciones', 'productos'));
+        return view('h_ventas.edit', compact('data', 'operaciones', 'productos'));
     }
 
     public function update(Request $request, $id)

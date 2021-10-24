@@ -8,7 +8,7 @@
 
 	<div class="container">
 		<a href="{{ url('sell') }}" class="btn btn-secondary float-end mt-2"> << Volver </a>
-		<h1>Nueva Venta</h1>
+		<h1> * Nueva Venta * </h1>
 		<hr>
 		<form action="{{ url('sell') }}" method="POST" class="col-md-6">
 			@csrf

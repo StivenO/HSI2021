@@ -11,7 +11,7 @@
 <body>
 
 	<div class="container">
-		<a href="{{ url('sell/new') }}" class="btn btn-primary float-right"><i class="fas fa-share-square"></i> Ir a vender</a>
+		<a href="{{ url('h_ventas/new') }}" class="btn btn-primary float-right"><i class="fas fa-share-square"></i> Ir a vender</a>
 		<h1 class="h3 mb-4 text-gray-800">Historial de Ventas</h1>
 		<hr>
 		

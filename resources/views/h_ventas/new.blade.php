@@ -7,10 +7,10 @@
 <body>
 
 	<div class="container">
-		<a href="{{ url('sell') }}" class="btn btn-secondary float-end mt-2"> << Volver </a>
-		<h1>Nueva Venta</h1>
+		<a href="{{ url('h_ventas') }}" class="btn btn-secondary float-end mt-2"> << Volver </a>
+		<h1> * Hacer Venta * </h1>
 		<hr>
-		<form action="{{ url('sell') }}" method="POST" class="col-md-6">
+		<form action="{{ url('h_ventas') }}" method="POST" class="col-md-6">
 			@csrf
 
 			<input name="person_id" placeholder="Nombre" class="form-control"  autofocus>

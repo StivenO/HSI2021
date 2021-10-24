@@ -119,7 +119,7 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acerca de la venta:</h6>
-                        <a class="collapse-item" href="vender.php">Hacer una Venta</a>
+                        <a class="collapse-item" href="/h_ventas/new">Hacer una Venta</a>
                     </div>
                 </div>
             </li>

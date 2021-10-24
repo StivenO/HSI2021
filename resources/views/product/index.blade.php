@@ -9,9 +9,9 @@
 </head>
 @section('content')
     <body>
-    <div class="container">    
+    <div class="container-fluid">    
     <a href="product/new" class="btn btn-primary float-right"><i class="fas fa-plus-circle"></i> Agregar Producto</a>
-    <h1 class="h3 mb-0 text-gray-800">Productos</h1>
+    <h1 class="h3 mb-0 text-gray-800">Gestión de Productos</h1>
     <hr>
     <ul class="nav nav-pills float-end mb-3" id="pills-tab" role="tablist">
     <li class="nav-item" role="presentation">
@@ -24,7 +24,7 @@
     <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
     <br>
-    <table class="table table-bordered table-hover table-striped">
+    <table class="table table-hover table-striped table-bordered table-sm">
         <thead>
             <tr>
                 <th>Id</th>
@@ -62,7 +62,7 @@
     </div>
     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
     
-    <table class="table table-bordered table-hover table-striped">
+    <table class="table table-hover table-striped table-bordered table-sm">
         <thead>
             <tr>
                 <th>Id</th>
@@ -98,16 +98,7 @@
         </tbody>
     </table>
     </div>
-    <center>
-        <br>
-    <h3>IR A</h3>
-    <br><hr>
-    <a href="{{ url('category')}}" class="btn btn-outline-success float-center mt-2"> Categorias </a>
-    <a href="{{ url('unit')}}" class="btn btn-outline-warning float-center mt-2"> Unidades </a>
-    <br><br>
-    <a href="{{ url('sell')}}" type="button" class="btn btn-secondary btn-lg ">Crud Anterior</a>
-    <br><br>
-</center>
+    <br>
 </body>
 @stop 
 </html>
