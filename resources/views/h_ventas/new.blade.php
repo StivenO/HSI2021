@@ -1,43 +1,80 @@
+@extends('layaut')
+
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title></title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+
 </head>
+@section('content')
+
 <body>
+	<div class="container-fluid">
 
-	<div class="container">
-		<a href="{{ url('h_ventas') }}" class="btn btn-secondary float-end mt-2"> << Volver </a>
-		<h1> * Hacer Venta * </h1>
-		<hr>
-		<form action="{{ url('h_ventas') }}" method="POST" class="col-md-6">
+		<a href="{{ url('h_ventas') }}" class="btn btn-danger float-right"><i class="fas fa-window-close"></i> Cancelar</a>
+
+		<!-- Encabezado de página -->
+		<h1 class="h3 mb-4 text-gray-800">Hacer una Venta</h1>
+
+		<form action="{{ url('h_ventas') }}" method="POST" class="user">
 			@csrf
+			<!-- Fila de columna -->
+			<div class="col-lg-6 mb-4">
 
-			<input name="person_id" placeholder="Nombre" class="form-control"  autofocus>
-			<input name="user_id" placeholder="Usuario" class="form-control"  >
-			<select name="opetype_id" class="form-control" required>
-            <option >Seleccione Tipo De Transaccion*</option>
-            @foreach ($operaciones as $operacion)
-                    <option value="{{$operacion->idopetype}}">{{ $operacion->nomopetype }}</option>
-            @endforeach
-        </select>
-			<select name="product_id" class="form-control" required>
-            <option >Seleccione Tipo De Producto*</option>
-            @foreach ($productos as $producto)
-                    <option value="{{$producto->idproduct}}">{{ $producto->nomproduct }}</option>
-            @endforeach
-        </select>
-			<input name="cantproduct" placeholder="Cantidad" class="form-control"  >
-			<input name="cash" placeholder="Valor" class="form-control"  >
-			<input name="disc" placeholder="Descuento" class="form-control"  >
-			<input name="date" placeholder="Fecha" class="form-control" type="datetime-local" >
-			<input name="total" placeholder="Total" class="form-control"  >
-	
-			<input type="submit" class="btn btn-success mt-3">
+				<!-- Formulario -->
+				<div class="card shadow mb-4" style="width: 60rem;">
+					<div class="card-header py-3">
+						<h6 class="m-0 font-weight-bold text-primary text-center">Realiza la venta</h6>
+					</div>
+					<div class="card-body">
+						<div class="form-group row">
+							<div class="col-sm-4 mb-3 mb-sm-0">
+								<input name="person_id" type="" class="form-control form-control-user" id="ejemploNomuser" value="3" placeholder="Nombre del usuario" readonly>
+							</div>
+
+							<div class="col-sm-4">
+								<input name="user_id" type="" class="form-control form-control-user" id="ejemploNomperson" placeholder="Nombre del cliente">
+							</div>
+
+							<div class="col-sm-4 mb-3 mb-sm-0">
+
+								<select name="product_id" class=" form-control-user" required>
+									<option>Seleccione Nombre Del Producto*</option>
+									@foreach ($productos as $producto)
+									<option value="{{$producto->idproduct}}">{{ $producto->nomproduct }}</option>
+									@endforeach
+								</select>
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-sm-4 mb-3 mb-sm-0">
+								<input name="cantproduct" type="number" class="form-control form-control-user" id="ejemploCant" placeholder="Cantidad">
+							</div>
+							<div class="col-sm-4">
+								<input name="cash" type="number" class="form-control form-control-user" id="ejemploPriceout" placeholder="Precio unitario">
+							</div>
+							<div class="col-sm-4">
+								<input name="disc" type="number" class="form-control form-control-user" id="ejemploDesc" placeholder="Descuento">
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-sm-4 mb-3 mb-sm-0">
+								<input name="date" type="datetime-local" class="form-control form-control-user" id="ejemplodate" placeholder="Fecha y hora">
+							</div>
+							<div class="col-sm-4">
+								<input name="total" type="number" class="form-control form-control-user" id="ejemplototal" placeholder="Total">
+							</div>
+							<div class="col-sm-3">
+								<a class="btn btn-success btn-user btn-block" href="#" data-toggle="modal" data-target="#logoutModal2"><i class="fas fa-dollar-sign"></i> Confirmar Venta</a>
+								<br>
+								<input type="submit" class="btn btn-success mt-3">
+							</div>
+						</div>
 
 		</form>
 	</div>
-
-
+	@stop
 </body>
+
 </html>

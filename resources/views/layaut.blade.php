@@ -11,15 +11,15 @@
     <meta name="author" content="Hardware Store Inventory">
 
     <title>HSI - Aplicación</title>
-    <script src="plugins/notificaciones/push.min.js"></script>
+    <script src="{{ url('plugins/notificaciones/push.min.js') }}"></script>
     <!-- Fuentes personalizadas para esta plantilla-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ url('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Estilos personalizados para esta plantilla-->
-    <link href="css/estilo.css" rel="stylesheet">
+    <link href="{{ url('css/estilo.css') }}" rel="stylesheet">
 <!-- CSS only -->
 
 <!-- JavaScript Bundle with Popper -->
@@ -51,7 +51,7 @@
 
             <!-- Elemento de navegación: panel -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.php">
+                <a class="nav-link" href="{{ url('index.php') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Página Principal</span></a>
             </li>
@@ -218,7 +218,7 @@
 
             <!-- Mensaje de la barra lateral -->
             <div class="sidebar-card">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="">
+                <img class="sidebar-card-illustration mb-2" src="{{ url('img/undraw_rocket.svg') }}" alt="">
                 <p class="text-center mb-2"><strong>Hardware Store Inventory</strong> esta feliz que haga uso de su software, estamos para usted!</p>
                 <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Contáctanos!</a>
             </div>
@@ -347,7 +347,7 @@
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                                        <img class="rounded-circle" src="{{ url('img/undraw_profile_1.svg') }}"
                                             alt="">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
@@ -359,7 +359,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                        <img class="rounded-circle" src="{{ url('img/undraw_profile_2.svg') }}"
                                             alt="">
                                         <div class="status-indicator"></div>
                                     </div>
@@ -371,7 +371,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
+                                        <img class="rounded-circle" src="{{ url('img/undraw_profile_3.svg') }}"
                                             alt="">
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
@@ -405,7 +405,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"> XXXXXXXXX </span>
                                 <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                    src="{{ url('img/undraw_profile.svg') }}">
                             </a>
                             <!-- Menú desplegable - Información del usuario -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -491,7 +491,7 @@
     </script>
 
 
-<script src="plugins/jquery.js"></script>
+<script src="{{ url('plugins/jquery.js') }}"></script>
     	<!-- <script src="plugins/datatables/js/jquery.dataTables.min.js"></script> -->
     	<!-- <script src="plugins/datatables/js/dataTables.bootstrap4.min.js"></script> -->
 
@@ -559,21 +559,21 @@
 
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="{{ url('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
     <!-- Custom scripts para todas las páginas -->
-    <script src="js/sb-admin-2.min.js"></script>
+    <script src="{{ url('js/sb-admin-2.min.js') }}"></script>
 
     <!-- Complementos de nivel de página -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="{{ url('vendor/chart.js/Chart.min.js') }}"></script>
 
     <!-- Scripts,Nivel de página personalizado -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="{{ url('js/demo/chart-area-demo.js') }}"></script>
+    <script src="{{ url('js/demo/chart-pie-demo.js') }}"></script>
 
 </body>
 

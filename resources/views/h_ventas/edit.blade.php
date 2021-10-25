@@ -9,7 +9,7 @@
 
 	<div class="container">
 		<a href="{{ url('sell') }}" class="btn btn-secondary float-end mt-2"> << Volver </a>
-		<h1>Editar Tipo</h1>
+		<h1> :D Editar Tipo</h1>
 		<hr>
 		<form action="{{ url('sell/editar/'.$data->idsell ) }}" method="POST" class="col-md-6">
 			@csrf
