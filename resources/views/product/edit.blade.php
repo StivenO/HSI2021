@@ -1,47 +1,90 @@
+@extends('layaut')
+
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <tittle></tittle>
-<!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">    </head>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+@section('content')
+
 <body>
-    <div class="container">    
-    <center>
-        <a href="{{ url('product') }}" class="btn btn-secondary float-end mt-2"> Volver </a>
-    <h1>Editar Producto</h1>
-    <hr>
-    <form action="{{url('product/edit/'.$data->idproduct)}}" method="POST">
-        @csrf
-        <input name="nomproduct" type="text" class="form-control form-control-user" placeholder="Nombre del producto*" value="{{ $data->nomproduct }}" autofocus>
-        <input name="description" type="text" class="form-control form-control-user" placeholder="Descripción..." value="{{ $data->description }}">
-        <input name="stockmin" type="number" class="form-control form-control-user" placeholder="Stock mínimo*" value="{{ $data->stockmin }}">
-        <input name="pricein" type="number" class="form-control form-control-user" placeholder="Precio de entrada*" value="{{ $data->pricein }}">
-        <input name="quantity" type="number" class="form-control form-control-user" placeholder="Cantidad*" value="{{ $data->quantity }}">
-        <input name="priceout" type="number" class="form-control form-control-user" placeholder="Precio de salida*" value="{{ $data->priceout }}">
-        <select name="unit_id" class="form-control" required>
-            <option >Seleccione Tipo De Unidad*</option>
-            @foreach ($unidades as $unidad)
-                @if(($unidad->idunit) == ($data->unit_id))
-                    <option value="{{$unidad->idunit}}" selected>{{ $unidad->nomunit }}</option>
-                    @else
-                    <option value="{{$unidad->idunit}}">{{ $unidad->nomunit }}</option>
-                @endif
-            @endforeach
-        </select>
-        <select name="category_id" class="form-control" required>
-            <option >Seleccione Categoría*</option>
-            @foreach ($categorias as $categoria)
-                @if(($categoria->idcategory) == ($data->category_id))
-                    <option value="{{$categoria->idcategory}}" selected>{{ $categoria->nomcategory }}</option>
-                    @else
-                    <option value="{{$categoria->idcategory}}">{{ $categoria->nomcategory }}</option>
-                @endif
-            @endforeach
-        </select>
-        <br>
-        <input type="submit" class="btn btn-success" >
-    </form>
-    </center>
+
+    <div class="container-fluid">
+
+        <a href="{{ url('product') }}" class="btn btn-danger float-right"><i class="fas fa-window-close"></i> Cancelar</a>
+
+        <!-- Encabezado de página -->
+        <h1 class="h3 mb-4 text-gray-800">Editar un Producto</h1>
+
+        <form action="{{url('product/edit/'.$data->idproduct)}}" method="POST" class="user">
+            @csrf
+            <!-- Fila de columna -->
+            <div class="col-lg-6 mb-4">
+
+                <!-- Formulario -->
+                <div class="card shadow mb-4" style="width: 60rem;">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary text-center">Formulario para editar un Producto</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-sm-4 mb-3 mb-sm-0">
+                                <input name="nomproduct" type="text" class="form-control form-control-user" id="ejemploNom" placeholder="Nombre del producto*" value="{{ $data->nomproduct }}" autofocus>
+                            </div>
+                            <div class="col-sm-8">
+                                <input name="description" type="text" class="form-control form-control-user" id="ejemploDescription" placeholder="Descripción..." value="{{ $data->description }}">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-4">
+                                <input name="stockmin" type="number" class="form-control form-control-user" id="ejemploStockmin" placeholder="Stock mínimo*" value="{{ $data->stockmin }}">
+                            </div>
+                            <div class="col-sm-4">
+                                <input name="pricein" type="number" class="form-control form-control-user" id="ejemploPricein" placeholder="Precio de entrada*" value="{{ $data->pricein }}">
+                            </div>
+                            <div class="col-sm-4">
+                                <input name="quantity" type="number" class="form-control form-control-user" id="ejemploCant" placeholder="Cantidad*" value="{{ $data->quantity }}">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-4 mb-3 mb-sm-0">
+                                <input name="priceout" type="number" class="form-control form-control-user" id="ejemploPriceout" placeholder="Precio de salida*" value="{{ $data->priceout }}">
+                            </div>
+                            <div class="col-sm-4">
+                                <select name="unit_id" class="form-control form-select-user text-gray-600" id="ejemploUnitid" required>
+                                    <option>Seleccione Tipo De Unidad*</option>
+                                    @foreach ($unidades as $unidad)
+                                    @if(($unidad->idunit) == ($data->unit_id))
+                                    <option value="{{$unidad->idunit}}" selected>{{ $unidad->nomunit }}</option>
+                                    @else
+                                    <option value="{{$unidad->idunit}}">{{ $unidad->nomunit }}</option>
+                                    @endif
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="col-sm-4 mb-3 mb-sm-0">
+
+                                <select name="category_id" class="form-control form-select-user text-gray-600" id="ejemploCategory" required>
+                                    <option>Seleccione Categoría*</option>
+                                    @foreach ($categorias as $categoria)
+                                    @if(($categoria->idcategory) == ($data->category_id))
+                                    <option value="{{$categoria->idcategory}}" selected>{{ $categoria->nomcategory }}</option>
+                                    @else
+                                    <option value="{{$categoria->idcategory}}">{{ $categoria->nomcategory }}</option>
+                                    @endif
+                                    @endforeach
+                                </select>
+                            </div><br><br><br>
+                            <div class="col-sm-4 mb-3 mb-sm-0">
+                                <input type="submit" name="" value="Editar Producto" class="btn btn-primary btn-user btn-block"></input>
+                            </div>
+                        </div>
+        </form>
     </div>
+    @stop
 </body>
+
 </html>
