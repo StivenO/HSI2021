@@ -30,7 +30,7 @@
 					<div class="card-body">
 						<div class="form-group row">
 							<div class="col-sm-4 mb-3 mb-sm-0">
-								<input name="person_id" type="" class="form-control form-control-user" id="ejemploNomuser" value="3" placeholder="Nombre del usuario" readonly>
+								<input name="person_id" type="" class="form-control form-control-user" id="ejemploNomuser" placeholder="Nombre del usuario">
 							</div>
 
 							<div class="col-sm-4">
@@ -39,8 +39,8 @@
 
 							<div class="col-sm-4 mb-3 mb-sm-0">
 
-								<select name="product_id" class=" form-control-user" required>
-									<option>Seleccione Nombre Del Producto*</option>
+								<select name="product_id" class="form-control form-selected-user" required>
+									<option disabled selected>Seleccione un Producto *</option>
 									@foreach ($productos as $producto)
 									<option value="{{$producto->idproduct}}">{{ $producto->nomproduct }}</option>
 									@endforeach
@@ -66,9 +66,7 @@
 								<input name="total" type="number" class="form-control form-control-user" id="ejemplototal" placeholder="Total">
 							</div>
 							<div class="col-sm-3">
-								<a class="btn btn-success btn-user btn-block" href="#" data-toggle="modal" data-target="#logoutModal2"><i class="fas fa-dollar-sign"></i> Confirmar Venta</a>
-								<br>
-								<input type="submit" class="btn btn-success mt-3">
+								<input type="submit" value="Confirmar Venta" class="btn btn-success btn-user btn-block"></input>
 							</div>
 						</div>
 
