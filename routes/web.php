@@ -8,6 +8,8 @@ use App\Http\Controllers\OperationtypeController;
 use App\Http\Controllers\SellController;
 use App\Http\Controllers\H_ventasController;
 use App\Http\Controllers\H_abastecimientoController;
+use App\Http\Controllers\InicioController;
+
 
 
 
@@ -141,3 +143,8 @@ Route::get('h_abastecimiento', [H_abastecimientoController::class, 'index']);
 // Route::get('h_ventas/destroy/{idsell}', [SellController::class, 'destroy']);
 // Route::get('h_ventas/recovery/{idsell}', [SellController::class, 'recovery']);
 // Route::get('h_ventas/delete/{idsell}', [SellController::class, 'delete']);
+
+
+//  Inicio ----------------------------------------------------------------------
+
+Route::get('inicio', [InicioController::class, 'index']);
