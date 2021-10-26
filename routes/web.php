@@ -9,11 +9,7 @@ use App\Http\Controllers\SellController;
 use App\Http\Controllers\H_ventasController;
 use App\Http\Controllers\H_abastecimientoController;
 use App\Http\Controllers\InicioController;
-
-
-
-
-
+use App\Http\Controllers\PerfilController;
 
 /*
 |--------------------------------------------------------------------------
@@ -148,3 +144,7 @@ Route::get('h_abastecimiento', [H_abastecimientoController::class, 'index']);
 //  Inicio ----------------------------------------------------------------------
 
 Route::get('inicio', [InicioController::class, 'index']);
+
+//  Perfil ----------------------------------------------------------------------
+
+Route::get('perfil', [PerfilController::class, 'index']);

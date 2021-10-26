@@ -373,12 +373,12 @@
                         <!-- Elemento de navegación: información del usuario -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> XXXXXXXXX </span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> Administrador </span>
                                 <img class="img-profile rounded-circle" src="{{ url('img/undraw_profile.svg') }}">
                             </a>
                             <!-- Menú desplegable - Información del usuario -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="{{ url('perfil') }}">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Perfil
                                 </a>
@@ -472,7 +472,7 @@
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.js"></script>
 
-        <!-- Export -->
+    <!-- Export -->
     <script>
         $('table').dataTable({
             language: {
