@@ -107,3 +107,36 @@ Route::post('sell/editar/{idsell}', [SellController::class, 'update']);
 Route::get('sell/destroy/{idsell}', [SellController::class, 'destroy']);
 Route::get('sell/recovery/{idsell}', [SellController::class, 'recovery']);
 Route::get('sell/delete/{idsell}', [SellController::class, 'delete']);
+
+//User
+Route::get('user', [UserController::class, 'index']);
+
+Route::get('user/new', [UserController::class, 'create']);
+Route::post('user', [UserController::class, 'store']);
+
+Route::get('user/editar/{iduser}', [UserController::class, 'edit']);
+Route::post('user/editar/{iduser}', [UserController::class, 'update']);
+
+
+Route::get('user/destroy/{iduser}', [UserController::class, 'destroy']);
+Route::get('user/recovery/{iduser}', [UserController::class, 'recovery']);
+Route::get('user/delete/{iduser}', [UserController::class, 'delete']);
+
+//  Tipo de Identificacion ----------------------------------------------------------------------
+
+
+Route::get('typeid', [TypeidController::class, 'index']);
+
+// Route::get('operationtype/show/{idoperationtype}', [OperationtypeController::class, 'show']); No Hay Necesidad *DE MOMENTO*
+
+Route::get('typeid/new', [TypeidController::class, 'create']);
+Route::post('typeid', [TypeidController::class, 'store']);
+
+Route::get('typeid/edit/{idtypeid}', [TypeidController::class, 'edit']);
+Route::post('typeid/edit/{idoperationtype}', [TypeidController::class, 'update']);
+
+
+Route::get('typeid/destroy/{idtypeid}', [TypeidController::class, 'destroy']);
+Route::get('typeid/recovery/{idtypeid}', [TypeidController::class, 'recovery']);
+Route::get('typeid/delete/{idtypeid}', [TypeidController::class, 'delete']);
+
