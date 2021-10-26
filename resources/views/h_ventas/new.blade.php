@@ -30,11 +30,11 @@
 					<div class="card-body">
 						<div class="form-group row">
 							<div class="col-sm-4 mb-3 mb-sm-0">
-								<input name="person_id" type="" class="form-control form-control-user" id="ejemploNomuser" placeholder="Nombre del usuario">
+								<input name="person_id" type="" class="form-control form-control-user" id="ejemploNomuser" placeholder="Nombre del usuario" required>
 							</div>
 
 							<div class="col-sm-4">
-								<input name="user_id" type="" class="form-control form-control-user" id="ejemploNomperson" placeholder="Nombre del cliente">
+								<input name="user_id" type="" class="form-control form-control-user" id="ejemploNomperson" placeholder="Nombre del cliente" required>
 							</div>
 
 							<div class="col-sm-4 mb-3 mb-sm-0">
@@ -49,21 +49,21 @@
 						</div>
 						<div class="form-group row">
 							<div class="col-sm-4 mb-3 mb-sm-0">
-								<input name="cantproduct" type="number" class="form-control form-control-user" id="ejemploCant" placeholder="Cantidad">
+								<input name="cantproduct" type="number" class="form-control form-control-user" id="ejemploCant" placeholder="Cantidad" required>
 							</div>
 							<div class="col-sm-4">
-								<input name="cash" type="number" class="form-control form-control-user" id="ejemploPriceout" placeholder="Precio unitario">
+								<input name="cash" type="number" class="form-control form-control-user" id="ejemploPriceout" placeholder="Precio unitario" required>
 							</div>
 							<div class="col-sm-4">
-								<input name="disc" type="number" class="form-control form-control-user" id="ejemploDesc" placeholder="Descuento">
+								<input name="disc" type="number" class="form-control form-control-user" id="ejemploDesc" placeholder="Descuento" required>
 							</div>
 						</div>
 						<div class="form-group row">
 							<div class="col-sm-4 mb-3 mb-sm-0">
-								<input name="date" type="datetime-local" class="form-control form-control-user" id="ejemplodate" placeholder="Fecha y hora">
+								<input name="date" type="datetime-local" class="form-control form-control-user" id="ejemplodate" placeholder="Fecha y hora" required>
 							</div>
 							<div class="col-sm-4">
-								<input name="total" type="number" class="form-control form-control-user" id="ejemplototal" placeholder="Total">
+								<input name="total" type="number" class="form-control form-control-user" id="ejemplototal" placeholder="Total" required>
 							</div>
 							<div class="col-sm-3">
 								<input type="submit" value="Confirmar Venta" class="btn btn-success btn-user btn-block"></input>
