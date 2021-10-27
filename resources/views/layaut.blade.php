@@ -12,7 +12,10 @@
     <title>HSI - Aplicación</title>
     <script src="{{ url('plugins/notificaciones/push.min.js') }}"></script>
     <link rel="icon" type="image/png" href="{{ url('img/icon_principal.png') }}">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 45431d5e2f5df48a9efaffe56f9c56a088e487eb
     <!-- Fuentes personalizadas para esta plantilla-->
     <link href="{{ url('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
