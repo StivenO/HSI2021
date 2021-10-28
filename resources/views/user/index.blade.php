@@ -39,7 +39,6 @@
 							<th>Apellido</th>
 							<th>Email</th>
 							<th>Nick</th>
-							<th>Contra</th>
 							<th>ACCIONES</th>
 						</tr>
 					</thead>
@@ -51,9 +50,8 @@
 							<td> {{ $row->image }} </td>
 							<td> {{ $row->nomuser }} </td>
 							<td> {{ $row->apeuser }} </td>
-							<td> {{ $row->emailuser }} </td>
+							<td> {{ $row->email }} </td>
 							<td> {{ $row->nick }} </td>
-							<td> {{ $row->pass }} </td>
 							<td>
 								<a class="btn btn-info btn-sm" href="{{url( 'user/editar/'.$row->iduser )}}" title="Editar Registro"><i class="fas fa-edit"></i></a>
 								<a class="btn btn-danger btn-sm" href="{{url( 'user/destroy/'.$row->iduser )}}" onclick=" return confirm('Desea eliminar el registro?')" title="Enviar a Papelera"> <i class="far fa-trash-alt"></i> </a>
@@ -76,7 +74,6 @@
 							<th>Apellido</th>
 							<th>Email</th>
 							<th>Nick</th>
-							<th>Contra</th>
 							<th>ACCIONES</th>
 						</tr>
 					</thead>
@@ -88,9 +85,8 @@
 							<td> {{ $row->image }} </td>
 							<td> {{ $row->nomuser }} </td>
 							<td> {{ $row->apeuser }} </td>
-							<td> {{ $row->emailuser }} </td>
+							<td> {{ $row->email }} </td>
 							<td> {{ $row->nick }} </td>
-							<td> {{ $row->pass }} </td>
 							<td>
 								<a class="btn btn-success btn-sm" href="{{url( 'user/recovery/'.$row->iduser )}}" onclick=" return confirm('Desea recuperar el registro?')" title="Recuperar registro"><i class="fas fa-undo"></i></a>
 								<a class="btn btn-danger btn-sm" href="{{url( 'user/delete/'.$row->iduser )}}" onclick=" return confirm('Desea eliminarlo definitivamente?')" title="Eliminar Definitivamente"><i class="fas fa-times"></i></a>

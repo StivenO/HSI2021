@@ -34,7 +34,7 @@ class LoginController extends Controller
     public function check(Request $request)
     {
 
-        $datos['email']    = $request->get('email');
+        $datos['nick']    = $request->get('nick');
         $datos['password'] = $request->get('password');
 
        

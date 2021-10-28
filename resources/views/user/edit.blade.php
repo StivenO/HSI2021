@@ -34,9 +34,9 @@
 					<input name="image" placeholder="Imagen" class="form-control" value="{{ $data->image }}">
 					<input name="nomuser" placeholder="Nombre" class="form-control" value="{{ $data->nomuser }}">
 					<input name="apeuser" placeholder="Apellido" class="form-control" value="{{ $data->apeuser }}">
-					<input name="emailuser" placeholder="Email" class="form-control" value="{{ $data->emailuser }}">
+					<input name="email" placeholder="Email" class="form-control" value="{{ $data->email }}">
 					<input name="nick" placeholder="Nick" class="form-control" value="{{ $data->nick }}">
-					<input name="pass" placeholder="Contra" class="form-control" value="{{ $data->pass }}">
+					<input name="password" placeholder="Contraseña" class="form-control" value="{{ $data->password }}">
 
 					<input type="submit" class="btn btn-success mt-3">
 

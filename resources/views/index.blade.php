@@ -43,7 +43,7 @@
                                     </div><br>
                                     <form class="m-t" role="form" action="">
                                         <div class="form-group">
-                                            <input name="email" class="form-control form-control-user" placeholder="Usuario">
+                                            <input name="nick" class="form-control form-control-user" placeholder="Usuario">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="password" class="form-control form-control-user" placeholder="Contraseña">

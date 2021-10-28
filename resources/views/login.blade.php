@@ -51,7 +51,7 @@
                                     <form form class="m-t" role="form" action="validate" method="POST">
                                         @csrf
                                         <div class="form-group">
-                                            <input name="email" class="form-control form-control-user" placeholder="Usuario" required="">
+                                            <input name="nick" class="form-control form-control-user" placeholder="Usuario" required="">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="password" class="form-control form-control-user" placeholder="Contraseña" required="">
