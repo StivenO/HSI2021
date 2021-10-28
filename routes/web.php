@@ -10,6 +10,8 @@ use App\Http\Controllers\H_ventasController;
 use App\Http\Controllers\H_abastecimientoController;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\PerfilController;
+use App\Http\Controllers\TypeidController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------

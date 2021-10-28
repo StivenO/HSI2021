@@ -29,7 +29,7 @@
             <div class="col mr-2">
               <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                 Inventario</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800"><label class="text-gray-500">prods</label></div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800"><label class="text-gray-500">{{$cantidad}} prods</label></div>
             </div>
             <div class="col-auto">
               <i class="fas fa-calendar fa-2x text-gray-300"></i>
