@@ -21,6 +21,9 @@
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/e44764d2ff.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body id="page-top">
@@ -373,7 +376,7 @@
                         <!-- Elemento de navegación: información del usuario -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> XXXXXXXXX </span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> {{Auth::user()->nomuser}} </span>
                                 <img class="img-profile rounded-circle" src="{{ url('img/undraw_profile.svg') }}">
                             </a>
                             <!-- Menú desplegable - Información del usuario -->
