@@ -3,6 +3,7 @@
 <html>
 
 <head>
+  <link rel="icon" type="image/png" href="{{ url('img/icon_principal.png') }}">
   <tittle></tittle>
   <!-- CSS only -->
   <!-- JavaScript Bundle with Popper -->

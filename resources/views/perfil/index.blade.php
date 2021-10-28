@@ -6,6 +6,8 @@
 <head>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/fc2b074465.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="{{ url('img/icon_principal.png') }}">
+    <title>HSI - Perfil Usuario</title>
 </head>
 @section('content')
 
@@ -18,7 +20,7 @@
             <div class="col-md-7">
                 <div class="p-3 py-5">
                     <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="text-right">Editar Perfil</h4>
+                        <h3 class="text-right">Editar Perfil</h3>
                     </div>
                     <div class="row mt-2">
                         <div class="col-md-6"><label class="labels">Tipo de Identificación</label><input type="text" class="form-control" placeholder="Cédula de Ciudadanía" value=""></div>
@@ -27,7 +29,7 @@
                     <div class="row mt-3">
                         <div class="col-md-12"><label class="labels">Nombre Completo</label><input type="text" class="form-control" placeholder="Andrés David" value=""></div>
                         <div class="col-md-12"><label class="labels">Apellidos</label><input type="text" class="form-control" placeholder="Acosta Buitrago" value=""></div>
-                        <div class="col-md-12"><label class="labels">Correo Electrónico</label><input type="text" class="form-control" placeholder="acostabuitrago0123@gmail.com" value=""></div>
+                        <div class="col-md-12"><label class="labels">Correo Electrónico</label><input type="text" class="form-control" placeholder="administrador@hsi.com" value=""></div>
                         <div class="col-md-12"><label class="labels">NickName</label><input type="text" class="form-control" placeholder="Administrador" value=""></div>
                     </div>
                     <div class="row mt-3">
