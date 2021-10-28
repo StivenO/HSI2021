@@ -1,5 +1,4 @@
 @extends('layaut')
-
 <!DOCTYPE html>
 <html>
 
@@ -14,7 +13,7 @@
 <body>
     <div class="container contenedor-perfil rounded bg-white mt-5 mb-5">
         <div class="row">
-            <div class="col-md-4 border-right">
+            <div class="col-md-3 border-right">
                 <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="imagen-perfil mt-3" src="https://cdn-icons-png.flaticon.com/512/2416/2416668.png"><br><span class="font-weight-bold">Administrador</span><span class="text-black-50">administrador@hsi.com</span><span> </span></div>
             </div>
             <div class="col-md-7">

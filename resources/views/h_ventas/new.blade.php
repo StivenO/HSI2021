@@ -1,11 +1,10 @@
 @extends('layaut')
-
 <!DOCTYPE html>
 <html>
 
 <head>
-	<title></title>
-
+	<link rel="icon" type="image/png" href="{{ url('img/icon_principal.png') }}">
+	<title>HSI - Hacer una Venta</title>
 </head>
 @section('content')
 
@@ -69,10 +68,12 @@
 								<input type="submit" value="Confirmar Venta" class="btn btn-success btn-user btn-block"></input>
 							</div>
 						</div>
-
+					</div>
+				</div>
+			</div>
 		</form>
 	</div>
-	@stop
 </body>
+@stop
 
 </html>
