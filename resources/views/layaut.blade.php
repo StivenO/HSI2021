@@ -10,16 +10,17 @@
     <meta name="author" content="Hardware Store Inventory">
 
     <title>HSI - Aplicación</title>
-    <script src="{{ url('plugins/notificaciones/push.min.js') }}"></script>
+
     <!-- Fuentes personalizadas para esta plantilla-->
+    <link rel="icon" type="image/png" href="{{ url('img/icon_principal.png') }}">
     <link href="{{ url('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Estilos personalizados para esta plantilla-->
     <link href="{{ url('css/estilo.css') }}" rel="stylesheet">
-    <!-- CSS only -->
 
     <!-- JavaScript Bundle with Popper -->
+    <script src="{{ url('plugins/notificaciones/push.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Iconos -->
     <script src="https://kit.fontawesome.com/e44764d2ff.js" crossorigin="anonymous"></script>
@@ -39,7 +40,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-hammer"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">HSI (APP)<sup>1.0</sup></div>
+                <div class="sidebar-brand-text mx-3">HSI App <sup>1.1</sup></div>
             </a>
 
             <!-- Divisor -->
@@ -60,36 +61,7 @@
             <hr class="sidebar-divider">
 
 
-            <!-- Elementos para segunda entrega -->
-            <div class="sidebar-heading">Segunda Entrega PI</div>
-            <br>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span> CRUD'S </span>
-                </a>
-                <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Tablas:</h6>
-                        <a class="collapse-item" href="/product">Productos</a>
-                        <a class="collapse-item" href="/category">Categorías</a>
-                        <a class="collapse-item" href="/unit">Unidades</a>
-                        <a class="collapse-item" href="/operationtype">Tipo De Operaciones</a>
-                        <a class="collapse-item" href="/sell">Transacciones</a>
-
-                    </div>
-                </div>
-            </li>
-            <br>
-            <hr class="sidebar-divider">
-
-
-
-
             <!-- Encabezado -->
-            <br>
-            <div class="sidebar-heading">(Hacer caso omiso a las siguientes)</div>
-            <br>
             <div class="sidebar-heading">Gestión General</div>
 
             <!-- Elemento de navegación: menú desplegable del Administrador -->
@@ -101,7 +73,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Gestión de cuentas:</h6>
-                        <a class="collapse-item" href="usuarios.php">Usuarios</a>
+                        <a class="collapse-item" href="user">Usuarios</a>
                     </div>
                 </div>
             </li>
@@ -110,14 +82,14 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapsethree">
                     <i class="far fa-money-bill-alt"></i>
-                    <span>Vender</span>
+                    <span>Ventas</span>
                 </a>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acerca de la venta:</h6>
                         <a class="collapse-item" href="{{ url('/h_ventas/new') }}">Hacer una Venta</a>
-                        <br>
-                        <a class="collapse-item" href="{{ url('/carrito/new') }}">Pi-pi </a>
+                        <a class="collapse-item" href="/sell">Transacciones</a>
+                        <a class="collapse-item" href="{{ url('/carrito/new') }}">Ir al Carrito</a>
                     </div>
                 </div>
             </li>
@@ -147,6 +119,9 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Detalle de productos:</h6>
                         <a class="collapse-item" href="/product">Lista de productos</a>
+                        <a class="collapse-item" href="/category">Categorías</a>
+                        <a class="collapse-item" href="/unit">Unidades</a>
+                        <a class="collapse-item" href="/operationtype">Tipo de Operaciones</a>
                     </div>
                 </div>
             </li>
@@ -160,8 +135,8 @@
                 <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sobre Inventario:</h6>
-                        <a class="collapse-item" href="inventario.php">Inventario</a>
-                        <a class="collapse-item" href="abastecer.php">Abastecer</a>
+                        <a class="collapse-item" href="#">Inventario</a>
+                        <a class="collapse-item" href="#">Abastecer</a>
                         <a class="collapse-item" href="/h_abastecimiento">Historial abastecimiento</a>
                     </div>
                 </div>
@@ -331,7 +306,7 @@
                                     <div class="font-weight-bold">
                                         <div class="text-truncate">Hola! soy un hijuemadre que critica todo y de mente
                                             muy cerrada.</div>
-                                        <div class="small text-gray-500">esteban Labrador · 58m</div>
+                                        <div class="small text-gray-500">Esteban Labrador · 58m</div>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -381,7 +356,7 @@
                             </a>
                             <!-- Menú desplegable - Información del usuario -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="{{ url('perfil') }}">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Perfil
                                 </a>
@@ -475,7 +450,7 @@
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.js"></script>
 
-        <!-- Export -->
+    <!-- Export -->
     <script>
         $('table').dataTable({
             language: {

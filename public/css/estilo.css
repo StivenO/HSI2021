@@ -11745,3 +11745,36 @@ body.sidebar-toggled footer.sticky-footer {
 #DataTables_Table_0_info {
     float: left;
 }
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #002ae4;
+}
+
+.back:hover {
+    color: #004df1;
+    cursor: pointer;
+}
+
+.labels {
+    font-size: 11px;
+}
+
+.add-experience:hover {
+    background: #004df1;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #004df1;
+}
+
+.imagen-perfil {
+    width: 200px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 50% !important;
+}
+
+.contenedor-perfil {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin-top: 0px !important;
+}

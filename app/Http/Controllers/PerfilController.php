@@ -3,16 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Product;
 
-class InicioController extends Controller
+
+class PerfilController extends Controller
 {
 
   public function index()
   {
-    //Hacer la consulta
-    $cantidad = Product::count()/*Where*/;
-    return view('inicio.index', compact("cantidad"));
+    return view('perfil.index');
   }
 
 
