@@ -47,6 +47,9 @@ Route::post('validate', [LoginController::class, 'check']);
 
 Route::group(['middleware' => 'auth'], function () {
 
+    // Cerrar sesion ------------------------------------------------------
+    Route::get('logout', [LoginController::class, 'logout']);
+
 
 Route::get('product', [ProductController::class, 'index']);
 

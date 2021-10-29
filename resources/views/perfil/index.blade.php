@@ -14,7 +14,7 @@
     <div class="container contenedor-perfil rounded bg-white mt-5 mb-5">
         <div class="row">
             <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="imagen-perfil mt-3" src="https://cdn-icons-png.flaticon.com/512/2416/2416668.png"><br><span class="font-weight-bold">Administrador</span><span class="text-black-50">administrador@hsi.com</span><span> </span></div>
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="imagen-perfil mt-3" src="https://cdn-icons-png.flaticon.com/512/2416/2416668.png"><br><span class="font-weight-bold">{{Auth::user()->rol->nomrol}}</span><span class="text-black-50">{{Auth::user()->email}}</span><span> </span></div>
             </div>
             <div class="col-md-7">
                 <div class="p-3 py-5">
@@ -22,14 +22,14 @@
                         <h3 class="text-right">Editar Perfil</h3>
                     </div>
                     <div class="row mt-2">
-                        <div class="col-md-6"><label class="labels">Tipo de Identificación</label><input type="text" class="form-control" placeholder="Cédula de Ciudadanía" value=""></div>
-                        <div class="col-md-6"><label class="labels">Número de Identificación</label><input type="text" class="form-control" value="" placeholder="1006051844"></div>
+                        <div class="col-md-6"><label class="labels">Tipo de Identificación</label><input type="text" class="form-control" placeholder="Tipo de Identificación" value="{{Auth::user()->typeid->nomtypeid}}"></div>
+                        <div class="col-md-6"><label class="labels">Número de Identificación</label><input type="text" class="form-control" value="{{Auth::user()->numid}}" placeholder="Número de Identificación"></div>
                     </div>
                     <div class="row mt-3">
-                        <div class="col-md-12"><label class="labels">Nombre Completo</label><input type="text" class="form-control" placeholder="Andrés David" value=""></div>
-                        <div class="col-md-12"><label class="labels">Apellidos</label><input type="text" class="form-control" placeholder="Acosta Buitrago" value=""></div>
-                        <div class="col-md-12"><label class="labels">Correo Electrónico</label><input type="text" class="form-control" placeholder="administrador@hsi.com" value=""></div>
-                        <div class="col-md-12"><label class="labels">NickName</label><input type="text" class="form-control" placeholder="Administrador" value=""></div>
+                        <div class="col-md-12"><label class="labels">Nombre Completo</label><input type="text" class="form-control" placeholder="Andrés David" value="{{Auth::user()->nomuser}}"></div>
+                        <div class="col-md-12"><label class="labels">Apellidos</label><input type="text" class="form-control" placeholder="Acosta Buitrago" value="{{Auth::user()->apeuser}}"></div>
+                        <div class="col-md-12"><label class="labels">Correo Electrónico</label><input type="text" class="form-control" placeholder="administrador@hsi.com" value="{{Auth::user()->email}}"></div>
+                        <div class="col-md-12"><label class="labels">NickName</label><input type="text" class="form-control" placeholder="Administrador" value="{{Auth::user()->nick}}"></div>
                     </div>
                     <div class="row mt-3">
                         <div class="col-md-6"><label class="labels">Contraseña</label><input type="text" class="form-control" placeholder="Nueva contraseña" value=""></div>
