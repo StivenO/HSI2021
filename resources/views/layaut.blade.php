@@ -104,7 +104,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Detalle de tesorería:</h6>
                         <a class="collapse-item" href="{{ url('/h_ventas') }}">Historial de ventas</a>
-                        <a class="collapse-item" href="caja.php">Caja</a>
+                        <a class="collapse-item" href="{{ url('/h_ventas/caja') }}">Caja</a>
                     </div>
                 </div>
             </li>

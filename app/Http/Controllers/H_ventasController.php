@@ -54,7 +54,10 @@ class H_ventasController extends Controller
     {
         //
     }
-
+    public function caja()
+    {
+        return view('h_ventas.caja');
+    }
 
     public function edit($id)
     {

@@ -152,10 +152,12 @@ Route::group(['middleware' => ['auth', 'prevent-back-history']], function () {
     Route::get('h_ventas/destroy/{idsell}', [H_ventasController::class, 'destroy']);
     Route::get('h_ventas/recovery/{idsell}', [H_ventasController::class, 'recovery']);
     Route::get('h_ventas/delete/{idsell}', [H_ventasController::class, 'delete']);
+    Route::get('h_ventas/caja', [H_ventasController::class, 'caja']);
 
     //  abastecimiento (sell) ----------------------------------------------------------------------
 
     Route::get('h_abastecimiento', [H_abastecimientoController::class, 'index']);
+
 
     //Route::get('h_ventas/new', [SellController::class, 'create']);
     //Route::post('h_ventas', [SellController::class, 'store']);
