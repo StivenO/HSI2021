@@ -14,7 +14,11 @@
     <div class="container contenedor-perfil rounded bg-white mt-5 mb-5">
         <div class="row">
             <div class="col-md-3 col-sm-6 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="imagen-perfil mt-3" src="https://cdn-icons-png.flaticon.com/512/2416/2416668.png"><br><span class="font-weight-bold">{{Auth::user()->rol->nomrol}}</span><span class="text-black-50">{{Auth::user()->email}}</span><span> </span></div>
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                    <img class="imagen-perfil mt-3" src="https://cdn-icons-png.flaticon.com/512/2416/2416668.png"><br>
+                    <span class="font-weight-bold">{{Auth::user()->rol->nomrol}}</span>
+                    <span class="text-black-50">{{Auth::user()->email}}</span>
+                </div>
             </div>
             <div class="col-md-9 col-sm-6">
                 <div class="p-3 py-5">
@@ -23,14 +27,15 @@
                     </div>
                     <div class="row mt-2">
                         <div class="col-md-6">
-                            <label class="labels">Tipo de Identificación</label>
-                            <select name="typeid_id" class="form-control form-control-user" id="campo" required>
-                                <option disabled>Seleccione Tipo de Identificación *</option>
-                                <option value="{{Auth::user()->typeid_id}}" selected>{{Auth::user()->typeid->nomtypeid}}</option>
-                                @foreach ($identificaciones as $identidicacion)
-                                <option value="{{$identidicacion->idtypeid}}">{{ $identidicacion->nomtypeid }}</option>
-                                @endforeach
-                            </select>
+                            <form action="">
+                                <label class="labels">Tipo de Identificación</label>
+                                <select name="typeid_id" class="form-control form-control-user" id="campo" required>
+                                    <option disabled>Seleccione Tipo de Identificación *</option>
+                                    <option value="{{Auth::user()->typeid_id}}" selected>{{Auth::user()->typeid->nomtypeid}}</option>
+                                    @foreach ($identificaciones as $identidicacion)
+                                    <option value="{{$identidicacion->idtypeid}}">{{ $identidicacion->nomtypeid }}</option>
+                                    @endforeach
+                                </select>
                         </div>
                         <div class="col-md-6"><label class="labels">Número de Identificación</label>
                             <input type="text" class="form-control form-control-user" value="{{Auth::user()->numid}}" placeholder="Número de Identificación">
@@ -61,6 +66,7 @@
                         </div>
                     </div>
                     <div class="mt-5 text-center"><button class="btn btn-primary btn-user btn-block" type="button">Guardar Perfil</button></div>
+                    </form>
                 </div>
             </div>
         </div>

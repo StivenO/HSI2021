@@ -351,8 +351,8 @@
                         <!-- Elemento de navegación: información del usuario -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> {{Auth::user()->nomuser}} </span>
-                                <img class="img-profile rounded-circle" src="{{ url('img/undraw_profile.svg') }}">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> {{Auth::user()->nick}} </span>
+                                <img class="img-profile rounded-circle" src="https://cdn-icons-png.flaticon.com/512/2416/2416668.png">
                             </a>
                             <!-- Menú desplegable - Información del usuario -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
