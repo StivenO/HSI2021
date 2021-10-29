@@ -11786,3 +11786,8 @@ body.sidebar-toggled footer.sticky-footer {
     padding: 0.2rem 0.5rem !important;
     height: calc(2.9em + 2px) !important;
 }
+
+.sombra1 {
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+        rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}

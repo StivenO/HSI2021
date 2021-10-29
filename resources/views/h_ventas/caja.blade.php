@@ -3,11 +3,9 @@
 <html>
 
 <head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
   <link rel="icon" type="image/png" href="{{ url('img/icon_principal.png') }}">
-  <tittle></tittle>
-  <!-- CSS only -->
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <title>HSI - Caja</title>
 </head>
 @section('content')
 
@@ -15,129 +13,69 @@
 
   <!-- Encabezado de página -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Página Principal</h1>
+    <h1 class="h3 mb-0 text-gray-800">Caja financiera🤑</h1>
   </div><br>
 
   <!-- Fila de contenido -->
   <div class="row">
 
-    <!-- Tarjeta de inventario -->
+    <!-- Tarjeta de Activos -->
     <div class="col-xl-3 col-md-6 mb-4">
       <div class="card border-left-primary shadow h-100 py-2">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
-              <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                Inventario</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800"><label class="text-gray-500">xx prods</label></div>
+              <div class="text-md font-weight-bold text-primary text-uppercase mb-1">
+                Activos</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-600">$ <label class="text-gray-600">300.000</label></div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-calendar fa-2x text-gray-300"></i>
+              <i class="fas fa-globe-americas fa-2x text-gray-300"></i>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Tarjeta de ventas (mensuales) -->
+    <!-- Tarjeta de Pasivos -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-danger shadow h-100 py-2">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-md font-weight-bold text-danger text-uppercase mb-1">
+                Pasivos </div>
+              <div class="h5 mb-0 font-weight-bold text-gray-600">$ <label class="text-gray-600">200.000</label></div>
+            </div>
+            <div class="col-auto">
+              <i class="fas fa-hourglass-half fa-2x text-gray-300"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de Patrimonio -->
     <div class="col-xl-3 col-md-6 mb-4">
       <div class="card border-left-success shadow h-100 py-2">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
-              <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                Ventas </div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+              <div class="text-md font-weight-bold text-success text-uppercase mb-1">
+                Total</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-600">$ <label class="text-gray-600">100.000</label></div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+              <i class="fas fa-cash-register fa-2x text-gray-300"></i>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Tarjeta de historial -->
-    <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-info shadow h-100 py-2">
-        <div class="card-body">
-          <div class="row no-gutters align-items-center">
-            <div class="col mr-2">
-              <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                Clientes</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
-            </div>
-            <div class="col-auto">
-              <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tarjeta de proveedores -->
-    <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-warning shadow h-100 py-2">
-        <div class="card-body">
-          <div class="row no-gutters align-items-center">
-            <div class="col mr-2">
-              <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                Proveedores</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
-            </div>
-            <div class="col-auto">
-              <i class="fas fa-comments fa-2x text-gray-300"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Fila de contenido -->
-  <br>
-  <div class="row">
 
   </div>
+  <img class="img-fluid sombra1" src="{{ url('img/caja1.JPEG') }}" alt="Caja">
 
-  <!-- Fila de contenido -->
-  <div class="row">
-
-    <!-- Fila de columna -->
-    <div class="col-lg-6 mb-4">
-
-      <!-- Espacio de alertas Stock Mínimo -->
-      <div class="card shadow mb-4" style="width: 33rem;">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Espacio de alertas</h6>
-        </div>
-        <div class="card-body text-gray-600">
-        </div>
-      </div>
-
-
-    </div>
-
-    <div class="col-lg-6 mb-4">
-
-      <!-- Enfoque de desarrollo -->
-      <div class="card shadow mb-4" style="width: 33rem;">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Info Material Externo</h6>
-        </div>
-        <div class="card-body">
-          <div class="text-center">
-            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 23rem;" src="img/externo.svg" alt="computador unDraw">
-          </div>
-          <p>Esta aplicación web tomó como base la plantilla SB Admin2 de
-            <a target="_blank" rel="nofollow" href="https://startbootstrap.com/theme/sb-admin-2">Bootstrap</a>, y
-            facilitó el uso de imágenes gratuitas con <a target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
 
 </body>
 @stop
