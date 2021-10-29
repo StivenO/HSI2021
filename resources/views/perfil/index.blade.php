@@ -22,12 +22,13 @@
             </div>
             <div class="col-md-9 col-sm-6">
                 <div class="p-3 py-5">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h3 class="text-right">Editar Perfil</h3>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col-md-6">
-                            <form action="">
+                    <form action="">
+                        @csrf
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h3 class="text-right">Editar Perfil</h3>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-6">
                                 <label class="labels">Tipo de Identificación</label>
                                 <select name="typeid_id" class="form-control form-control-user" id="campo" required>
                                     <option disabled>Seleccione Tipo de Identificación *</option>
@@ -36,36 +37,36 @@
                                     <option value="{{$identidicacion->idtypeid}}">{{ $identidicacion->nomtypeid }}</option>
                                     @endforeach
                                 </select>
+                            </div>
+                            <div class="col-md-6"><label class="labels">Número de Identificación</label>
+                                <input type="text" class="form-control form-control-user" value="{{Auth::user()->numid}}" placeholder="Número de Identificación">
+                            </div>
                         </div>
-                        <div class="col-md-6"><label class="labels">Número de Identificación</label>
-                            <input type="text" class="form-control form-control-user" value="{{Auth::user()->numid}}" placeholder="Número de Identificación">
+                        <div class="row mt-3">
+                            <div class="col-md-6"><label class="labels">Nombre Completo</label>
+                                <input type="text" class="form-control form-control-user" placeholder="Nombre Completo" value="{{Auth::user()->nomuser}}">
+                            </div>
+                            <div class="col-md-6"><label class="labels">Apellidos</label>
+                                <input type="text" class="form-control form-control-user" placeholder="Apellidos" value="{{Auth::user()->apeuser}}">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-md-6"><label class="labels">Nombre Completo</label>
-                            <input type="text" class="form-control form-control-user" placeholder="Nombre Completo" value="{{Auth::user()->nomuser}}">
+                        <div class="row mt-3">
+                            <div class="col-md-6"><label class="labels">Correo Electrónico</label>
+                                <input type="text" class="form-control form-control-user" placeholder="Correo Electrónico" value="{{Auth::user()->email}}">
+                            </div>
+                            <div class="col-md-6"><label class="labels">NickName</label>
+                                <input type="text" class="form-control form-control-user" placeholder="NickName" value="{{Auth::user()->nick}}">
+                            </div>
                         </div>
-                        <div class="col-md-6"><label class="labels">Apellidos</label>
-                            <input type="text" class="form-control form-control-user" placeholder="Apellidos" value="{{Auth::user()->apeuser}}">
+                        <div class="row mt-3">
+                            <div class="col-md-6"><label class="labels">Contraseña</label>
+                                <input type="text" class="form-control form-control-user" placeholder="Nueva contraseña" value="">
+                            </div>
+                            <div class="col-md-6"><label class="labels">Confirmar Contraseña</label>
+                                <input type="text" class="form-control form-control-user" value="" placeholder="Confirmar contraseña">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-md-6"><label class="labels">Correo Electrónico</label>
-                            <input type="text" class="form-control form-control-user" placeholder="Correo Electrónico" value="{{Auth::user()->email}}">
-                        </div>
-                        <div class="col-md-6"><label class="labels">NickName</label>
-                            <input type="text" class="form-control form-control-user" placeholder="NickName" value="{{Auth::user()->nick}}">
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-md-6"><label class="labels">Contraseña</label>
-                            <input type="text" class="form-control form-control-user" placeholder="Nueva contraseña" value="">
-                        </div>
-                        <div class="col-md-6"><label class="labels">Confirmar Contraseña</label>
-                            <input type="text" class="form-control form-control-user" value="" placeholder="Confirmar contraseña">
-                        </div>
-                    </div>
-                    <div class="mt-5 text-center"><button class="btn btn-primary btn-user btn-block" type="button">Guardar Perfil</button></div>
+                        <div class="mt-5 text-center"><button class="btn btn-primary btn-user btn-block" type="button">Guardar Perfil</button></div>
                     </form>
                 </div>
             </div>

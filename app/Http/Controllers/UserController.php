@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Typeid;
+use Hash;
+
 
 class UserController extends Controller
 {
@@ -34,13 +36,11 @@ class UserController extends Controller
         $data['apeuser'] = $request->get('apeuser');
         $data['email'] = $request->get('email');
         $data['nick'] = $request->get('nick');
-        $data['password'] = $request->get('password');
+        $data['password'] = Hash::make($request->get('password'));
         $data['rol_id'] = $request->get('rol_id');
         $data['state'] = $request->get('state');
 
-
         User::create($data);
-
         return redirect('user');
     }
 
