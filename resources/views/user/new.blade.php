@@ -28,9 +28,9 @@
 					<input name="image" placeholder="Imagen" class="form-control">
 					<input name="nomuser" placeholder="Nombre" class="form-control">
 					<input name="apeuser" placeholder="Apellido" class="form-control">
-					<input name="emailuser" placeholder="Email" class="form-control">
+					<input name="email" placeholder="Email" class="form-control">
 					<input name="nick" placeholder="Nick" class="form-control" required>
-					<input name="pass" placeholder="Contra" class="form-control">
+					<input name="password" placeholder="Contra" class="form-control">
 
 					<input type="submit" class="btn btn-success mt-3">
 

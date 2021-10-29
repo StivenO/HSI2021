@@ -32,9 +32,9 @@ class UserController extends Controller
         $data['image'] = $request->get('image');
         $data['nomuser'] = $request->get('nomuser');
         $data['apeuser'] = $request->get('apeuser');
-        $data['emailuser'] = $request->get('emailuser');
+        $data['email'] = $request->get('email');
         $data['nick'] = $request->get('nick');
-        $data['pass'] = $request->get('pass');
+        $data['password'] = $request->get('password');
         $data['rol_id'] = $request->get('rol_id');
         $data['state'] = $request->get('state');
 
@@ -65,9 +65,9 @@ class UserController extends Controller
         $data['image'] = $request->get('image');
         $data['nomuser'] = $request->get('nomuser');
         $data['apeuser'] = $request->get('apeuser');
-        $data['emailuser'] = $request->get('emailuser');
+        $data['email'] = $request->get('email');
         $data['nick'] = $request->get('nick');
-        $data['pass'] = $request->get('pass');
+        $data['password'] = $request->get('password');
         $data['rol_id'] = $request->get('rol_id');
         $data['state'] = $request->get('state');
 
