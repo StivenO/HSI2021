@@ -22,14 +22,22 @@
                         <h3 class="text-right">Editar Perfil</h3>
                     </div>
                     <div class="row mt-2">
-                        <div class="col-md-6"><label class="labels">Tipo de Identificación</label><input type="text" class="form-control" placeholder="Tipo de Identificación" value="{{Auth::user()->typeid->nomtypeid}}"></div>
+                        <div class="col-md-6">
+                        <select name="typeid_id" class="form-control" required>
+                            <option>Seleccione Tipo de Identificacion*</option>
+                            <option value="{{Auth::user()->typeid_id}}" selected>{{Auth::user()->typeid->nomtypeid}}</option>
+                            @foreach ($identificaciones as $identidicacion)
+                            <option value="{{$identidicacion->idtypeid}}">{{ $identidicacion->nomtypeid }}</option>
+                            @endforeach
+                        </select>
+                        </div>
                         <div class="col-md-6"><label class="labels">Número de Identificación</label><input type="text" class="form-control" value="{{Auth::user()->numid}}" placeholder="Número de Identificación"></div>
                     </div>
                     <div class="row mt-3">
-                        <div class="col-md-12"><label class="labels">Nombre Completo</label><input type="text" class="form-control" placeholder="Andrés David" value="{{Auth::user()->nomuser}}"></div>
-                        <div class="col-md-12"><label class="labels">Apellidos</label><input type="text" class="form-control" placeholder="Acosta Buitrago" value="{{Auth::user()->apeuser}}"></div>
-                        <div class="col-md-12"><label class="labels">Correo Electrónico</label><input type="text" class="form-control" placeholder="administrador@hsi.com" value="{{Auth::user()->email}}"></div>
-                        <div class="col-md-12"><label class="labels">NickName</label><input type="text" class="form-control" placeholder="Administrador" value="{{Auth::user()->nick}}"></div>
+                        <div class="col-md-12"><label class="labels">Nombre Completo</label><input type="text" class="form-control" placeholder="Nombre Completo" value="{{Auth::user()->nomuser}}"></div>
+                        <div class="col-md-12"><label class="labels">Apellidos</label><input type="text" class="form-control" placeholder="Apellidos" value="{{Auth::user()->apeuser}}"></div>
+                        <div class="col-md-12"><label class="labels">Correo Electrónico</label><input type="text" class="form-control" placeholder="Correo Electrónico" value="{{Auth::user()->email}}"></div>
+                        <div class="col-md-12"><label class="labels">NickName</label><input type="text" class="form-control" placeholder="NickName" value="{{Auth::user()->nick}}"></div>
                     </div>
                     <div class="row mt-3">
                         <div class="col-md-6"><label class="labels">Contraseña</label><input type="text" class="form-control" placeholder="Nueva contraseña" value=""></div>

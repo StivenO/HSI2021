@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\User;
+use App\Models\Typeid;
 
 class PerfilController extends Controller
 {
 
   public function index()
   {
-    return view('perfil.index');
+    $identificaciones = Typeid::where('state', 1)->get();
+    $data = ("{{Auth::user()->typeid->nomtypeid}}");
+    return view('perfil.index', compact('data', 'identificaciones'));
   }
 
 
