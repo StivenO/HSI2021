@@ -11778,3 +11778,11 @@ body.sidebar-toggled footer.sticky-footer {
         rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     margin-top: 0px !important;
 }
+
+#campo {
+    word-wrap: normal;
+    font-size: 0.8rem !important;
+    border-radius: 0.6rem !important;
+    padding: 0.2rem 0.5rem !important;
+    height: calc(2.9em + 2px) !important;
+}
