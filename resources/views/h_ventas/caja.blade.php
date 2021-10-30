@@ -27,7 +27,7 @@
             <div class="col mr-2">
               <div class="text-md font-weight-bold text-primary text-uppercase mb-1">
                 Activos</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-600">$ <label class="text-gray-600">300.000</label></div>
+              <div class="h5 mb-0 font-weight-bold text-gray-600">$ <label class="text-gray-600">{{$activos}}</label></div>
             </div>
             <div class="col-auto">
               <i class="fas fa-globe-americas fa-2x text-gray-300"></i>
@@ -45,7 +45,7 @@
             <div class="col mr-2">
               <div class="text-md font-weight-bold text-danger text-uppercase mb-1">
                 Pasivos </div>
-              <div class="h5 mb-0 font-weight-bold text-gray-600">$ <label class="text-gray-600">200.000</label></div>
+              <div class="h5 mb-0 font-weight-bold text-gray-600">$ <label class="text-gray-600">{{$pasivos}}</label></div>
             </div>
             <div class="col-auto">
               <i class="fas fa-hourglass-half fa-2x text-gray-300"></i>
@@ -63,7 +63,7 @@
             <div class="col mr-2">
               <div class="text-md font-weight-bold text-success text-uppercase mb-1">
                 Total</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-600">$ <label class="text-gray-600">100.000</label></div>
+              <div class="h5 mb-0 font-weight-bold text-gray-600">$ <label class="text-gray-600">{{$total}}</label></div>
             </div>
             <div class="col-auto">
               <i class="fas fa-cash-register fa-2x text-gray-300"></i>
