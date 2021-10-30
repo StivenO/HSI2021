@@ -13,6 +13,7 @@
 <body>
 
     <div class="container">
+
         <a href="{{ url('product') }}" class="btn btn-danger float-right"><i class="fas fa-window-close"></i> Cancelar</a>
 
         <!-- Encabezado de página -->
