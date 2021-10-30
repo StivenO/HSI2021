@@ -13,11 +13,9 @@
 <body>
 
 	<div class="container">
-		<a href="{{ url('sell/new') }}" class="btn btn-primary float-end mt-2"> + Nuevo </a>
-		<h1>Transacciones</h1>
-		<hr>
-
-		<ul class="nav nav-tabs" id="myTab" role="tablist">
+		<a href="{{ url('sell/new') }}" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Generar Transacción </a>
+		<h1>Transacciones</h1><br>
+		<ul class="nav nav-tabs float-right" id="myTab" role="tablist">
 			<li class="nav-item" role="presentation">
 				<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Activos</button>
 			</li>
@@ -26,20 +24,19 @@
 		</ul>
 		<div class="tab-content" id="myTabContent">
 			<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-				<table class="table table-bordered table-hover table-striped">
+				<table class="table table-responsive table-bordered table-hover table-striped">
 					<thead>
 						<tr>
-
-							<th>ID Personas</th>
-							<th>Id Usuarios</th>
-							<th>Transaccion </th>
+							<th>Personas</th>
+							<th>Usuarios</th>
+							<th>Transaccion</th>
 							<th>Producto</th>
-							<th>Cantidad Productos</th>
+							<th>Cantidad</th>
 							<th>Valor</th>
-							<th>Descuentos</th>
+							<th>Descuento</th>
 							<th>Fecha</th>
 							<th>Total</th>
-							<th>ACCIONES</th>
+							<th>Acciones</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -52,13 +49,13 @@
 							<td> {{ $row->cantproduct }} </td>
 							<td> {{ $row->cash }} </td>
 							<td> {{ $row->disc }} </td>
-							<td> {{ $row->date }} </td>
+							<td style="width: 14%"> {{ $row->date }} </td>
 							<td> {{ $row->total }} </td>
 
-							<td>
-								<a class="btn btn-info btn-sm" href="{{url( 'sell/editar/'.$row->idsell )}}" title="Editar Registro"><i class="fas fa-edit"></i></a>
+							<td style="width: 12%; text-align: center;">
+								<a style="width: 30%" class="btn btn-info btn-sm" href="{{url( 'sell/editar/'.$row->idsell )}}" title="Editar Registro"><i class="fas fa-edit"></i></a>
 
-								<a class="btn btn-danger btn-sm" href="{{url( 'sell/destroy/'.$row->idsell )}}" onclick=" return confirm('Desea eliminar el registro?')" title="Enviar a Papelera"> <i class="far fa-trash-alt"></i> </a>
+								<a style="width: 30%" class="btn btn-danger btn-sm" href="{{url( 'sell/destroy/'.$row->idsell )}}" onclick=" return confirm('Desea eliminar el registro?')" title="Enviar a Papelera"> <i class="far fa-trash-alt"></i> </a>
 							</td>
 						</tr>
 						@endforeach

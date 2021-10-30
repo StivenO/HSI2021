@@ -64,7 +64,7 @@
 							<div class="col-sm-4">
 								<input name="total" type="number" class="form-control form-control-user" id="ejemplototal" placeholder="Total" required>
 							</div>
-							<div class="col-sm-3">
+							<div class="col-sm-4">
 								<input type="submit" value="Confirmar Venta" class="btn btn-success btn-user btn-block"></input>
 							</div>
 						</div>
