@@ -13,9 +13,10 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\TypeidController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\PersonController;
 use App\Http\Controllers\RolController;
 use App\Http\Middleware\Admin;
+use App\Http\Controllers\ProveedoresController;
+use App\Http\Controllers\ClientesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -183,21 +184,6 @@ Route::group(['middleware' => ['auth', 'prevent-back-history']], function () {
     Route::get('typeid/recovery/{idtypeid}', [TypeidController::class, 'recovery']);
     Route::get('typeid/delete/{idtypeid}', [TypeidController::class, 'delete']);
 
-    //Personas------------------------------------------------------------------------
-
-    Route::get('person', [PersonController::class, 'index']);
-
-    Route::get('person/new', [PersonController::class, 'create']);
-    Route::post('person', [PersonController::class, 'store']);
-
-    Route::get('person/edit/{idperson}', [PersonController::class, 'edit']);
-    Route::post('person/edit/{idperson}', [PersonController::class, 'update']);
-
-
-    Route::get('person/destroy/{idperson}', [PersonController::class, 'destroy']);
-    Route::get('person/recovery/{idperson}', [PersonController::class, 'recovery']);
-    Route::get('person/delete/{idperson}', [PersonController::class, 'delete']);
-
 //Rol---------------------------------------------------------------------
 
     Route::get('rol', [RolController::class, 'index']);
@@ -255,5 +241,35 @@ Route::group(['middleware' => ['auth', 'prevent-back-history', 'admin']], functi
 
     Route::get('h_abastecimiento', [H_abastecimientoController::class, 'index']);
     Route::get('h_abastecimiento/abastecer', [H_abastecimientoController::class, 'abastecer']);
+
+    // Clientes Bellos ----------------------------------------------------------------------
+
+    Route::get('clientes', [ClientesController::class, 'index']);
+
+    Route::get('clientes/new', [ClientesController::class, 'create']);
+    Route::post('clientes', [ClientesController::class, 'store']);
+
+    Route::get('clientes/edit/{idperson}', [ClientesController::class, 'edit']);
+    Route::post('clientes/edit/{idperson}', [ClientesController::class, 'update']);
+
+
+    Route::get('clientes/destroy/{idperson}', [ClientesController::class, 'destroy']);
+    Route::get('clientes/recovery/{idperson}', [ClientesController::class, 'recovery']);
+    Route::get('clientes/delete/{idperson}', [ClientesController::class, 'delete']);
+
+    // Proveedores Rikos----------------------------------------------------------------------
+
+    Route::get('proveedores', [ProveedoresController::class, 'index']);
+
+    Route::get('proveedores/new', [ProveedoresController::class, 'create']);
+    Route::post('proveedores', [ProveedoresController::class, 'store']);
+
+    Route::get('proveedores/edit/{idperson}', [ProveedoresController::class, 'edit']);
+    Route::post('proveedores/edit/{idperson}', [ProveedoresController::class, 'update']);
+
+
+    Route::get('proveedores/destroy/{idperson}', [ProveedoresController::class, 'destroy']);
+    Route::get('proveedores/recovery/{idperson}', [ProveedoresController::class, 'recovery']);
+    Route::get('proveedores/delete/{idperson}', [ProveedoresController::class, 'delete']);
 
 });

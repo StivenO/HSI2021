@@ -7,22 +7,13 @@
 <body>
 
 	<div class="container">
-		<a href="{{ url('person') }}" class="btn btn-secondary float-end mt-2"> << Volver </a>
-		<h1>Editar Persona</h1>
+		<a href="{{ url('proveedores') }}" class="btn btn-secondary float-end mt-2"> << Volver </a>
+		<h1>Editar Proveedor</h1>
 		<hr>
-		<form action="{{ url('person/edit/'.$data->idperson ) }}" method="POST" class="col-md-6">
+		<form action="{{ url('proveedores/edit/'.$data->idperson ) }}" method="POST" class="col-md-6">
 			@csrf
 			
-			<select name="ptype_id" class="form-control" required>
-            <option >Seleccione Tipo De Persona*</option>
-            @foreach ($tipopersonas as $tipopersona)
-                @if(($tipopersona->idptype) == ($data->ptype_id))
-                    <option value="{{$tipopersona->idptype}}" selected>{{ $tipopersona->nomptype }}</option>
-                    @else
-                    <option value="{{$tipopersona->idptype}}">{{ $tipopersona->nomptype }}</option>
-                @endif
-        	 @endforeach
-       		 </select>
+
 			<select name="typeid_id" class="form-control" required>
 				<option >Seleccione Tipo De Identificacion*</option>
 				@foreach ($identificaciones as $identificacion)

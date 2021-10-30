@@ -2,19 +2,21 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Models\Person;
+use App\Models\Clientes;
 use App\Models\Typeid;
 use App\Models\Ptype;
 
-class PersonController extends Controller
+class ClientesController extends Controller
 {
 
     public function index()
     {
+        $clientes = ['ptype_id'=>1, 'state'=>1];
+        $clientes2 = ['ptype_id'=>1, 'state'=>0];
         //$data = Tipo::all(); Trae todos.
-        $data = Person::where('state', 1)->get();
-        $data2 = Person::where('state', 0)->get();
-        return view('person.index', compact('data', 'data2') );
+        $data = Clientes::where($clientes )->get();
+        $data2 = Clientes::where($clientes2 )->get();
+        return view('clientes.index', compact('data', 'data2') );
     }
 
 
@@ -22,13 +24,13 @@ class PersonController extends Controller
     {
         $identificaciones = Typeid::where('state', 1)->get();
         $tipopersonas = Ptype::where('state', 1)->get();
-        return view('person.new', compact('identificaciones', 'tipopersonas'));
+        return view('clientes.new', compact('identificaciones', 'tipopersonas'));
     }
 
 
     public function store(Request $request)
     {
-        $data['ptype_id'] = $request->get('ptype_id');
+        $data['ptype_id'] = 1;
         $data['typeid_id'] = $request->get('typeid_id');
         $data['numid'] = $request->get('numid');
         $data['nomperson'] = $request->get('nomperson');
@@ -38,9 +40,9 @@ class PersonController extends Controller
         $data['emailperson'] = $request->get('emailperson');
         $data['state'] = $request->get('state');
      
-        Person::create($data);
+        Clientes::create($data);
         
-        return redirect('person');
+        return redirect('clientes');
     }
 
     public function show($id)
@@ -53,14 +55,14 @@ class PersonController extends Controller
     {
         $identificaciones = Typeid::where('state', 1)->get();
         $tipopersonas = Ptype::where('state', 1)->get();
-        $data = Person::find($id);
-        return view('person.edit', compact('data', 'identificaciones', 'tipopersonas'));
+        $data = Clientes::find($id);
+        return view('clientes.edit', compact('data', 'identificaciones', 'tipopersonas'));
     }
 
     public function update(Request $request, $id)
     {
         
-        $data['ptype_id'] = $request->get('ptype_id');
+        $data['ptype_id'] = 1;
         $data['typeid_id'] = $request->get('typeid_id');
         $data['numid'] = $request->get('numid');
         $data['nomperson'] = $request->get('nomperson');
@@ -70,28 +72,28 @@ class PersonController extends Controller
         $data['emailperson'] = $request->get('emailperson');
         $data['state'] = $request->get('state');
 
-        Person::find($id)->update($data);
-        return redirect('person');
+        Clientes::find($id)->update($data);
+        return redirect('clientes');
     }
 
     public function destroy($id)
     {
         
-        Person::where('idperson', $id)->update(['state' => 0]);
-        return redirect('person');
+        Clientes::where('idperson', $id)->update(['state' => 0]);
+        return redirect('clientes');
     }
 
       public function recovery($id)
     {   
-        Person::where('idperson', $id)->update(['state' => 1]);
-        return redirect('person');
+        Clientes::where('idperson', $id)->update(['state' => 1]);
+        return redirect('clientes');
     }
 
       public function delete($id)
     {
     
-        Person::where('idperson', $id)->delete();
-        return redirect('person');
+        Clientes::where('idperson', $id)->delete();
+        return redirect('clientes');
     }
 
 

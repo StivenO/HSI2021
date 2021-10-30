@@ -9,8 +9,8 @@
 <body>
 
 	<div class="container">
-		<a href="{{ url('person/new') }}" class="btn btn-primary float-end mt-2"> + Nuevo </a>
-		<h1>Personas</h1>
+		<a href="{{ url('proveedores/new') }}" class="btn btn-primary float-end mt-2"> + Nuevo </a>
+		<h1>Proveedores</h1>
 		<hr>
 		
 		<ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -51,8 +51,8 @@
 							<td> {{ $row->phone }} </td>
 							<td> {{ $row->emailperson }} </td>
 							<td> 
-							<a class="btn btn-info btn-sm" href="{{url( 'person/edit/'.$row->idperson )}}" title="Editar Registro"><i class="fas fa-edit"></i></a>
-							<a class="btn btn-danger btn-sm" href="{{url( 'person/destroy/'.$row->idperson )}}" onclick= " return confirm('Desea eliminar el registro?')" title="Enviar a Papelera"> <i class="far fa-trash-alt"></i> </a>
+							<a class="btn btn-info btn-sm" href="{{url( 'proveedores/edit/'.$row->idperson )}}" title="Editar Registro"><i class="fas fa-edit"></i></a>
+							<a class="btn btn-danger btn-sm" href="{{url( 'proveedores/destroy/'.$row->idperson )}}" onclick= " return confirm('Desea eliminar el registro?')" title="Enviar a Papelera"> <i class="far fa-trash-alt"></i> </a>
 							</td>
 						</tr>
 					@endforeach
@@ -88,8 +88,8 @@
 							<td> {{ $row->phone }} </td>
 							<td> {{ $row->emailperson }} </td>
 							<td> 
-							<a class="btn btn-success btn-sm" href="{{url( 'person/recovery/'.$row->idperson )}}" onclick= " return confirm('Desea recuperar el registro?')" title="Recuperar registro"><i class="fas fa-undo"></i></a> 
-							<a class="btn btn-danger btn-sm" href="{{url( 'person/destroy/'.$row->idperson )}}" onclick= " return confirm('Desea eliminar el registro?')" title="Enviar a Papelera"> <i class="far fa-trash-alt"></i> </a>
+							<a class="btn btn-success btn-sm" href="{{url( 'proveedores/recovery/'.$row->idperson )}}" onclick= " return confirm('Desea recuperar el registro?')" title="Recuperar registro"><i class="fas fa-undo"></i></a> 
+							<a class="btn btn-danger btn-sm" href="{{url( 'proveedores/destroy/'.$row->idperson )}}" onclick= " return confirm('Desea eliminar el registro?')" title="Enviar a Papelera"> <i class="far fa-trash-alt"></i> </a>
 							</td>
 						</tr>
 					@endforeach
