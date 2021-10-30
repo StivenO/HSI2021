@@ -36,32 +36,32 @@
                                 <div class="row mt-2">
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels">Nombre del producto</label>
-                                        <input name="nomproduct" type="text" class="form-control form-control-user" id="ejemploNom" placeholder="Nombre del producto" autofocus>
+                                        <input name="nomproduct" type="text" class="form-control form-control-user" id="ejemploNom" placeholder="Nombre del producto" autofocus required>
                                     </div>
                                     <div class="col-md-8 col-sm-6">
                                         <label class="labels">Descripción del producto</label>
-                                        <input name="description" type="text" class="form-control form-control-user" id="ejemploDescription" placeholder="Descripción...">
+                                        <input name="description" type="text" class="form-control form-control-user" id="ejemploDescription" placeholder="Descripción..." required>
                                     </div>
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels">Stock mínimo</label>
-                                        <input name="stockmin" type="number" class="form-control form-control-user" id="ejemploStockmin" placeholder="Stock mínimo">
+                                        <input name="stockmin" type="number" class="form-control form-control-user" id="ejemploStockmin" placeholder="Stock mínimo" required>
                                     </div>
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels">Precio de entrada</label>
-                                        <input name="pricein" type="number" class="form-control form-control-user" id="ejemploPricein" placeholder="Precio de entrada">
+                                        <input name="pricein" type="number" class="form-control form-control-user" id="ejemploPricein" placeholder="Precio de entrada" required>
 
                                     </div>
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels">Cantidad</label>
-                                        <input name="quantity" type="number" class="form-control form-control-user" id="ejemploCant" placeholder="Cantidad">
+                                        <input name="quantity" type="number" class="form-control form-control-user" id="ejemploCant" placeholder="Cantidad" required>
                                     </div>
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels">Precio de salida</label>
-                                        <input name="priceout" type="number" class="form-control form-control-user" id="ejemploPriceout" placeholder="Precio de salida">
+                                        <input name="priceout" type="number" class="form-control form-control-user" id="ejemploPriceout" placeholder="Precio de salida" required>
                                     </div>
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels">Tipo de Unidad</label>
@@ -74,7 +74,7 @@
                                     </div>
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels">Categoría</label>
-                                        <select name="category_id" class="form-control form-select-user text-gray-600" id="ejemploCategory">
+                                        <select name="category_id" class="form-control form-select-user text-gray-600" id="ejemploCategory" required>
                                             <option>Seleccione Categoría *</option>
                                             @foreach ($datos as $dato)
                                             <option value="{{$dato->idcategory}}">{{ $dato->nomcategory }}</option>
@@ -83,7 +83,7 @@
                                     </div>
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels"></label>
-                                        <input type="submit" name="" value="Crear Producto" class="btn btn-primary btn-user btn-block"></input>
+                                        <input type="submit" name="" value="Crear Producto" class="btn btn-success btn-user btn-block"></input>
                                     </div>
                                 </div>
                             </div>

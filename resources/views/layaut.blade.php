@@ -455,7 +455,11 @@
             language: {
                 url: 'plugins/datatables/lang/Spanish.json'
             },
-            dom: 'Bfrtip',
+            dom: 'Blfrtip',
+            dom: "<'row mt-1'<'col-sm-6'B><'col-sm-6'f>>" +
+                "<'row'<'col-sm-12'tr>>" +
+                "<'row'<'col-sm-4'i><'col-sm-2'l><'col-sm-6 text-right'p>>",
+            "lengthMenu": [4, 10, 25, 50, 100],
             buttons: [{
                     extend: 'excelHtml5',
                     text: '<i class="fas fa-file-excel">',

@@ -90,7 +90,7 @@
                                     </div>
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels"></label>
-                                        <input type="submit" name="" value="Editar Producto" class="btn btn-primary btn-user btn-block"></input>
+                                        <input type="submit" name="" value="Editar Producto" class="btn btn-success btn-user btn-block"></input>
                                     </div>
                                 </div>
                             </div>

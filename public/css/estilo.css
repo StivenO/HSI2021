@@ -8058,6 +8058,7 @@ button.bg-dark:focus {
 .mt-1,
 .my-1 {
     margin-top: 0.25rem !important;
+    margin-bottom: 30px;
 }
 
 .mr-1,
@@ -11794,4 +11795,19 @@ body.sidebar-toggled footer.sticky-footer {
 
 #img-registrar {
     margin: 55px 12px 0px !important;
+}
+/*
+ * Filter
+ */
+.dataTables_filter {
+    float: right;
+    text-align: left;
+}
+
+.dataTables_filter label {
+    display: inline-flex;
+}
+
+.dataTables_length {
+    text-align: left;
 }
