@@ -24,11 +24,13 @@ class H_abastecimientoController extends Controller
 
     public function abastecer()
     {
-        $data=Product::where('stockmin','>','quantity')
-                        ->where('state','=','1')
+        $data=Product::where('state','=','1')
+                        ->whereRaw('stockmin >=quantity')
                         ->get(); 
 
-        $data2=Product::where('state', 0)->get();
+        $data2=Product::where('state', 0)
+                        ->whereRaw('stockmin >=quantity')
+                        ->get(); 
         return view('H_abastecimiento.abastecer', compact('data', 'data2'));
     }
 
