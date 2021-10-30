@@ -29,7 +29,7 @@
             <div class="col mr-2">
               <div class="text-md font-weight-bold text-primary text-uppercase mb-1">
                 Inventario</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-600">{{$cantidad}} <label class="text-gray-500">prods</label></div>
+              <div class="h5 mb-0 font-weight-bold text-gray-600">{{$inventario}} <label class="text-gray-500">prods</label></div>
             </div>
             <div class="col-auto">
               <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -47,7 +47,7 @@
             <div class="col mr-2">
               <div class="text-md font-weight-bold text-success text-uppercase mb-1">
                 Ventas </div>
-              <div class="h5 mb-0 font-weight-bold text-gray-600">$ 300.000</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-600">$ {{$ventas}}</div>
             </div>
             <div class="col-auto">
               <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -65,7 +65,7 @@
             <div class="col mr-2">
               <div class="text-md font-weight-bold text-info text-uppercase mb-1">
                 Clientes</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-600">{{$cantidad}}</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-600">{{$nclientes}}</div>
             </div>
             <div class="col-auto">
               <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
@@ -83,7 +83,7 @@
             <div class="col mr-2">
               <div class="text-md font-weight-bold text-warning text-uppercase mb-1">
                 Proveedores</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-600">{{$cantidad}}</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-600">{{$nproveedores}}</div>
             </div>
             <div class="col-auto">
               <i class="fas fa-comments fa-2x text-gray-300"></i>
