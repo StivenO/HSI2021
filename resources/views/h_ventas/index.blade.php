@@ -62,10 +62,10 @@
 					<table class="table table-responsive table-hover table-striped table-bordered table-sm">
 						<thead>
 							<tr>
-								<th>ID Personas</th>
-								<th>Id Usuarios</th>
+								<th>Personas</th>
+								<th>Usuarios</th>
 								<th>Producto</th>
-								<th>Cantidad Productos</th>
+								<th>Cantidad</th>
 								<th>Valor</th>
 								<th>Descuentos</th>
 								<th>Fecha</th>

@@ -27,8 +27,8 @@
 				<table class="table table-responsive table-bordered table-hover table-striped">
 					<thead>
 						<tr>
-							<th>Personas</th>
-							<th>Usuarios</th>
+							<th>Persona</th>
+							<th>Usuario</th>
 							<th>Transaccion</th>
 							<th>Producto</th>
 							<th>Cantidad</th>
@@ -68,16 +68,16 @@
 				<table class="table table-bordered table-hover table-striped">
 					<thead>
 						<tr>
-							<th>ID Personas</th>
-							<th>Id Usuarios</th>
+							<th>Persona</th>
+							<th>Usuario</th>
 							<th>Transaccion </th>
 							<th>Producto</th>
-							<th>Cantidad Productos</th>
+							<th>Cantidad</th>
 							<th>Valor</th>
 							<th>Descuentos</th>
 							<th>Fecha</th>
 							<th>Total</th>
-							<th>ACCIONES</th>
+							<th>Acciones</th>
 						</tr>
 					</thead>
 					<tbody>
