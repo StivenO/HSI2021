@@ -56,7 +56,23 @@ class H_ventasController extends Controller
     }
     public function caja()
     {
-        return view('h_ventas.caja');
+        // SELECT SUM(total) AS 'sumventas' FROM sell WHERE opetype_id ='1'
+        $b=Sell::where('opetype_id', '=','1')
+                ->where('state', '=', 1)
+                ->get();
+        $b1= $b->sum('total');
+        $activos=number_format($b1);
+
+        //SELECT SUM(total) AS 'sumcompras' FROM sell WHERE opetype_id ='2'
+        $a=Sell::where('opetype_id', '=','2')
+        ->where('state', '=', 1)
+        ->get();
+        $a1= $a->sum('total');
+        $pasivos=number_format($a1);
+
+        //$suma = $sumv - $sumc;
+        $total=number_format($b1-$a1);
+        return view('h_ventas.caja', compact("activos", "pasivos", "total"));
     }
 
     public function edit($id)

@@ -22,7 +22,8 @@ class InicioController extends Controller
     $b=Sell::where('opetype_id', '=','1')
             ->where('state', '=', 1)
             ->get();
-    $ventas= $b->sum('total');
+    $b1= $b->sum('total');
+    $ventas=number_format($b1);
     //SELECT COUNT(*) AS 'numclien' FROM person WHERE ptype_id ='1' and `state` =1
     $c=Person::where('state', '=', 1)
                 ->where('ptype_id', '=','1')
