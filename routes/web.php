@@ -157,7 +157,7 @@ Route::group(['middleware' => ['auth', 'prevent-back-history']], function () {
     //  abastecimiento (sell) ----------------------------------------------------------------------
 
     Route::get('h_abastecimiento', [H_abastecimientoController::class, 'index']);
-
+    Route::get('h_abastecimiento/abastecer', [H_abastecimientoController::class, 'abastecer']);
 
     //Route::get('h_ventas/new', [SellController::class, 'create']);
     //Route::post('h_ventas', [SellController::class, 'store']);
