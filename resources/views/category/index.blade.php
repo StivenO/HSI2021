@@ -26,7 +26,7 @@
                 <table class="table table-responsive table-bordered table-hover table-striped">
                     <thead>
                         <tr>
-                            <th>Id</th>
+                            <th>ID</th>
                             <th>Nombre</th>
                             <th style="width: 1660px">Acción</th>
                         </tr>
@@ -50,7 +50,7 @@
                 <table class="table table-bordered table-hover table-striped">
                     <thead>
                         <tr>
-                            <th>Id</th>
+                            <th>ID</th>
                             <th>Nombre</th>
                             <th style="width: 1660px">Acción</th>
                         </tr>

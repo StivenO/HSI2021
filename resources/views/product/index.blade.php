@@ -26,7 +26,7 @@
                 <table class="table table-responsive table-bordered table-hover table-striped">
                     <thead>
                         <tr>
-                            <th>Id</th>
+                            <th>ID</th>
                             <th>Nombre</th>
                             <th>Descripción</th>
                             <th>StockMín</th>
@@ -65,14 +65,14 @@
                 <table class="table table-bordered table-hover table-striped">
                     <thead>
                         <tr>
-                            <th>Id</th>
+                            <th>ID</th>
                             <th>Nombre</th>
                             <th>Descripción</th>
-                            <th>Stock Mínimo</th>
-                            <th>Precio De Entrada</th>
+                            <th>StockMín</th>
+                            <th>$Entrada</th>
                             <th>Cantidad</th>
-                            <th>Precio De Salida</th>
-                            <th>Tipo De Unidad</th>
+                            <th>$Salida</th>
+                            <th>T. Unidad</th>
                             <th>Categoría</th>
                             <th>Acción</th>
                         </tr>
