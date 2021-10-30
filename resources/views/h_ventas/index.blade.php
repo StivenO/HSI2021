@@ -14,10 +14,8 @@
 
 	<div class="container">
 		<a href="{{ url('h_ventas/new') }}" class="btn btn-primary float-right"><i class="fas fa-share-square"></i> Ir a vender</a>
-		<h1 class="h3 mb-4 text-gray-800">Historial de Ventas</h1>
-		<hr>
-
-		<ul class="nav nav-tabs" id="myTab" role="tablist">
+		<h1>Historial de Ventas</h1>
+		<ul class="nav nav-tabs float-right" id="myTab" role="tablist">
 			<li class="nav-item" role="presentation">
 				<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Activos</button>
 			</li>
@@ -31,8 +29,8 @@
 						<thead>
 							<tr>
 
-								<th>ID Personas</th>
-								<th>Id Usuarios</th>
+								<th>Personas</th>
+								<th>Usuarios</th>
 								<th>Producto</th>
 								<th>Cantidad Productos</th>
 								<th>Valor</th>
@@ -61,7 +59,7 @@
 			<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
 				<div class="table-responsive">
-					<table class="table table-hover table-striped table-bordered table-sm">
+					<table class="table table-responsive table-hover table-striped table-bordered table-sm">
 						<thead>
 							<tr>
 								<th>ID Personas</th>

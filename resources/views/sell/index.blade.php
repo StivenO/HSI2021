@@ -93,9 +93,9 @@
 							<td> {{ $row->date }} </td>
 							<td> {{ $row->total }} </td>
 							<td>
-								<a class="btn btn-success btn-sm" href="{{url( 'sell/recovery/'.$row->idsell )}}" onclick=" return confirm('Desea recuperar el registro?')" title="Recuperar registro"><i class="fas fa-undo"></i></a>
+								<a class="btn btn-success btn-sm" href="{{url( 'sell/recovery/'.$row->idsell )}}" onclick=" return confirm('¿Desea recuperar el registro?')" title="Recuperar registro"><i class="fas fa-undo"></i></a>
 
-								<a class="btn btn-danger btn-sm" href="{{url( 'sell/delete/'.$row->idsell )}}" onclick=" return confirm('Desea eliminarlo definitivamente?')" title="Eliminar Definitivamente"><i class="fas fa-times"></i></a>
+								<a class="btn btn-danger btn-sm" href="{{url( 'sell/delete/'.$row->idsell )}}" onclick=" return confirm('¿Desea eliminarlo definitivamente?')" title="Eliminar Definitivamente"><i class="fas fa-times"></i></a>
 							</td>
 						</tr>
 						@endforeach
