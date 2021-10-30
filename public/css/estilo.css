@@ -11791,3 +11791,7 @@ body.sidebar-toggled footer.sticky-footer {
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
         rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
+
+#img-registrar {
+    margin: 55px 12px 0px !important;
+}

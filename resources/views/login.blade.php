@@ -9,6 +9,7 @@
     <meta name="description" content="Hardware Store Inventory es una Aplicación Web destinada a la gestión de inventario de las ferreterías">
     <meta name="keywords" content="Ferreteria, Hardware Store, Inventario, Inventory, Aplicación Web">
     <meta name="author" content="Hardware Store Inventory">
+    <link rel="icon" type="image/png" href="{{ url('img/icon_principal.png') }}">
 
     <title>HSI - Login</title>
 
@@ -29,14 +30,14 @@
         <!-- Fila exterior -->
         <div class="row justify-content-center">
 
-            <div class="col-xl-10 col-lg-12 col-md-9">
+            <div class="col-xl-12 col-lg-12 col-md-9">
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
                         <!-- Fila anidada dentro del cuerpo de la tarjeta -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-7 d-none d-lg-block"><img class="img-fluid" id="img-registrar" src="img/registrar.jpeg" alt="Regístrate!"></div>
+                            <div class="col-lg-5">
                                 <div class="p-5">
                                     <div class="text-center">
                                         <img src="img/logo.png" alt="Logo Hardware Store Inventory" width="100%" height="100%" />
@@ -57,16 +58,16 @@
                                             <input type="password" name="password" class="form-control form-control-user" placeholder="Contraseña" required="">
                                         </div>
                                         <div class="form-group">
-                                            <br />
                                             <div class="text-center">
-                                            </div>
+                                                Los datos deben ser válidos
+                                            </div><br>
                                         </div>
                                         <input type="Submit" class="btn btn-primary btn-user btn-block" value="Ingresar">
                                         </a><br>
 
                                     </form>
                                     <div class="text-center">
-                                        <a class="small" href="register">¿Has olvidado tu Contraseña?</a>
+                                        <a class="small" href="register">¿No tienes Cuenta? ¡Registrate!</a>
                                     </div>
                                     <footer class="text-center">
                                         <hr>
