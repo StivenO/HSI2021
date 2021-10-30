@@ -15,7 +15,7 @@ use App\Http\Controllers\TypeidController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PersonController;
 use App\Http\Controllers\RolController;
-
+use App\Http\Middleware\Admin;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,23 +53,6 @@ Route::group(['middleware' => ['auth', 'prevent-back-history']], function () {
     Route::get('logout', [LoginController::class, 'logout']);
 
 
-    // productos --------------------------------------------------
-
-    Route::get('product', [ProductController::class, 'index']);
-
-
-    // Route::get('product/show/{idproduct}', [ProductController::class, 'show']); No Hay Necesidad *DE MOMENTO*
-
-    Route::get('product/new', [ProductController::class, 'create']);
-    Route::post('product', [ProductController::class, 'store']);
-
-    Route::get('product/edit/{idproduct}', [ProductController::class, 'edit']);
-    Route::post('product/edit/{idproduct}', [ProductController::class, 'update']);
-
-
-    Route::get('product/destroy/{idproduct}', [ProductController::class, 'destroy']);
-    Route::get('product/recovery/{idproduct}', [ProductController::class, 'recovery']);
-    Route::get('product/delete/{idproduct}', [ProductController::class, 'delete']);
 
     // categoria --------------------------------------------------------------------
 
@@ -154,12 +137,9 @@ Route::group(['middleware' => ['auth', 'prevent-back-history']], function () {
     Route::get('h_ventas/destroy/{idsell}', [H_ventasController::class, 'destroy']);
     Route::get('h_ventas/recovery/{idsell}', [H_ventasController::class, 'recovery']);
     Route::get('h_ventas/delete/{idsell}', [H_ventasController::class, 'delete']);
-    Route::get('h_ventas/caja', [H_ventasController::class, 'caja']);
 
     //  abastecimiento (sell) ----------------------------------------------------------------------
 
-    Route::get('h_abastecimiento', [H_abastecimientoController::class, 'index']);
-    Route::get('h_abastecimiento/abastecer', [H_abastecimientoController::class, 'abastecer']);
 
     //Route::get('h_ventas/new', [SellController::class, 'create']);
     //Route::post('h_ventas', [SellController::class, 'store']);
@@ -184,20 +164,6 @@ Route::group(['middleware' => ['auth', 'prevent-back-history']], function () {
 
     Route::get('perfil', [PerfilController::class, 'index']);
 
-    //  Usuarios ----------------------------------------------------------------------
-
-    Route::get('user', [UserController::class, 'index']);
-
-    Route::get('user/new', [UserController::class, 'create']);
-    Route::post('user', [UserController::class, 'store']);
-
-    Route::get('user/editar/{iduser}', [UserController::class, 'edit']);
-    Route::post('user/editar/{iduser}', [UserController::class, 'update']);
-
-
-    Route::get('user/destroy/{iduser}', [UserController::class, 'destroy']);
-    Route::get('user/recovery/{iduser}', [UserController::class, 'recovery']);
-    Route::get('user/delete/{iduser}', [UserController::class, 'delete']);
 
     //  Tipo de Identificacion ----------------------------------------------------------------------
 
@@ -246,5 +212,48 @@ Route::group(['middleware' => ['auth', 'prevent-back-history']], function () {
     Route::get('rol/destroy/{idrol}', [RolController::class, 'destroy']);
     Route::get('rol/recovery/{idrol}', [RolController::class, 'recovery']);
     Route::get('rol/delete/{idrol}', [RolController::class, 'delete']);
+});
+Route::group(['middleware' => ['auth', 'prevent-back-history', 'admin']], function () {
+    // productos --------------------------------------------------
+
+    Route::get('product', [ProductController::class, 'index']);
+
+
+    // Route::get('product/show/{idproduct}', [ProductController::class, 'show']); No Hay Necesidad *DE MOMENTO*
+
+    Route::get('product/new', [ProductController::class, 'create']);
+    Route::post('product', [ProductController::class, 'store']);
+
+    Route::get('product/edit/{idproduct}', [ProductController::class, 'edit']);
+    Route::post('product/edit/{idproduct}', [ProductController::class, 'update']);
+
+
+    Route::get('product/destroy/{idproduct}', [ProductController::class, 'destroy']);
+    Route::get('product/recovery/{idproduct}', [ProductController::class, 'recovery']);
+    Route::get('product/delete/{idproduct}', [ProductController::class, 'delete']);
+
+    //  Usuarios ----------------------------------------------------------------------
+
+    Route::get('user', [UserController::class, 'index']);
+
+    Route::get('user/new', [UserController::class, 'create']);
+    Route::post('user', [UserController::class, 'store']);
+
+    Route::get('user/editar/{iduser}', [UserController::class, 'edit']);
+    Route::post('user/editar/{iduser}', [UserController::class, 'update']);
+
+
+    Route::get('user/destroy/{iduser}', [UserController::class, 'destroy']);
+    Route::get('user/recovery/{iduser}', [UserController::class, 'recovery']);
+    Route::get('user/delete/{iduser}', [UserController::class, 'delete']);
+    
+    //  Ventas (sell) ----------------------------------------------------------------------
+
+    Route::get('h_ventas/caja', [H_ventasController::class, 'caja']);
+
+    //  abastecimiento (sell) ----------------------------------------------------------------------
+
+    Route::get('h_abastecimiento', [H_abastecimientoController::class, 'index']);
+    Route::get('h_abastecimiento/abastecer', [H_abastecimientoController::class, 'abastecer']);
 
 });

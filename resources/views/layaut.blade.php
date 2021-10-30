@@ -65,6 +65,7 @@
             <div class="sidebar-heading">Gestión General</div>
 
             <!-- Elemento de navegación: menú desplegable del Administrador -->
+            @if ( Auth::user()->rol->nomrol == "Administrador")
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-user-shield"></i>
@@ -77,7 +78,7 @@
                     </div>
                 </div>
             </li>
-
+            @endif
             <!-- Elemento de navegación: menú desplegable de ventas -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapsethree">
@@ -103,12 +104,15 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Detalle de tesorería:</h6>
                         <a class="collapse-item" href="{{ url('/h_ventas') }}">Historial de ventas</a>
+                        @if ( Auth::user()->rol->nomrol == "Administrador")
                         <a class="collapse-item" href="{{ url('/h_ventas/caja') }}">Caja</a>
+                        @endif
                     </div>
                 </div>
             </li>
 
             <!-- Elemento de navegación: menú desplegable de productos -->
+            @if ( Auth::user()->rol->nomrol == "Administrador")
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
                     <i class="fas fa-box-open"></i>
@@ -124,7 +128,7 @@
                     </div>
                 </div>
             </li>
-
+            @endif
             <!-- Elemento de navegación: menú desplegable de inventario -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
@@ -135,8 +139,10 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sobre Inventario:</h6>
                         <a class="collapse-item" href="#">Inventario</a>
+                        @if ( Auth::user()->rol->nomrol == "Administrador")
                         <a class="collapse-item" href="{{ url('h_abastecimiento/abastecer') }}">Abastecer</a>
                         <a class="collapse-item" href="/h_abastecimiento">Historial abastecimiento</a>
+                        @endif
                     </div>
                 </div>
             </li>
