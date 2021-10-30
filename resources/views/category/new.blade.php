@@ -35,7 +35,7 @@
                                 <div class="row mt-2">
                                     <div class="col-md-7">
                                         <label class="labels">Nombre de la Categoría</label>
-                                        <input name="nomcategory" type="text" class="form-control form-control-user" placeholder="Nombre Categoría" autofocus>
+                                        <input name="nomcategory" type="text" class="form-control form-control-user" placeholder="Nombre Categoría" autofocus required>
                                     </div>
                                     <div class="col-md-5 col-sm-12">
                                         <label class="labels"></label>
