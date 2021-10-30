@@ -24,7 +24,7 @@ class H_abastecimientoController extends Controller
 
     public function abastecer()
     {
-        $consultas=['quantity'<'stockmin', 'state' => 1];
+        // $consultas=['quantity'>'stockmin', 'state' => 1];
         $data=Product::where('stockmin', '>', 'quantity')->get(); 
 
         $data2=Product::where('state', 0)->get();
