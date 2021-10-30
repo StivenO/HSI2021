@@ -66,7 +66,7 @@
                                 <input type="text" class="form-control form-control-user" value="" placeholder="Confirmar contraseña">
                             </div>
                         </div>
-                        <div class="mt-5 text-center"><button class="btn btn-primary btn-user btn-block" type="button">Guardar Perfil</button></div>
+                        <div class="mt-5 text-center"><button class="btn btn-primary btn-user btn-block" type="button">Guardar Perfil</button><input type="submit" class="btn btn-success"></div>
                     </form>
                 </div>
             </div>
