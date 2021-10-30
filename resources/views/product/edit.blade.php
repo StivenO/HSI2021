@@ -37,31 +37,31 @@
                                 <div class="row mt-2">
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels">Nombre del producto</label>
-                                        <input name="nomproduct" type="text" class="form-control form-control-user" id="ejemploNom" value="{{ $data->nomproduct }}" autofocus>
+                                        <input name="nomproduct" type="text" class="form-control form-control-user" id="ejemploNom" value="{{ $data->nomproduct }}" autofocus required>
                                     </div>
                                     <div class="col-md-8 col-sm-6">
                                         <label class="labels">Descripción del producto</label>
-                                        <input name="description" type="text" class="form-control form-control-user" id="ejemploDescription" value="{{ $data->description }}">
+                                        <input name="description" type="text" class="form-control form-control-user" id="ejemploDescription" value="{{ $data->description }}" required>
                                     </div>
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels">Stock mínimo</label>
-                                        <input name="stockmin" type="number" class="form-control form-control-user" id="ejemploStockmin" value="{{ $data->stockmin }}">
+                                        <input name="stockmin" type="number" class="form-control form-control-user" id="ejemploStockmin" value="{{ $data->stockmin }}" required>
                                     </div>
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels">Precio de entrada</label>
-                                        <input name="pricein" type="number" class="form-control form-control-user" id="ejemploPricein" value="{{ $data->pricein }}">
+                                        <input name="pricein" type="number" class="form-control form-control-user" id="ejemploPricein" value="{{ $data->pricein }}" required>
                                     </div>
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels">Cantidad</label>
-                                        <input name="quantity" type="number" class="form-control form-control-user" id="ejemploCant" value="{{ $data->quantity }}">
+                                        <input name="quantity" type="number" class="form-control form-control-user" id="ejemploCant" value="{{ $data->quantity }}" required>
                                     </div>
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels">Precio de salida</label>
-                                        <input name="priceout" type="number" class="form-control form-control-user" id="ejemploPriceout" value="{{ $data->priceout }}">
+                                        <input name="priceout" type="number" class="form-control form-control-user" id="ejemploPriceout" value="{{ $data->priceout }}" required>
                                     </div>
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels">Tipo de Unidad</label>
