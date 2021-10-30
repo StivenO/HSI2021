@@ -13,6 +13,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\TypeidController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PersonController;
+use App\Http\Controllers\RolController;
 
 
 /*
@@ -157,7 +159,7 @@ Route::group(['middleware' => ['auth', 'prevent-back-history']], function () {
     //  abastecimiento (sell) ----------------------------------------------------------------------
 
     Route::get('h_abastecimiento', [H_abastecimientoController::class, 'index']);
-
+    Route::get('h_abastecimiento/abastecer', [H_abastecimientoController::class, 'abastecer']);
 
     //Route::get('h_ventas/new', [SellController::class, 'create']);
     //Route::post('h_ventas', [SellController::class, 'store']);
@@ -214,4 +216,35 @@ Route::group(['middleware' => ['auth', 'prevent-back-history']], function () {
     Route::get('typeid/destroy/{idtypeid}', [TypeidController::class, 'destroy']);
     Route::get('typeid/recovery/{idtypeid}', [TypeidController::class, 'recovery']);
     Route::get('typeid/delete/{idtypeid}', [TypeidController::class, 'delete']);
+
+    //Personas------------------------------------------------------------------------
+
+    Route::get('person', [PersonController::class, 'index']);
+
+    Route::get('person/new', [PersonController::class, 'create']);
+    Route::post('person', [PersonController::class, 'store']);
+
+    Route::get('person/edit/{idperson}', [PersonController::class, 'edit']);
+    Route::post('person/edit/{idperson}', [PersonController::class, 'update']);
+
+
+    Route::get('person/destroy/{idperson}', [PersonController::class, 'destroy']);
+    Route::get('person/recovery/{idperson}', [PersonController::class, 'recovery']);
+    Route::get('person/delete/{idperson}', [PersonController::class, 'delete']);
+
+//Rol---------------------------------------------------------------------
+
+    Route::get('rol', [RolController::class, 'index']);
+
+    Route::get('rol/new', [RolController::class, 'create']);
+    Route::post('rol', [RolController::class, 'store']);
+
+    Route::get('rol/edit/{idrol}', [RolController::class, 'edit']);
+    Route::post('rol/edit/{idrol}', [RolController::class, 'update']);
+
+
+    Route::get('rol/destroy/{idrol}', [RolController::class, 'destroy']);
+    Route::get('rol/recovery/{idrol}', [RolController::class, 'recovery']);
+    Route::get('rol/delete/{idrol}', [RolController::class, 'delete']);
+
 });
