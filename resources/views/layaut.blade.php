@@ -138,10 +138,10 @@
                 <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Sobre Inventario:</h6>
-                        <a class="collapse-item" href="#">Inventario</a>
+                        <a class="collapse-item" href="{{ url('h_abastecimiento/inventario') }}">Inventario</a>
                         @if ( Auth::user()->rol->nomrol == "Administrador")
                         <a class="collapse-item" href="{{ url('h_abastecimiento/abastecer') }}">Abastecer</a>
-                        <a class="collapse-item" href="/h_abastecimiento">Historial abastecimiento</a>
+                        <a class="collapse-item" href="{{ url('h_abastecimiento') }}">Historial abastecimiento</a>
                         @endif
                     </div>
                 </div>
