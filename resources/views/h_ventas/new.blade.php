@@ -5,6 +5,7 @@
 <head>
 	<link rel="icon" type="image/png" href="{{ url('img/icon_principal.png') }}">
 	<title>HSI - Hacer una Venta</title>
+
 </head>
 @section('content')
 
@@ -62,7 +63,7 @@
 								<input name="date" type="datetime-local" class="form-control form-control-user" id="ejemplodate" placeholder="Fecha y hora" required>
 							</div>
 							<div class="col-sm-4">
-								<input name="total" type="number" class="form-control form-control-user" id="ejemplototal" placeholder="Total" required>
+								<input name="total" type="number" class="form-control form-control-user" id="" placeholder="Total" required>
 							</div>
 							<div class="col-sm-4">
 								<input type="submit" value="Confirmar Venta" class="btn btn-success btn-user btn-block"></input>
