@@ -30,7 +30,6 @@
 				<table class="table table-responsive table-bordered table-hover table-striped">
 					<thead>
 						<tr>
-
 							<th width="20">Tipo de Persona</th>
 							<th>TipoID</th>
 							<th>Número ID</th>
@@ -43,7 +42,6 @@
 						</tr>
 					</thead>
 					<tbody>
-
 						@foreach($data as $row)
 						<tr>
 							<td> {{ $row->ptype->nomptype}} </td>
@@ -99,12 +97,57 @@
 						@endforeach
 					</tbody>
 				</table>
-
 			</div>
 		</div>
 	</div>
 
 </body>
+@stop
+@section('scripts')
+<!-- Export -->
+<script>
+	$('table').dataTable({
+		language: {
+			url: 'plugins/datatables/lang/Spanish.json'
+		},
+		dom: 'Blfrtip',
+		dom: "<'row mt-1'<'col-sm-6'B><'col-sm-6'f>>" +
+			"<'row'<'col-sm-12'tr>>" +
+			"<'row'<'col-sm-4'i><'col-sm-2'l><'col-sm-6 text-right'p>>",
+		"lengthMenu": [4, 10, 25, 50, 100],
+		buttons: [{
+				extend: 'excelHtml5',
+				text: '<i class="fas fa-file-excel">',
+				titleAttr: 'Exportar a excel',
+				className: 'btn btn-success btn-lg',
+				filename: 'Reporte de Existentes',
+				exportOptions: {
+					columns: [0, 1, 2, 3, 4, 5, 6, 7]
+				}
+			},
+			{
+				extend: 'pdfHtml5',
+				text: '<i class="fas fa-file-pdf">',
+				titleAttr: 'Exportar a PDF',
+				className: 'btn btn-danger btn-lg',
+				filename: 'Reporte de Existentes',
+				exportOptions: {
+					columns: [0, 1, 2, 3, 4, 5, 6, 7]
+				}
+			},
+			{
+				extend: 'print',
+				text: '<i class="fas fa-print">',
+				titleAttr: 'Imprimir',
+				className: 'btn btn-info btn-lg',
+				filename: 'Reporte de Existentes',
+				exportOptions: {
+					columns: [0, 1, 2, 3, 4, 5, 6, 7]
+				}
+			},
+		]
+	});
+</script>
 @stop
 
 </html>
