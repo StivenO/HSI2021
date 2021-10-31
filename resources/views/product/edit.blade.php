@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels">Tipo de Unidad</label>
-                                        <select name="unit_id" class="form-control form-select-user text-gray-600" id="ejemploUnitid" required>
+                                        <select name="unit_id" class="select-acostica form-control form-select-user text-gray-600" id="ejemploUnitid" required>
                                             <option>Seleccione Tipo de Unidad *</option>
                                             @foreach ($unidades as $unidad)
                                             @if(($unidad->idunit) == ($data->unit_id))
@@ -78,7 +78,7 @@
                                     </div>
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels">Categoría</label>
-                                        <select name="category_id" class="form-control form-select-user text-gray-600" id="ejemploCategory" required>
+                                        <select name="category_id" class="select-acostica form-control form-select-user text-gray-600" id="ejemploCategory" required>
                                             <option>Seleccione Categoría*</option>
                                             @foreach ($categorias as $categoria)
                                             @if(($categoria->idcategory) == ($data->category_id))

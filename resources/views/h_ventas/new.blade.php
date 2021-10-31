@@ -39,7 +39,7 @@
 
 							<div class="col-sm-4 mb-3 mb-sm-0">
 
-								<select name="product_id" class="form-control" required>
+								<select name="product_id" class="select-acostica form-control" required>
 									<option disabled selected>Seleccione un Producto *</option>
 									@foreach ($productos as $producto)
 									<option value="{{$producto->idproduct}}">{{ $producto->nomproduct }}</option>

@@ -64,7 +64,7 @@
                                     </div>
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels">Tipo de Unidad</label>
-                                        <select name="unit_id" class="form-control form-select-user text-gray-600" id="ejemploUnitid" required>
+                                        <select name="unit_id" class="select-acostica form-control form-select-user text-gray-600" id="ejemploUnitid" required>
                                             <option>Seleccione Tipo de Unidad *</option>
                                             @foreach ($datosu as $datou)
                                             <option value="{{$datou->idunit}}">{{ $datou->nomunit }}</option>
@@ -73,7 +73,7 @@
                                     </div>
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels">Categoría</label>
-                                        <select name="category_id" class="form-control form-select-user text-gray-600" id="ejemploCategory" required>
+                                        <select name="category_id" class="select-acostica form-control form-select-user text-gray-600" id="ejemploCategory" required>
                                             <option>Seleccione Categoría *</option>
                                             @foreach ($datos as $dato)
                                             <option value="{{$dato->idcategory}}">{{ $dato->nomcategory }}</option>

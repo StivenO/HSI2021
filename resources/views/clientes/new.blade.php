@@ -35,7 +35,7 @@
 								<div class="row mt-2">
 									<div class="col-md-4 col-sm-6">
 										<label class="labels">Tipo de Identificación</label>
-										<select name="typeid_id" class="form-control form-control-user" required>
+										<select name="typeid_id" class="select-acostica form-control form-control-user" required>
 											<option>Seleccione Tipo de Identificación *</option>
 											@foreach ($identificaciones as $identificacion)
 											<option value="{{$identificacion->idtypeid}}"> {{ $identificacion->nomtypeid }}</option>

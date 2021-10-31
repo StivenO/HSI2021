@@ -289,8 +289,6 @@ select {
     word-wrap: normal;
     font-size: 0.8rem !important;
     border-radius: 10rem !important;
-    padding: 0.5rem 1rem !important;
-    height: calc(3.8em + 2px) !important;
 }
 
 button,
@@ -11810,4 +11808,14 @@ body.sidebar-toggled footer.sticky-footer {
 
 .dataTables_length {
     text-align: left;
+}
+
+#example_length {
+    padding: 0 !important;
+    height: 0 !important;
+}
+
+.select-acostica {
+    padding: 0.5rem 1rem !important;
+    height: calc(3.8em + 2px) !important;
 }
