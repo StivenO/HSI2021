@@ -14,6 +14,12 @@ class Sell extends Model
      protected $fillable = ['person_id', 'user_id',  'opetype_id', 'product_id', 'cantproduct', 'cash', 'disc', 'date', 
      'total'];
     
+     public function user(){
+        return $this->belongsTo(User::class, 'user_id','iduser');
+     }
+     public function person(){
+        return $this->belongsTo(Person::class, 'person_id','idperson');
+     }
      public function operationtype(){
         return $this->belongsTo(operationtype::class, 'opetype_id', 'idopetype');
     }

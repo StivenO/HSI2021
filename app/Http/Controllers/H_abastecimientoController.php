@@ -15,11 +15,8 @@ class H_abastecimientoController extends Controller
     public function index()
     {
         $consulta=['state' => 1, 'opetype_id' => 2];
-        $consulta2=['state' => 0, 'opetype_id' => 2];
-        $data=Sell::where($consulta)->get();
-        //$data = Tipo::all(); Trae todos
-        $data2 = Sell::where($consulta2)->get();
-        return view('H_abastecimiento.index', compact('data', 'data2') );
+        $data=Sell::where($consulta)->with('person')->with('user')->get();
+        return view('H_abastecimiento.index', compact('data') );
     }
     public function inventario()
     {

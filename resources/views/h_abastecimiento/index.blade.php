@@ -32,8 +32,8 @@
 				<tbody>
 					@foreach($data as $row)
 					<tr>
-						<td> {{ $row->person_id }} </td>
-						<td> {{ $row->user_id }} </td>
+						<td> {{ $row->person->nomperson }} </td>
+						<td> {{ $row->user->nomuser }} </td>
 						<td style="width: 30%">{{$row->product->nomproduct}}</td>
 						<td> {{ $row->cantproduct }} </td>
 						<td style="width: 15%">$ {{ $row->cash }} </td>
