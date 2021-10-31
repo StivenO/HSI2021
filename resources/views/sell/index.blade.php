@@ -36,7 +36,9 @@
 							<th>Descuento</th>
 							<th>Fecha</th>
 							<th>Total</th>
+							@if ( Auth::user()->rol->nomrol == "Administrador")
 							<th>Acciones</th>
+							@endif
 						</tr>
 					</thead>
 					<tbody>
@@ -51,12 +53,13 @@
 							<td> {{ $row->disc }} </td>
 							<td style="width: 18%"> {{ $row->date }} </td>
 							<td> {{ $row->total }} </td>
-
+							@if ( Auth::user()->rol->nomrol == "Administrador")
 							<td style="width: 15%; text-align: center;">
 								<a style="width: 40%" class="btn btn-info btn-sm" href="{{url( 'sell/editar/'.$row->idsell )}}" title="Editar Registro"><i class="fas fa-edit"></i></a>
 
 								<a style="width: 40%" class="btn btn-danger btn-sm" href="{{url( 'sell/destroy/'.$row->idsell )}}" onclick=" return confirm('Desea eliminar el registro?')" title="Enviar a Papelera"> <i class="far fa-trash-alt"></i> </a>
 							</td>
+							@endif
 						</tr>
 						@endforeach
 					</tbody>
@@ -77,7 +80,9 @@
 							<th>Descuentos</th>
 							<th>Fecha</th>
 							<th>Total</th>
+							@if ( Auth::user()->rol->nomrol == "Administrador")
 							<th>Acciones</th>
+							@endif
 						</tr>
 					</thead>
 					<tbody>
@@ -92,11 +97,13 @@
 							<td> {{ $row->disc }} </td>
 							<td style="width: 18%"> {{ $row->date }} </td>
 							<td> {{ $row->total }} </td>
+							@if ( Auth::user()->rol->nomrol == "Administrador")
 							<td style="width: 15%; text-align: center;">
 								<a style="width: 40%" class="btn btn-success btn-sm" href="{{url( 'sell/recovery/'.$row->idsell )}}" onclick=" return confirm('¿Desea recuperar el registro?')" title="Recuperar registro"><i class="fas fa-undo"></i></a>
 
 								<a style="width: 40%" class="btn btn-danger btn-sm" href="{{url( 'sell/delete/'.$row->idsell )}}" onclick=" return confirm('¿Desea eliminarlo definitivamente?')" title="Eliminar Definitivamente"><i class="fas fa-times"></i></a>
 							</td>
+							@endif
 						</tr>
 						@endforeach
 					</tbody>
