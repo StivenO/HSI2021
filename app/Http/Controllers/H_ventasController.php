@@ -54,6 +54,7 @@ class H_ventasController extends Controller
     {
         //
     }
+    
     public function caja()
     {
         // SELECT SUM(total) AS 'sumventas' FROM sell WHERE opetype_id ='1'
