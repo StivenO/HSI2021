@@ -203,7 +203,7 @@
             <div class="sidebar-card">
                 <img class="sidebar-card-illustration mb-2" src="{{ url('img/undraw_rocket.svg') }}" alt="">
                 <p class="text-center mb-2"><strong>Hardware Store Inventory</strong> esta feliz que haga uso de su software, estamos para usted!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Contáctanos!</a>
+                <a class="btn btn-success btn-sm" href="{{ url('soporte/contacto') }}">Contáctanos!</a>
             </div>
 
         </ul>

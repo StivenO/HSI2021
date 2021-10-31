@@ -3,141 +3,103 @@
 <html>
 
 <head>
-  <link rel="icon" type="image/png" href="{{ url('img/icon_principal.png') }}">
-  <tittle></tittle>
-  <!-- CSS only -->
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" href="{{ url('img/icon_principal.png') }}">
+  <title>HSI - Equipo</title>
 </head>
 @section('content')
 
 <body>
+  <div class="container">
 
-  <!-- Encabezado de página -->
-  <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Página Principal</h1>
-  </div><br>
+    <!-- Encabezado de página -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+      <h1 class="h3 mb-0 text-gray-800">Nuestro Equipo</h1>
+    </div>
 
-  <!-- Fila de contenido -->
-  <div class="row">
+    <!--Carousel Wrapper-->
+    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
-    <!-- Tarjeta de inventario -->
-    <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-primary shadow h-100 py-2">
-        <div class="card-body">
-          <div class="row no-gutters align-items-center">
-            <div class="col mr-2">
-              <div class="text-md font-weight-bold text-primary text-uppercase mb-1">
-                Inventario</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-600"> A <label class="text-gray-500">prods</label></div>
-            </div>
-            <div class="col-auto">
-              <i class="fas fa-calendar fa-2x text-gray-300"></i>
+      <!--Controls-->
+      <div class="controls-top">
+        <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+        <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-right"></i></a>
+      </div>
+      <!--/.Controls-->
+
+      <!--Indicators-->
+      <ol class="carousel-indicators">
+        <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+        <li data-target="#multi-item-example" data-slide-to="1"></li>
+
+      </ol>
+      <!--/.Indicators-->
+
+      <!--Slides-->
+      <div class="carousel-inner" role="listbox">
+
+        <!--First slide-->
+        <div class="carousel-item active">
+
+          <div class="col-md-6" style="float:left">
+            <div class="card mb-2">
+              <img class="img-fluid card-img-top" src="{{ url('img/acosta.JPEG') }}" alt="Acosta">
+              <div class="card-body">
+                <h4 class="card-title text-gray-800">Andrés David Acosta Buitrago</h4>
+                <p class="card-text">Software Developer Front-end.</p>
+                <a href="https://api.whatsapp.com/send?phone=573184464480&text=Hola!!%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20Hardware%20Store%20Inventory..." class="btn btn-success">Contáctame!</a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Tarjeta de ventas (mensuales) -->
-    <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-success shadow h-100 py-2">
-        <div class="card-body">
-          <div class="row no-gutters align-items-center">
-            <div class="col mr-2">
-              <div class="text-md font-weight-bold text-success text-uppercase mb-1">
-                Ventas </div>
-              <div class="h5 mb-0 font-weight-bold text-gray-600"> A </div>
-            </div>
-            <div class="col-auto">
-              <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+          <div class="col-md-6" style="float:left">
+            <div class="card mb-2">
+              <img class="img-fluid card-img-top" src="{{ url('img/stiven.JPEG') }}" alt="Stiven">
+              <div class="card-body">
+                <h4 class="card-title text-gray-800">Nelson Stiven Ortega Urbano</h4>
+                <p class="card-text">Software Developer Back-end.</p>
+                <a href="https://api.whatsapp.com/send?phone=573002999905&text=Hola!!%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20Hardware%20Store%20Inventory..." class="btn btn-success">Contáctame!</a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Tarjeta de historial -->
-    <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-info shadow h-100 py-2">
-        <div class="card-body">
-          <div class="row no-gutters align-items-center">
-            <div class="col mr-2">
-              <div class="text-md font-weight-bold text-info text-uppercase mb-1">
-                Clientes</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-600"> A </div>
-            </div>
-            <div class="col-auto">
-              <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
+        <!--/.First slide-->
 
-    <!-- Tarjeta de proveedores -->
-    <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-warning shadow h-100 py-2">
-        <div class="card-body">
-          <div class="row no-gutters align-items-center">
-            <div class="col mr-2">
-              <div class="text-md font-weight-bold text-warning text-uppercase mb-1">
-                Proveedores</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-600"> A </div>
-            </div>
-            <div class="col-auto">
-              <i class="fas fa-comments fa-2x text-gray-300"></i>
+        <!--Second slide-->
+        <div class="carousel-item">
+
+          <div class="col-md-6" style="float:left">
+            <div class="card mb-2">
+              <img class="img-fluid card-img-top" src="{{ url('img/marlon.JPEG') }}" alt="Marlon">
+              <div class="card-body">
+                <h4 class="card-title text-gray-800">Marlon Steven Mayorga Moncayo</h4>
+                <p class="card-text">Software Developer Back-end.</p>
+                <a href="https://api.whatsapp.com/send?phone=573233794426&text=Hola!!%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20Hardware%20Store%20Inventory..." class="btn btn-success">Contáctame!</a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Fila de contenido -->
-  <br>
-  <div class="row">
-
-  </div>
-
-  <!-- Fila de contenido -->
-  <div class="row">
-
-    <!-- Fila de columna -->
-    <div class="col-lg-4 mb-3">
-
-      <!-- Espacio de alertas Stock Mínimo -->
-      <div class="card shadow mb-3">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Espacio de alertas</h6>
-        </div>
-        <div class="card-body text-gray-600">
-        </div>
-      </div>
-
-
-    </div>
-
-    <div class="col-lg-8 mb-6">
-
-      <!-- Enfoque de desarrollo -->
-      <div class="card shadow mb-2">
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Info Material Externo</h6>
-        </div>
-        <div class="card-body">
-          <div class="text-center">
-            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 22rem;" src="img/externo.svg" alt="computador unDraw">
+          <div class="col-md-6" style="float:left">
+            <div class="card mb-2">
+              <img class="img-fluid card-img-top" src="{{ url('img/arroyave.JPEG') }}" alt="Arroyave">
+              <div class="card-body">
+                <h4 class="card-title text-gray-800">Andrés Felipe Arroyave Chicangana</h4>
+                <p class="card-text">Software Developer Back-end.</p>
+                <a href="https://api.whatsapp.com/send?phone=573106268204&text=Hola!!%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20Hardware%20Store%20Inventory..." class="btn btn-success">Contáctame!</a>
+              </div>
+            </div>
           </div>
-          <p>Esta aplicación web tomó como base la plantilla SB Admin2 de
-            <a target="_blank" rel="nofollow" href="https://startbootstrap.com/theme/sb-admin-2">Bootstrap</a>, y
-            facilitó el uso de imágenes gratuitas con <a target="_blank" rel="nofollow" href="https://undraw.co/">unDraw.</a>
-            Aparte de eso, fue desarrollada con el framework <a target="_blank" rel="nofollow" href="https://laravel.com/">Laravel.</a>
-          </p>
+
         </div>
+        <!--/.Second slide-->
+
       </div>
+      <!--/.Slides-->
 
     </div>
+    <!--/.Carousel Wrapper-->
   </div>
 
 </body>
