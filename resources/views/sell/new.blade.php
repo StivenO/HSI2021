@@ -43,7 +43,7 @@
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<label class="labels">Tipo de Transacción</label>
-										<select name="opetype_id" class="form-control form-control-user" required>
+										<select name="opetype_id" class="select-acostica form-control form-control-user" required>
 											<option>Seleccione Tipo de Transaccion *</option>
 											@foreach ($operaciones as $operacion)
 											<option value="{{$operacion->idopetype}}">{{ $operacion->nomopetype }}</option>
@@ -54,7 +54,7 @@
 								<div class="row mt-2">
 									<div class="col-md-4 col-sm-6">
 										<label class="labels">Seleccione el Producto</label>
-										<select name="product_id" class="form-control form-control-user" required>
+										<select name="product_id" class="select-acostica form-control form-control-user" required>
 											<option>Seleccione el Producto *</option>
 											@foreach ($productos as $producto)
 											<option value="{{$producto->idproduct}}">{{ $producto->nomproduct }}</option>
