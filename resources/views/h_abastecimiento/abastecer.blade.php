@@ -69,7 +69,7 @@
                 className: 'btn btn-success btn-lg',
                 filename: 'Reporte de Existentes',
                 exportOptions: {
-                    columns: [0, 1, 2, 3, 4, 5]
+                    columns: [0, 1, 2, 3, 4]
                 }
             },
             {
@@ -79,7 +79,7 @@
                 className: 'btn btn-danger btn-lg',
                 filename: 'Reporte de Existentes',
                 exportOptions: {
-                    columns: [0, 1, 2, 3, 4, 5]
+                    columns: [0, 1, 2, 3, 4]
                 }
             },
             {
@@ -89,7 +89,7 @@
                 className: 'btn btn-info btn-lg',
                 filename: 'Reporte de Existentes',
                 exportOptions: {
-                    columns: [0, 1, 2, 3, 4, 5]
+                    columns: [0, 1, 2, 3, 4]
                 }
             },
         ]

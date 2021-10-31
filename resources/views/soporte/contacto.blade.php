@@ -15,7 +15,7 @@
 
     <!-- Encabezado de página -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-      <h1 class="h3 mb-0 text-gray-800">Nuestro Equipo</h1>
+      <h1 class="h3 mb-0 text-gray-800">Equipo de Desarrollo</h1>
     </div>
 
     <!--Carousel Wrapper-->
