@@ -39,7 +39,7 @@ class H_ventasController extends Controller
     public function store(Request $request)
     {        
         
-        $data['user_id'] = ($request->get('user_id'));
+        $data['user_id'] = (Auth::user()->iduser);
         $data['person_id'] = $request->get('person_id');
         $data['opetype_id'] = 1;
         $data['product_id'] = $request->get('product_id');
