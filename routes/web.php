@@ -113,17 +113,6 @@ Route::group(['middleware' => ['auth', 'prevent-back-history']], function () {
 
     Route::get('sell', [SellController::class, 'index']);
 
-    Route::get('sell/new', [SellController::class, 'create']);
-    Route::post('sell', [SellController::class, 'store']);
-
-    Route::get('sell/editar/{idsell}', [SellController::class, 'edit']);
-    Route::post('sell/editar/{idsell}', [SellController::class, 'update']);
-
-
-    Route::get('sell/destroy/{idsell}', [SellController::class, 'destroy']);
-    Route::get('sell/recovery/{idsell}', [SellController::class, 'recovery']);
-    Route::get('sell/delete/{idsell}', [SellController::class, 'delete']);
-
     //  Ventas (sell) ----------------------------------------------------------------------
 
     Route::get('h_ventas', [H_ventasController::class, 'index']);
@@ -251,6 +240,18 @@ Route::group(['middleware' => ['auth', 'prevent-back-history', 'admin']], functi
     //  Ventas (sell) ----------------------------------------------------------------------
 
     Route::get('h_ventas/caja', [H_ventasController::class, 'caja']);
+
+    // (sell) ----------------------------------------------------------------------
+    Route::get('sell/new', [SellController::class, 'create']);
+    Route::post('sell', [SellController::class, 'store']);
+
+    Route::get('sell/editar/{idsell}', [SellController::class, 'edit']);
+    Route::post('sell/editar/{idsell}', [SellController::class, 'update']);
+
+
+    Route::get('sell/destroy/{idsell}', [SellController::class, 'destroy']);
+    Route::get('sell/recovery/{idsell}', [SellController::class, 'recovery']);
+    Route::get('sell/delete/{idsell}', [SellController::class, 'delete']);
 
     //  abastecimiento (sell) ----------------------------------------------------------------------
 
