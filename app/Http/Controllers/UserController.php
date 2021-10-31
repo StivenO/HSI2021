@@ -67,7 +67,7 @@ class UserController extends Controller
         $data['apeuser'] = $request->get('apeuser');
         $data['email'] = $request->get('email');
         $data['nick'] = $request->get('nick');
-        $data['password'] = $request->get('password');
+        $data['password'] = Hash::make($request->get('password'));
         $data['rol_id'] = $request->get('rol_id');
         $data['state'] = $request->get('state');
 

@@ -159,6 +159,7 @@ Route::group(['middleware' => ['auth', 'prevent-back-history']], function () {
     //  Perfil ----------------------------------------------------------------------
 
     Route::get('perfil', [PerfilController::class, 'index']);
+    Route::post('perfil', [PerfilController::class, 'update']);
 
 
     //  Tipo de Identificacion ----------------------------------------------------------------------

@@ -34,10 +34,24 @@ class PerfilController extends Controller
 
   public function edit($id)
   {
+
   }
 
-  public function update(Request $request, $id)
+  public function update(Request $request)
   {
+    $id=(Auth::user()->nick);
+        $data['typeid_id'] = $request->get('typeid_id');
+        $data['numid'] = $request->get('numid');
+        $data['nomuser'] = $request->get('nomuser');
+        $data['apeuser'] = $request->get('apeuser');
+        $data['email'] = $request->get('email');
+        $data['nick'] = $request->get('nick');
+        $data['password'] = $request->get('password');
+        $data['rol_id'] = $request->get('rol_id');
+        $data['state'] = $request->get('state');
+
+        User::find($id)->update($data);
+        return redirect('inicio');
   }
 
   public function destroy($id)
