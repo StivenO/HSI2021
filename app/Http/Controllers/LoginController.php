@@ -48,7 +48,9 @@ class LoginController extends Controller
             return redirect('inicio');
         }
 
-        return back();
+        return redirect('login')->with('mensaje', 'Usuario o contraseña incorrecta!')
+        ->with('tipo', 'danger')
+        ->with('icono', '<i class="fas fa-times-circle"></i>');
     }
 
 
@@ -61,8 +63,8 @@ class LoginController extends Controller
 
         User::create($data);
 
-        return redirect('login')->with('mensaje', 'Cuenta creada exitosamente!')
-            ->with('tipo', 'success')
-            ->with('icono', '<i class="fas fa-check-circle"></i>');
+        return redirect('login')->with('mensaje2', 'Cuenta creada exitosamente!')
+            ->with('tipo2', 'success')
+            ->with('icono2', '<i class="fas fa-check-circle"></i>');
     }
 }
