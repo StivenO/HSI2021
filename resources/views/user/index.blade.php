@@ -13,7 +13,7 @@
 <body>
 	<div class="container">
 		<a href="{{ url('user/new') }}" class="btn btn-primary float-right"><i class="fas fa-user-plus"></i> Agregar Usuaio</a>
-		<h1>Usuarios</h1><br>
+		<h1>Gestión de Usuarios</h1><br>
 		<ul class="nav nav-tabs float-right" id="myTab" role="tablist">
 			<li class="nav-item" role="presentation">
 				<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Activos</button>
