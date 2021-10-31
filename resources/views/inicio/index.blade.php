@@ -115,7 +115,7 @@
           @if ($alerta > '0')
           <p>
             <hr />
-          <p class=""><a style="colo:#c0c0c0" href="{{ url('h_abastecimiento/abastecer') }}"> Hay {{$alerta}} productos por debajo del Stock mínimo </a></p>
+          <p class=""><a class="text-dark" href="{{ url('h_abastecimiento/abastecer') }}"> Hay {{$alerta}} productos por debajo del Stock mínimo </a></p>
           <hr />
           </p>
           @else {
