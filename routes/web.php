@@ -150,6 +150,11 @@ Route::group(['middleware' => ['auth', 'prevent-back-history']], function () {
 
     Route::get('inicio', [InicioController::class, 'index']);
 
+    //  abastecimiento (sell) ----------------------------------------------------------------------
+    
+    Route::get('h_abastecimiento/inventario', [H_abastecimientoController::class, 'inventario']);
+
+
     //  Perfil ----------------------------------------------------------------------
 
     Route::get('perfil', [PerfilController::class, 'index']);

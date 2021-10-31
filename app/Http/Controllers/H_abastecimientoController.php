@@ -21,6 +21,16 @@ class H_abastecimientoController extends Controller
         $data2 = Sell::where($consulta2)->get();
         return view('H_abastecimiento.index', compact('data', 'data2') );
     }
+    public function inventario()
+    {
+        $data=Product::where('state', 1)->get();
+        // echo "<pre>";
+        // print_r ($data->toArray());
+        // echo "</pre>";
+        $data2=Product::where('state', 0)->get();
+        return view('H_abastecimiento.inventario', compact('data', 'data2'));
+
+    }
 
     public function abastecer()
     {
