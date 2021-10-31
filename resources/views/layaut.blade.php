@@ -156,7 +156,7 @@
                 <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Detalle de proveedores:</h6>
-                        <a class="collapse-item" href="proveedores">Lista de proveedores</a>
+                        <a class="collapse-item" href="{{ url('proveedores') }}">Lista de proveedores</a>
                     </div>
                 </div>
             </li>
@@ -170,7 +170,7 @@
                 <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Detalle de clientes:</h6>
-                        <a class="collapse-item" href="clientes">Lista de clientes</a>
+                        <a class="collapse-item" href="{{ url('clientes') }}">Lista de clientes</a>
                     </div>
                 </div>
             </li>
