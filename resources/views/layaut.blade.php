@@ -146,7 +146,7 @@
                     </div>
                 </div>
             </li>
-
+            @if ( Auth::user()->rol->nomrol == "Administrador")
             <!-- Elemento de navegación: menú desplegable de proveedores -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
@@ -174,7 +174,7 @@
                     </div>
                 </div>
             </li>
-
+            @endif
 
             <!-- Divisor -->
             <hr class="sidebar-divider d-none d-md-block">
