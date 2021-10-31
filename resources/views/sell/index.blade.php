@@ -29,7 +29,7 @@
 						<tr>
 							<th>Persona</th>
 							<th>Usuario</th>
-							<th>Transaccion</th>
+							<th>Transacción</th>
 							<th>Producto</th>
 							<th>Cantidad</th>
 							<th>Valor</th>
@@ -49,10 +49,10 @@
 							<td>{{$row->operationtype->nomopetype}}</td>
 							<td>{{$row->product->nomproduct}}</td>
 							<td> {{ $row->cantproduct }} </td>
-							<td> {{ $row->cash }} </td>
-							<td> {{ $row->disc }} </td>
+							<td>${{ $row->cash }} </td>
+							<td>${{ $row->disc }} </td>
 							<td style="width: 18%"> {{ $row->date }} </td>
-							<td> {{ $row->total }} </td>
+							<td>${{ $row->total }} </td>
 							@if ( Auth::user()->rol->nomrol == "Administrador")
 							<td style="width: 15%; text-align: center;">
 								<a style="width: 40%" class="btn btn-info btn-sm" href="{{url( 'sell/editar/'.$row->idsell )}}" title="Editar Registro"><i class="fas fa-edit"></i></a>
@@ -73,7 +73,7 @@
 						<tr>
 							<th>Persona</th>
 							<th>Usuario</th>
-							<th>Transaccion </th>
+							<th>Transacción </th>
 							<th>Producto</th>
 							<th>Cantidad</th>
 							<th>Valor</th>
@@ -93,10 +93,10 @@
 							<td>{{$row->operationtype->nomopetype}}</td>
 							<td>{{$row->product->nomproduct}}</td>
 							<td> {{ $row->cantproduct }} </td>
-							<td> {{ $row->cash }} </td>
-							<td> {{ $row->disc }} </td>
+							<td>${{ $row->cash }} </td>
+							<td>${{ $row->disc }} </td>
 							<td style="width: 18%"> {{ $row->date }} </td>
-							<td> {{ $row->total }} </td>
+							<td>${{ $row->total }} </td>
 							@if ( Auth::user()->rol->nomrol == "Administrador")
 							<td style="width: 15%; text-align: center;">
 								<a style="width: 40%" class="btn btn-success btn-sm" href="{{url( 'sell/recovery/'.$row->idsell )}}" onclick=" return confirm('¿Desea recuperar el registro?')" title="Recuperar registro"><i class="fas fa-undo"></i></a>

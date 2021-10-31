@@ -42,12 +42,12 @@
                         @foreach($data as $row)
                         <tr>
                             <td>{{$row->idproduct}}</td>
-                            <td>{{$row->nomproduct}}</td>
-                            <td>{{$row->description}}</td>
+                            <td style="width: 15%">{{$row->nomproduct}}</td>
+                            <td style="width: 30%">{{$row->description}}</td>
                             <td>{{$row->stockmin}}</td>
-                            <td>{{$row->pricein}}</td>
+                            <td>${{$row->pricein}}</td>
                             <td>{{$row->quantity}}</td>
-                            <td>{{$row->priceout}}</td>
+                            <td>${{$row->priceout}}</td>
                             <td>{{$row->unit->nomunit}}</td>
                             <td>{{$row->category->nomcategory}}</td>
 
@@ -82,11 +82,11 @@
                         <tr>
                             <td>{{$row->idproduct}}</td>
                             <td>{{$row->nomproduct}}</td>
-                            <td>{{$row->description}}</td>
+                            <td style="width: 30%">{{$row->description}}</td>
                             <td>{{$row->stockmin}}</td>
-                            <td>{{$row->pricein}}</td>
+                            <td>${{$row->pricein}}</td>
                             <td>{{$row->quantity}}</td>
-                            <td>{{$row->priceout}}</td>
+                            <td>${{$row->priceout}}</td>
                             <td>{{$row->unit->nomunit}}</td>
                             <td>{{$row->category->nomcategory}}</td>
                             <td style="width: 10%; text-align: center;">
