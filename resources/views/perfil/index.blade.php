@@ -60,13 +60,15 @@
                         </div>
                         <div class="row mt-3">
                             <div class="col-md-6"><label class="labels">Contraseña</label>
-                                <input name="password" type="text" class="form-control form-control-user" placeholder="Nueva contraseña" value="">
+                                <input name="password" type="password" class="form-control form-control-user" placeholder="Nueva contraseña" value="">
                             </div>
                             <div class="col-md-6"><label class="labels">Confirmar Contraseña</label>
-                                <input type="text" class="form-control form-control-user" value="" placeholder="Confirmar contraseña">
+                                <input type="password" class="form-control form-control-user" value="" placeholder="Confirmar contraseña">
                             </div>
                         </div>
-                        <div class="mt-5 text-center"><button class="btn btn-primary btn-user btn-block" type="button">Guardar Perfil</button><input type="submit" class="btn btn-success"></div>
+                        <div class="mt-5 text-center">
+                            <input type="submit" class="btn btn-success btn-user btn-block" value="Guardar Perfil">
+                        </div>
                     </form>
                 </div>
             </div>
