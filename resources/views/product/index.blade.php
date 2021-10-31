@@ -11,8 +11,8 @@
 @section('content')
 
 <body>
-    <div class="container-fluid">
-        <a href="product/new" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Agregar Producto</a>
+    <div class="container">
+        <a href="{{ url('product/new') }}" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Agregar Producto</a>
         <h1>Gestión de Productos</h1><br>
         <ul class="nav nav-tabs float-right" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">

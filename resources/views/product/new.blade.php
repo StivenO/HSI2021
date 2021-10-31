@@ -51,7 +51,6 @@
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels">Precio de entrada</label>
                                         <input name="pricein" type="number" class="form-control form-control-user" id="ejemploPricein" placeholder="Precio de entrada" required>
-
                                     </div>
                                     <div class="col-md-4 col-sm-6">
                                         <label class="labels">Cantidad</label>
