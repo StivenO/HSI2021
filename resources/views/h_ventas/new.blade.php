@@ -30,11 +30,16 @@
 					<div class="card-body">
 						<div class="form-group row">
 							<div class="col-sm-4 mb-3 mb-sm-0">
-								<input name="person_id" type="" class="form-control form-control-user" id="ejemploNomuser" placeholder="Nombre del usuario" required>
+								<input name="user_id" type="" class="form-control form-control-user" id="ejemploNomuser" placeholder="Nombre del usuario" value="{{Auth::user()->iduser}} " required readonly>
 							</div>
 
 							<div class="col-sm-4">
-								<input name="user_id" type="" class="form-control form-control-user" id="ejemploNomperson" placeholder="Nombre del cliente" required>
+								<select name="person_id" class="select-acostica form-control" required>
+									<option disabled selected>Seleccione el Cliente *</option>
+									@foreach ($personas as $persona)
+									<option value="{{$persona->idperson}}">{{ $persona->nomperson }}</option>
+									@endforeach
+								</select>
 							</div>
 
 							<div class="col-sm-4 mb-3 mb-sm-0">

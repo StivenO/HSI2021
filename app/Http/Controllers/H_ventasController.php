@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Sell;
 use App\Models\Product;
 use App\Models\Operationtype;
-
+use App\Models\Person;
+use Auth;
 
 class H_ventasController extends Controller
 {
@@ -26,16 +27,20 @@ class H_ventasController extends Controller
 
     public function create()
     {
+        $personas = Person::where('state', 1)
+                            ->where('ptype_id', 1)
+                            ->get();
         $operaciones = Operationtype::where('state', 1)->get();
         $productos = Product::where('state', 1)->get();
-        return view('h_ventas.new', compact('operaciones', 'productos'));
+        return view('h_ventas.new', compact('operaciones', 'productos', 'personas'));
     }
 
 
     public function store(Request $request)
-    {
+    {        
+        
+        $data['user_id'] = ($request->get('user_id'));
         $data['person_id'] = $request->get('person_id');
-        $data['user_id'] = $request->get('user_id');
         $data['opetype_id'] = 1;
         $data['product_id'] = $request->get('product_id');
         $data['cantproduct'] = $request->get('cantproduct');
