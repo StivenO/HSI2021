@@ -176,6 +176,21 @@
             </li>
             @endif
 
+            <!-- Elemento de navegación: menú desplegable de soporte -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                    <i class="fas fa-cog"></i>
+                    <span>Soporte HSI</span>
+                </a>
+                <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Detalle de soporte:</h6>
+                        <a class="collapse-item" href="{{ url('bd') }}">Relaciones BD</a>
+                        <a class="collapse-item" href="{{ url('contacto') }}">Nuestro Equipo</a>
+                    </div>
+                </div>
+            </li>
+
             <!-- Divisor -->
             <hr class="sidebar-divider d-none d-md-block">
 
