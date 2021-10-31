@@ -34,8 +34,13 @@ class InicioController extends Controller
               ->where('ptype_id', '=','2')
               ->get();
     $nproveedores=$d->count();;
+    //SELECT COUNT(*) AS 'nummin' FROM product pd INNER JOIN unit ut ON pd.unit_id = ut.idunit INNER JOIN category ct ON pd.category_id = ct.idcategory WHERE quantity < stockmin AND pd.state = 0
+    $e=Product::where('state', '=', 1)
+                ->whereRaw('stockmin >=quantity')
+                ->get();
+    $alerta=$e->count();;
 
-    return view('inicio.index', compact("inventario", "ventas", "nclientes", "nproveedores"));
+    return view('inicio.index', compact("inventario", "ventas", "nclientes", "nproveedores", "alerta"));
   }
 
 

@@ -112,10 +112,18 @@
           <h6 class="m-0 font-weight-bold text-primary">Espacio de alertas</h6>
         </div>
         <div class="card-body text-gray-600">
+          @if ($alerta > '0')
+          <p>
+            <hr />
+          <p class="p-2 bg-warning text-white"><a class="text-white" href="{{ url('h_abastecimiento/abastecer') }}"> Hay {{$alerta}} productos por debajo del Stock mínimo </a></p>
+          <hr />
+          </p>
+          @else {
+          <p> No hay alertas </p>
+          }
+          @endif
         </div>
       </div>
-
-
     </div>
 
     <div class="col-lg-8 mb-6">
