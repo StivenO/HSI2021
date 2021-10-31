@@ -42,11 +42,10 @@
                                     <div class="text-center">
                                         <img src="img/logo.png" alt="Logo Hardware Store Inventory" width="100%" height="100%" />
                                     </div><br>
-                                    @if(Session::get('mensaje'))
-                                    <div class="alert alert-{{Session::get('tipo')}} alert-dismissible fade show" role="alert">
-                                        {!! Session::get('icono') !!}
-                                        {{ Session::get('mensaje') }}
-                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    @if(Session::get('mensaje2'))
+                                    <div class="alert alert-{{Session::get('tipo2')}} alert-dismissible fade show" role="alert">
+                                        {!! Session::get('icono2') !!}
+                                        {{ Session::get('mensaje2') }}
                                     </div>
                                     @endif
                                     <form form class="m-t" role="form" action="validate" method="POST">
@@ -61,6 +60,12 @@
                                             <div class="text-center">
                                                 Los datos deben ser válidos
                                             </div><br>
+                                            @if(Session::get('mensaje'))
+                                            <div class="alert alert-{{Session::get('tipo')}} alert-dismissible fade show" role="alert">
+                                                {!! Session::get('icono') !!}
+                                                {{ Session::get('mensaje') }}
+                                            </div>
+                                            @endif
                                         </div>
                                         <input type="Submit" class="btn btn-primary btn-user btn-block" value="Ingresar">
                                         </a><br>
