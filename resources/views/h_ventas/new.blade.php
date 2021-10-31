@@ -49,13 +49,13 @@
 						</div>
 						<div class="form-group row">
 							<div class="col-sm-4 mb-3 mb-sm-0">
-								<input name="cantproduct" type="number" class="form-control form-control-user" id="ejemploCant" placeholder="Cantidad" required>
+								<input name="cantproduct" type="number" class="form-control form-control-user" id="cantidad" placeholder="Cantidad" oninput="calcular()" required>
 							</div>
 							<div class="col-sm-4">
-								<input name="cash" type="number" class="form-control form-control-user" id="ejemploPriceout" placeholder="Precio unitario" required>
+								<input name="cash" type="number" class="form-control form-control-user" id="precio" placeholder="Precio unitario" oninput="calcular()" required>
 							</div>
 							<div class="col-sm-4">
-								<input name="disc" type="number" class="form-control form-control-user" id="ejemploDesc" placeholder="Descuento" required>
+								<input name="disc" type="number" class="form-control form-control-user" id="descuento" placeholder="Descuento" oninput="calcular()"  required>
 							</div>
 						</div>
 						<div class="form-group row">
@@ -63,13 +63,24 @@
 								<input name="date" type="datetime-local" class="form-control form-control-user" id="ejemplodate" placeholder="Fecha y hora" required>
 							</div>
 							<div class="col-sm-4">
-								<input name="total" type="number" class="form-control form-control-user" id="" placeholder="Total" required>
+								<input name="total" type="number" class="form-control form-control-user" id="total" placeholder="Total" required>
 							</div>
 							<div class="col-sm-4">
 								<input type="submit" value="Confirmar Venta" class="btn btn-success btn-user btn-block"></input>
 							</div>
 						</div>
 					</div>
+					<script tipe="text/javascript">
+						function calcular(){
+							try {
+								var a = parseFloat(document.getElementById("cantidad").value)||0,
+									b = parseFloat(document.getElementById("precio").value)||0;
+									c = parseFloat(document.getElementById("descuento").value)||0;
+
+									document.getElementById("total").value = (a*b)-c;
+							}catch (e){}
+						}
+					</script>
 				</div>
 			</div>
 		</form>
