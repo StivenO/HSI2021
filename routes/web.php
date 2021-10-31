@@ -184,6 +184,21 @@ Route::group(['middleware' => ['auth', 'prevent-back-history']], function () {
     Route::get('typeid/recovery/{idtypeid}', [TypeidController::class, 'recovery']);
     Route::get('typeid/delete/{idtypeid}', [TypeidController::class, 'delete']);
 
+    //Person------------------------------------------------------------------------
+
+    Route::get('person', [PersonController::class, 'index']);
+
+    Route::get('person/new', [PersonController::class, 'create']);
+    Route::post('person', [PersonController::class, 'store']);
+
+    Route::get('person/edit/{idperson}', [PersonController::class, 'edit']);
+    Route::post('person/edit/{idperson}', [PersonController::class, 'update']);
+
+
+    Route::get('person/destroy/{idperson}', [PersonController::class, 'destroy']);
+    Route::get('person/recovery/{idperson}', [PersonController::class, 'recovery']);
+    Route::get('person/delete/{idperson}', [PersonController::class, 'delete']);
+
 //Rol---------------------------------------------------------------------
 
     Route::get('rol', [RolController::class, 'index']);
