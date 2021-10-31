@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Typeid;
+use Auth;
+use Hash;
+
 
 class PerfilController extends Controller
 {
@@ -39,14 +42,19 @@ class PerfilController extends Controller
 
   public function update(Request $request)
   {
-    $id=(Auth::user()->nick);
+        $id=(Auth::user()->iduser);
         $data['typeid_id'] = $request->get('typeid_id');
         $data['numid'] = $request->get('numid');
         $data['nomuser'] = $request->get('nomuser');
         $data['apeuser'] = $request->get('apeuser');
         $data['email'] = $request->get('email');
         $data['nick'] = $request->get('nick');
-        $data['password'] = $request->get('password');
+        $data['pas'] = $request->get('password');
+        if ($data['pas'] == ("")){
+          $data['password'] = (Auth::user()->password);
+        }else{
+          $data['password'] = Hash::make($request->get('password'));
+        }
         $data['rol_id'] = $request->get('rol_id');
         $data['state'] = $request->get('state');
 
