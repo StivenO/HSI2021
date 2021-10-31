@@ -69,11 +69,11 @@
 								<div class="row mt-2">
 									<div class="col-md-4 col-sm-6">
 										<label class="labels">Contraseña</label>
-										<input name="password" placeholder="Contraseña" class="form-control form-control-user" required>
+										<input name="password" placeholder="Contraseña" class="form-control form-control-user" type="password" required>
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<label class="labels">Repetir Contraseña</label>
-										<input name="password" placeholder="Repetir Contraseña" class="form-control form-control-user" required>
+										<input name="password" placeholder="Repetir Contraseña" class="form-control form-control-user" type="password" required>
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<label class="labels"></label>
