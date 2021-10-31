@@ -12,7 +12,7 @@
 
 <body>
     <div class="container">
-        <a href="category/new" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Agregar Categoría</a>
+        <a href="{{ url('category/new') }}" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Agregar Categoría</a>
         <h1>Categorías</h1><br>
         <ul class="nav nav-tabs float-right" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
@@ -28,7 +28,7 @@
                         <tr>
                             <th>ID</th>
                             <th>Nombre</th>
-                            <th style="width: 1660px">Acción</th>
+                            <th style="width: 1660px">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -47,12 +47,12 @@
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
-                <table class="table table-bordered table-hover table-striped">
+                <table class="table table-responsive table-bordered table-hover table-striped">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Nombre</th>
-                            <th style="width: 1660px">Acción</th>
+                            <th style="width: 1660px">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>

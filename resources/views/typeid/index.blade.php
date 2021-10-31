@@ -28,12 +28,12 @@
 		<div class="tab-content" id="myTabContent">
 			<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-				<table class="table table-bordered table-hover table-striped">
+				<table class="table table-responsive table-bordered table-hover table-striped">
 					<thead>
 						<tr>
 							<th>ID</th>
 							<th>Nombre</th>
-							<th>ACCIONES</th>
+							<th>Acciones</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -53,12 +53,12 @@
 			</div>
 			<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
-				<table class="table table-bordered table-hover table-striped">
+				<table class="table table-responsive table-bordered table-hover table-striped">
 					<thead>
 						<tr>
 							<th>ID</th>
 							<th>Nombre</th>
-							<th>ACCIONES</th>
+							<th>Acciones</th>
 						</tr>
 					</thead>
 					<tbody>

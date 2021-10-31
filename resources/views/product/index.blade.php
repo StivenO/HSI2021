@@ -35,7 +35,7 @@
                             <th>$Salida</th>
                             <th>T. Unidad</th>
                             <th>Categoría</th>
-                            <th>Acción</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -62,7 +62,7 @@
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
-                <table class="table table-bordered table-hover table-striped">
+                <table class="table table-responsive table-bordered table-hover table-striped">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -74,7 +74,7 @@
                             <th>$Salida</th>
                             <th>T. Unidad</th>
                             <th>Categoría</th>
-                            <th>Acción</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
