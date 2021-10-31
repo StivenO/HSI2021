@@ -185,8 +185,8 @@
                 <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Detalle de soporte:</h6>
-                        <a class="collapse-item" href="{{ url('bd') }}">Relaciones BD</a>
-                        <a class="collapse-item" href="{{ url('contacto') }}">Nuestro Equipo</a>
+                        <a class="collapse-item" href="{{ url('soporte/bd') }}">Relaciones BD</a>
+                        <a class="collapse-item" href="{{ url('soporte/contacto') }}">Nuestro Equipo</a>
                     </div>
                 </div>
             </li>

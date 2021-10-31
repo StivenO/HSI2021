@@ -14,6 +14,7 @@ use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\TypeidController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RolController;
+use App\Http\Controllers\SoporteController;
 use App\Http\Middleware\Admin;
 use App\Http\Controllers\ProveedoresController;
 use App\Http\Controllers\ClientesController;
@@ -207,6 +208,12 @@ Route::group(['middleware' => ['auth', 'prevent-back-history']], function () {
     Route::get('rol/destroy/{idrol}', [RolController::class, 'destroy']);
     Route::get('rol/recovery/{idrol}', [RolController::class, 'recovery']);
     Route::get('rol/delete/{idrol}', [RolController::class, 'delete']);
+
+//  Soporte ----------------------------------------------------------------------
+
+    Route::get('soporte/bd', [SoporteController::class, 'bd']);
+    Route::get('soporte/contacto', [SoporteController::class, 'contacto']);
+
 });
 Route::group(['middleware' => ['auth', 'prevent-back-history', 'admin']], function () {
     // productos --------------------------------------------------
