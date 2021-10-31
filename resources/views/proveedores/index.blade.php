@@ -26,7 +26,6 @@
 				<table id="example" class="table table-responsive table-bordered table-hover table-striped">
 					<thead>
 						<tr>
-							<th style="width: 5%">T.Persona</th>
 							<th style="width: 5%">TipoID</th>
 							<th>Número ID</th>
 							<th>Nombre</th>
@@ -40,7 +39,6 @@
 					<tbody>
 						@foreach($data as $row)
 						<tr>
-							<td style="width: 5%"> {{ $row->ptype->nomptype}} </td>
 							<td style="width: 5%"> {{ $row->typeid->nomtypeid }} </td>
 							<td> {{ $row->numid }} </td>
 							<td> {{ $row->nomperson }} </td>
@@ -63,7 +61,6 @@
 				<table class="table table-responsive table-bordered table-hover table-striped">
 					<thead>
 						<tr>
-							<th style="width: 5%">T.Persona</th>
 							<th style="width: 5%">TipoID</th>
 							<th>Número ID</th>
 							<th>Nombre</th>
@@ -77,7 +74,7 @@
 					<tbody>
 						@foreach($data2 as $row)
 						<tr>
-							<td style="width: 5%"> {{ $row->ptype->nomptype}} </td>
+							
 							<td style="width: 5%"> {{ $row->typeid->nomtypeid }} </td>
 							<td> {{ $row->numid }} </td>
 							<td> {{ $row->nomperson }} </td>
