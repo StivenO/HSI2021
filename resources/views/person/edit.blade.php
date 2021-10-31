@@ -1,9 +1,11 @@
+@extends('layaut')
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
 </head>
+@section('content')
 <body>
 
 	<div class="container">
@@ -45,4 +47,5 @@
 		</form>
 	</div>
 </body>
+@stop
 </html>
