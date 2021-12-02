@@ -47,7 +47,7 @@
               <img class="img-fluid card-img-top" src="{{ url('img/acosta.JPEG') }}" alt="Acosta">
               <div class="card-body">
                 <h4 class="card-title text-gray-800">Andrés David Acosta Buitrago</h4>
-                <p class="card-text">Software Developer Front-end.</p>
+                <p class="card-text">Software Developer Front-End.</p>
                 <a href="https://api.whatsapp.com/send?phone=573184464480&text=Hola!!%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20Hardware%20Store%20Inventory..." class="btn btn-success">Contáctame!</a>
               </div>
             </div>
@@ -58,7 +58,7 @@
               <img class="img-fluid card-img-top" src="{{ url('img/stiven.JPEG') }}" alt="Stiven">
               <div class="card-body">
                 <h4 class="card-title text-gray-800">Nelson Stiven Ortega Urbano</h4>
-                <p class="card-text">Software Developer Back-end.</p>
+                <p class="card-text">Software Developer Full-Stack.</p>
                 <a href="https://api.whatsapp.com/send?phone=573002999905&text=Hola!!%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20Hardware%20Store%20Inventory..." class="btn btn-success">Contáctame!</a>
               </div>
             </div>
@@ -75,7 +75,7 @@
               <img class="img-fluid card-img-top" src="{{ url('img/marlon.JPEG') }}" alt="Marlon">
               <div class="card-body">
                 <h4 class="card-title text-gray-800">Marlon Steven Mayorga Moncayo</h4>
-                <p class="card-text">Software Developer Back-end.</p>
+                <p class="card-text">Software Developer Back-End.</p>
                 <a href="https://api.whatsapp.com/send?phone=573233794426&text=Hola!!%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20Hardware%20Store%20Inventory..." class="btn btn-success">Contáctame!</a>
               </div>
             </div>
@@ -86,7 +86,7 @@
               <img class="img-fluid card-img-top" src="{{ url('img/arroyave.JPEG') }}" alt="Arroyave">
               <div class="card-body">
                 <h4 class="card-title text-gray-800">Andrés Felipe Arroyave Chicangana</h4>
-                <p class="card-text">Software Developer Back-end.</p>
+                <p class="card-text">Software Developer Back-End.</p>
                 <a href="https://api.whatsapp.com/send?phone=573106268204&text=Hola!!%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20Hardware%20Store%20Inventory..." class="btn btn-success">Contáctame!</a>
               </div>
             </div>
