@@ -60,13 +60,18 @@
                         </div>
                         <div class="row mt-3">
                             <div class="col-md-6"><label class="labels">Contraseña</label>
-                                <input name="password" type="password" class="form-control form-control-user" placeholder="Nueva contraseña" value="">
+                                <input name="password" id="pass" type="password" class="form-control form-control-user" placeholder="Nueva contraseña" value="">
                             </div>
                             <div class="col-md-6"><label class="labels">Confirmar Contraseña</label>
-                                <input type="password" class="form-control form-control-user" value="" placeholder="Confirmar contraseña">
+                                <input name="password2" type="password" id="pass-confirm" class="form-control form-control-user" value="" placeholder="Confirmar contraseña">
                             </div>
                         </div>
                         <div class="mt-5 text-center">
+                            @if(Session::get('alerta'))
+                                        <div class="alert alert-{{Session::get('tipo2')}} alert-dismissible fade show" role="alert">
+                                            {{ Session::get('alerta') }}
+                                        </div>
+                                        @endif
                             <input type="submit" class="btn btn-success btn-user btn-block" value="Guardar Perfil">
                         </div>
                     </form>

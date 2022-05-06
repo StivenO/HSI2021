@@ -50,14 +50,18 @@ class PerfilController extends Controller
         $data['email'] = $request->get('email');
         $data['nick'] = $request->get('nick');
         $data['pas'] = $request->get('password');
+        $data['pas2'] = $request->get('password2');
+    // 
         if ($data['pas'] == ("")){
           $data['password'] = (Auth::user()->password);
-        }else{
+        }elseif ($data['pas'] != $data['pas2']) {
+          return redirect('perfil')->with('alerta', 'La contraseña de verificación no coincide.')
+            ->with('tipo2', 'danger');
+        } else {
           $data['password'] = Hash::make($request->get('password'));
         }
         $data['rol_id'] = $request->get('rol_id');
         $data['state'] = $request->get('state');
-
         User::find($id)->update($data);
         return redirect('inicio');
   }
